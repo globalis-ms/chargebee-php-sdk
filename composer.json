@@ -1,0 +1,41 @@
+{
+  "name": "nathandunn/chargebee-client",
+  "description": "PHP Client for using Chargebee API.",
+  "license": "MIT",
+  "keywords": ["chargebee", "api-client"],
+  "type": "library",
+  "authors": [
+    {
+      "name": "Nathan Dunn",
+      "email": "github@nathandunn.uk",
+      "role": "Developer",
+      "homepage": "https://nathandunn.uk"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0",
+    "psr/http-message": "^1.0",
+    "php-http/httplug": "^1.0",
+    "php-http/message-factory": "^1.0",
+    "php-http/discovery": "^1.0",
+    "symfony/serializer": "3.4.x-dev",
+    "php-http/client-common": "^1.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^6.4",
+    "php-http/message": "^1.0",
+    "guzzlehttp/psr7": "^1.0",
+    "php-http/mock-client": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "NathanDunn\\Chargebee\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "minimum-stability": "dev"
+}
