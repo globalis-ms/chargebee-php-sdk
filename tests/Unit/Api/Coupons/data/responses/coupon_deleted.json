@@ -1,0 +1,20 @@
+{
+  "coupon": {
+    "id": "beta",
+    "name": "Beta Signup Offer",
+    "discount_type": "percentage",
+    "discount_percentage": 20.0,
+    "duration_type": "limited_period",
+    "duration_month": 12,
+    "max_redemptions": 100,
+    "status": "archived",
+    "apply_discount_on": "not_applicable",
+    "apply_on": "each_specified_item",
+    "plan_constraint": "all",
+    "addon_constraint": "none",
+    "created_at": 1506418484,
+    "archived_at": 1506418662,
+    "object": "coupon",
+    "redemptions": 0
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "coupon": {
+    "id": "cbdemo_earlybird",
+    "name": "Early Bird",
+    "discount_type": "fixed_amount",
+    "discount_amount": 1000,
+    "duration_type": "limited_period",
+    "duration_month": 12,
+    "status": "active",
+    "apply_discount_on": "not_applicable",
+    "apply_on": "each_specified_item",
+    "plan_constraint": "all",
+    "addon_constraint": "none",
+    "created_at": 1506418662,
+    "updated_at": 1506418662,
+    "resource_version": 1506418662000,
+    "object": "coupon",
+    "redemptions": 0,
+    "currency_code": "USD"
+  }
+}
