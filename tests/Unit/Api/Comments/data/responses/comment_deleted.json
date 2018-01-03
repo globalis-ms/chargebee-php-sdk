@@ -1,0 +1,12 @@
+{
+  "comment": {
+    "id": "cmt_3Nl8LlrQWK2dUa1",
+    "entity_type": "subscription",
+    "entity_id": "sub__8avQOOQY1Bn3I",
+    "notes": "This is a test comment",
+    "added_by": "full_access_key_v1",
+    "created_at": 1506418531,
+    "type": "user",
+    "object": "comment"
+  }
+}
