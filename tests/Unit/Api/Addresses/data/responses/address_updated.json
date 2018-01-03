@@ -1,0 +1,16 @@
+{
+  "address": {
+    "label": "shipping_address",
+    "first_name": "Benjamin",
+    "last_name": "Ross",
+    "addr": "PO Box 9999",
+    "city": "Walnut",
+    "state_code": "CA",
+    "state": "California",
+    "country": "US",
+    "zip": "91789",
+    "validation_status": "not_validated",
+    "object": "address",
+    "subscription_id": "8avVGOkx8U1MX"
+  }
+}

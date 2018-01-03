@@ -1,0 +1,18 @@
+{
+  "address": {
+    "label": "shipping_address",
+    "first_name": "Benjamin",
+    "last_name": "Ross",
+    "company": "Acme Inc",
+    "phone": "+1 (614) 226-4809",
+    "addr": "345, Redington Av",
+    "extended_addr": "Suite 1200",
+    "city": "Los Angeles",
+    "state_code": "CA",
+    "state": "California",
+    "country": "US",
+    "validation_status": "not_validated",
+    "object": "address",
+    "subscription_id": "8avVGOkx8U1MX"
+  }
+}
