@@ -1,0 +1,11 @@
+{
+  "coupon_set": {
+    "id": "cs_3RtyuIHol",
+    "coupon_id": "beta",
+    "name": "Launch Promotion",
+    "object": "coupon_set",
+    "total_count": 0,
+    "redeemed_count": 0,
+    "archived_count": 0
+  }
+}

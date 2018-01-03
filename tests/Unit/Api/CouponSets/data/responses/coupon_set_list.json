@@ -1,0 +1,16 @@
+{
+  "list": [
+    {
+      "coupon_set": {
+        "id": "_cs_Xcrtyqw",
+        "coupon_id": "beta",
+        "name": "Promo Coupon Codes",
+        "object": "coupon_set",
+        "total_count": 3,
+        "redeemed_count": 0,
+        "archived_count": 1
+      }
+    }
+  ],
+  "next_offset": "[\"111000000009\",\"1510107844000\"]"
+}
