@@ -1,0 +1,7 @@
+{
+  "download": {
+    "download_url": "https://cb-downloads-dev.s3.amazonaws.com/yourapp/credit_note/3Nl8LlrQWK3Gz641.pdf?response-content-disposition=attachment%3Bfilename%3Dyourapp%2Fcredit_note%2F3Nl8LlrQWK3Gz641.pdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20170926T093807Z&X-Amz-SignedHeaders=host&X-Amz-Expires=59&X-Amz-Credential=AKIAJ3MOW2V2DPJQTCMQ%2F20170926%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=18ae1511ca1a9cf711b628594a3f330b082ee0e81e4d40569aa70a0ad3497b76",
+    "valid_till": 1506418747,
+    "object": "download"
+  }
+}

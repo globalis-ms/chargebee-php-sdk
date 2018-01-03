@@ -1,0 +1,50 @@
+{
+  "credit_note": {
+    "id": "TEST-CN-6",
+    "customer_id": "8avVGOkx8U1MX",
+    "subscription_id": "8avVGOkx8U1MX",
+    "reference_invoice_id": "1",
+    "type": "refundable",
+    "reason_code": "waiver",
+    "status": "refund_due",
+    "date": 1506418688,
+    "price_type": "tax_exclusive",
+    "exchange_rate": 1.0,
+    "total": 100,
+    "amount_allocated": 0,
+    "amount_refunded": 0,
+    "amount_available": 100,
+    "updated_at": 1506418688,
+    "resource_version": 1506418688000,
+    "deleted": false,
+    "object": "credit_note",
+    "currency_code": "USD",
+    "base_currency_code": "USD",
+    "sub_total": 100,
+    "line_items": [
+      {
+        "id": "li_3Nl8LcOQWK3ILf7c",
+        "date_from": 1506418688,
+        "date_to": 1506418688,
+        "unit_amount": 100,
+        "quantity": 1,
+        "is_taxed": false,
+        "tax_amount": 0,
+        "object": "line_item",
+        "subscription_id": "8avVGOkx8U1MX",
+        "amount": 100,
+        "description": "basic description1",
+        "entity_type": "plan",
+        "entity_id": "basic",
+        "tax_exempt_reason": "tax_not_configured",
+        "discount_amount": 0,
+        "item_level_discount_amount": 0
+      }
+    ],
+    "taxes": [],
+    "line_item_taxes": [],
+    "line_item_discounts": [],
+    "linked_refunds": [],
+    "allocations": []
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "credit_note": {
+    "allocations": [],
+    "amount_allocated": 0,
+    "amount_available": 0,
+    "amount_refunded": 1000,
+    "base_currency_code": "USD",
+    "currency_code": "USD",
+    "customer_id": "monthly_super_saver-1",
+    "date": 1506418604,
+    "deleted": false,
+    "exchange_rate": 1,
+    "id": "TEST-CN-3",
+    "line_item_discounts": [],
+    "line_item_taxes": [],
+    "line_items": [
+      {
+        "amount": 1000,
+        "date_from": 1506418604,
+        "date_to": 1506418604,
+        "description": "No Trial",
+        "discount_amount": 0,
+        "entity_id": "no_trial",
+        "entity_type": "plan",
+        "id": "li_3Nl8LlrQWK2wXV1n",
+        "is_taxed": false,
+        "item_level_discount_amount": 0,
+        "object": "line_item",
+        "quantity": 1,
+        "subscription_id": "monthly_super_saver-1",
+        "tax_amount": 0,
+        "tax_exempt_reason": "tax_not_configured",
+        "unit_amount": 1000
+      }
+    ],
+    "linked_refunds": [
+      {
+        "applied_amount": 1000,
+        "applied_at": 1506418604,
+        "txn_amount": 1000,
+        "txn_date": 1506418664,
+        "txn_id": "txn_3Nl8LlrQWK2waO1q",
+        "txn_status": "success"
+      }
+    ],
+    "object": "credit_note",
+    "price_type": "tax_exclusive",
+    "reason_code": "product_unsatisfactory",
+    "reference_invoice_id": "39",
+    "refunded_at": 1506418604,
+    "resource_version": 1506418604000,
+    "status": "refunded",
+    "sub_total": 1000,
+    "subscription_id": "monthly_super_saver-1",
+    "taxes": [],
+    "total": 1000,
+    "type": "refundable",
+    "updated_at": 1506418604
+  },
+  "transaction": {
+    "amount": 1000,
+    "base_currency_code": "USD",
+    "currency_code": "USD",
+    "customer_id": "monthly_super_saver-1",
+    "date": 1506418664,
+    "deleted": false,
+    "exchange_rate": 1,
+    "gateway": "not_applicable",
+    "id": "txn_3Nl8LlrQWK2waO1q",
+    "linked_credit_notes": [
+      {
+        "applied_amount": 1000,
+        "applied_at": 1506418604,
+        "cn_date": 1506418604,
+        "cn_id": "TEST-CN-3",
+        "cn_reason_code": "product_unsatisfactory",
+        "cn_reference_invoice_id": "39",
+        "cn_status": "refunded",
+        "cn_total": 1000
+      }
+    ],
+    "object": "transaction",
+    "payment_method": "bank_transfer",
+    "resource_version": 1506418604000,
+    "status": "success",
+    "subscription_id": "monthly_super_saver-1",
+    "type": "refund",
+    "updated_at": 1506418604
+  }
+}
