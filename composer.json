@@ -18,7 +18,6 @@
     "php-http/httplug": "^1.0",
     "php-http/message-factory": "^1.0",
     "php-http/discovery": "^1.0",
-    "symfony/serializer": "3.4.x-dev",
     "php-http/client-common": "^1.0"
   },
   "require-dev": {
