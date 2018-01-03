@@ -1,0 +1,19 @@
+{
+  "addon": {
+    "id": "additional_users_2",
+    "name": "Additional Users 2",
+    "type": "quantity",
+    "charge_type": "recurring",
+    "price": 95,
+    "period": 1,
+    "period_unit": "month",
+    "unit": "per GB",
+    "status": "active",
+    "enabled_in_portal": true,
+    "updated_at": 1506418663,
+    "resource_version": 1506418663000,
+    "object": "addon",
+    "currency_code": "USD",
+    "taxable": true
+  }
+}

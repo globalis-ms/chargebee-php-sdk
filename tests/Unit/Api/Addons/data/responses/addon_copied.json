@@ -1,0 +1,21 @@
+{
+  "addon": {
+    "id": "cbdemo_additionaluser",
+    "name": "Additional users",
+    "invoice_name": "Additional users",
+    "description": "Pay for each additional user apart from your base plan.",
+    "type": "quantity",
+    "charge_type": "recurring",
+    "price": 1000,
+    "period": 1,
+    "period_unit": "month",
+    "unit": "user",
+    "status": "active",
+    "enabled_in_portal": true,
+    "updated_at": 1506418663,
+    "resource_version": 1506418663000,
+    "object": "addon",
+    "currency_code": "USD",
+    "taxable": false
+  }
+}

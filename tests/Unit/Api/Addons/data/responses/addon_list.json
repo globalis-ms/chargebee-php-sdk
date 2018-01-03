@@ -1,0 +1,24 @@
+{
+  "list": [
+    {
+      "addon": {
+        "id": "sms_pack",
+        "name": "Sms Pack",
+        "invoice_name": "sample data pack",
+        "type": "on_off",
+        "charge_type": "recurring",
+        "price": 200,
+        "period": 1,
+        "period_unit": "month",
+        "status": "active",
+        "enabled_in_portal": true,
+        "updated_at": 1506418663,
+        "resource_version": 1506418663000,
+        "object": "addon",
+        "currency_code": "USD",
+        "taxable": true
+      }
+    }
+  ],
+  "next_offset": "[\"105000000018\"]"
+}
