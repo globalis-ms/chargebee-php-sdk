@@ -1,0 +1,17 @@
+{
+  "card": {
+    "status": "valid",
+    "gateway": "chargebee",
+    "gateway_account_id": "gw_3Nl8LcOQWK2N9I2",
+    "iin": "411111",
+    "last4": "1111",
+    "card_type": "visa",
+    "funding_type": "credit",
+    "expiry_month": 1,
+    "expiry_year": 2022,
+    "object": "card",
+    "masked_number": "************1111",
+    "customer_id": "8avVGOkx8U1MX",
+    "payment_source_id": "pm_3Nl8LcOQWK2Rkh6"
+  }
+}

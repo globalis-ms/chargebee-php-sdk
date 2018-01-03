@@ -1,0 +1,47 @@
+{
+  "card": {
+    "card_type": "visa",
+    "customer_id": "3Nl8LlrQWK2vYRx",
+    "expiry_month": 12,
+    "expiry_year": 2018,
+    "funding_type": "not_known",
+    "gateway": "pin",
+    "gateway_account_id": "gw_3Nl8LcOQWK2uhS7R",
+    "iin": "411111",
+    "last4": "1111",
+    "masked_number": "************1111",
+    "object": "card",
+    "payment_source_id": "pm_3Nl8LlrQWK2vhky",
+    "status": "valid"
+  },
+  "customer": {
+    "allow_direct_debit": false,
+    "auto_collection": "on",
+    "card_status": "valid",
+    "created_at": 1506418600,
+    "deleted": false,
+    "email": "johnwilliams@gmail.com",
+    "excess_payments": 0,
+    "first_name": "John",
+    "id": "3Nl8LlrQWK2vYRx",
+    "last_name": "Williams",
+    "net_term_days": 0,
+    "object": "customer",
+    "payment_method": {
+      "gateway": "pin",
+      "gateway_account_id": "gw_3Nl8LcOQWK2uhS7R",
+      "object": "payment_method",
+      "reference_id": "Zqr4OtOiithdPAI0JELvfuPqoxh",
+      "status": "valid",
+      "type": "card"
+    },
+    "preferred_currency_code": "USD",
+    "primary_payment_source_id": "pm_3Nl8LlrQWK2vhky",
+    "promotional_credits": 0,
+    "refundable_credits": 0,
+    "resource_version": 1506418601000,
+    "taxability": "taxable",
+    "unbilled_charges": 0,
+    "updated_at": 1506418601
+  }
+}
