@@ -1,0 +1,44 @@
+{
+  "estimate": {
+    "created_at": 1506418664,
+    "object": "estimate",
+    "subscription_estimate": {
+      "status": "in_trial",
+      "next_billing_at": 1509010664,
+      "object": "subscription_estimate",
+      "currency_code": "USD"
+    },
+    "next_invoice_estimate": {
+      "recurring": true,
+      "price_type": "tax_exclusive",
+      "sub_total": 900,
+      "total": 900,
+      "credits_applied": 0,
+      "amount_paid": 0,
+      "amount_due": 900,
+      "object": "invoice_estimate",
+      "line_items": [
+        {
+          "id": "li_3Nl8LlrQWK3CC33N",
+          "date_from": 1509010664,
+          "date_to": 1511689064,
+          "unit_amount": 900,
+          "quantity": 1,
+          "is_taxed": false,
+          "tax_amount": 0,
+          "object": "line_item",
+          "amount": 900,
+          "description": "sample plan",
+          "entity_type": "plan",
+          "entity_id": "basic",
+          "discount_amount": 0,
+          "item_level_discount_amount": 0
+        }
+      ],
+      "taxes": [],
+      "line_item_taxes": [],
+      "currency_code": "USD",
+      "line_item_discounts": []
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "estimate": {
+    "created_at": 1506418665,
+    "object": "estimate",
+    "subscription_estimate": {
+      "id": "8avVGOkx8U1MX",
+      "status": "cancelled",
+      "object": "subscription_estimate",
+      "currency_code": "USD",
+      "shipping_address": {
+        "first_name": "Benjamin",
+        "last_name": "Ross",
+        "line1": "PO Box 9999",
+        "city": "Walnut",
+        "state_code": "CA",
+        "state": "California",
+        "country": "US",
+        "zip": "91789",
+        "validation_status": "not_validated",
+        "object": "shipping_address"
+      }
+    },
+    "credit_note_estimates": []
+  }
+}
