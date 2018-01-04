@@ -1,0 +1,14 @@
+{
+  "hosted_page": {
+    "id": "5do8tkcuscuomm1lbwGDRvFGvn1T3jfG6J",
+    "type": "checkout_new",
+    "url": "https://yourapp.chargebee.com/pages/v2/5do8tkcuscuomm1lbwGDRvFGvn1T3jfG6J/checkout",
+    "state": "created",
+    "embed": true,
+    "created_at": 1506418666,
+    "expires_at": 1506422266,
+    "object": "hosted_page",
+    "updated_at": 1506418666,
+    "resource_version": 1506418666000
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "hosted_page": {
+    "id": "QxjWg9dNDn3TeokQWefsTrfRHvaqNuP4",
+    "type": "checkout_new",
+    "url": "https://yourapp.chargebee.com/pages/v2/QxjWg9dNDn3TeokQWefsTrfRHvaqNuP4/checkout",
+    "state": "acknowledged",
+    "embed": true,
+    "created_at": 1506418532,
+    "expires_at": 1506422132,
+    "object": "hosted_page",
+    "content": {
+      "subscription": {
+        "id": "3Nl8LcOQWK2dX46o",
+        "customer_id": "3Nl8LcOQWK2dX46o",
+        "plan_id": "basic",
+        "plan_quantity": 1,
+        "plan_unit_price": 900,
+        "billing_period": 1,
+        "billing_period_unit": "month",
+        "plan_free_quantity": 0,
+        "status": "in_trial",
+        "trial_start": 1506418547,
+        "trial_end": 1509010547,
+        "next_billing_at": 1509010547,
+        "created_at": 1506418547,
+        "started_at": 1506418547,
+        "affiliate_token": "QxjWg9dNDn3TeokQWefsTrfRHvaqNuP4",
+        "created_from_ip": "127.0.0.1",
+        "updated_at": 1506418548,
+        "has_scheduled_changes": false,
+        "resource_version": 1506418548000,
+        "deleted": false,
+        "object": "subscription",
+        "currency_code": "USD",
+        "due_invoices_count": 0,
+        "shipping_address": {
+          "first_name": "Hello",
+          "last_name": "World",
+          "phone": "122242222",
+          "line1": "Wow",
+          "line2": "Cool",
+          "city": "Chennai",
+          "state_code": "TN",
+          "state": "Tamil Nadu",
+          "country": "IN",
+          "zip": "600041",
+          "validation_status": "not_validated",
+          "object": "shipping_address"
+        }
+      },
+      "customer": {
+        "id": "3Nl8LcOQWK2dX46o",
+        "first_name": "Hello",
+        "last_name": "World",
+        "email": "john@acmeinc.com",
+        "auto_collection": "on",
+        "net_term_days": 0,
+        "allow_direct_debit": false,
+        "created_at": 1506418547,
+        "created_from_ip": "127.0.0.1",
+        "taxability": "taxable",
+        "updated_at": 1506418547,
+        "resource_version": 1506418547000,
+        "deleted": false,
+        "object": "customer",
+        "billing_address": {
+          "first_name": "Hello",
+          "last_name": "World",
+          "phone": "122242222",
+          "line1": "Wow",
+          "line2": "Cool",
+          "city": "Chennai",
+          "state_code": "TN",
+          "state": "Tamil Nadu",
+          "country": "IN",
+          "zip": "600041",
+          "validation_status": "not_validated",
+          "object": "billing_address"
+        },
+        "card_status": "valid",
+        "primary_payment_source_id": "pm_3Nl8LlrQWK2hpO5",
+        "payment_method": {
+          "object": "payment_method",
+          "type": "card",
+          "reference_id": "tok_3Nl8LlrQWK2hoL4",
+          "gateway": "chargebee",
+          "gateway_account_id": "gw_3Nl8LcOQWK2N9I2",
+          "status": "valid"
+        },
+        "promotional_credits": 0,
+        "refundable_credits": 0,
+        "excess_payments": 0,
+        "unbilled_charges": 0,
+        "preferred_currency_code": "USD"
+      },
+      "card": {
+        "status": "valid",
+        "gateway": "chargebee",
+        "gateway_account_id": "gw_3Nl8LcOQWK2N9I2",
+        "first_name": "Hello",
+        "last_name": "World",
+        "iin": "411111",
+        "last4": "1111",
+        "card_type": "visa",
+        "funding_type": "credit",
+        "expiry_month": 10,
+        "expiry_year": 2020,
+        "ip_address": "127.0.0.1",
+        "object": "card",
+        "masked_number": "************1111",
+        "customer_id": "3Nl8LcOQWK2dX46o",
+        "payment_source_id": "pm_3Nl8LlrQWK2hpO5"
+      }
+    },
+    "updated_at": 1506418667,
+    "resource_version": 1506418667000,
+    "checkout_info": {
+      "client_ip": "127.0.0.1",
+      "order_value": 900,
+      "currency": "USD",
+      "locale": "en",
+      "checkout_submit": [
+        {
+          "gateway": {
+            "id": "gw_3Nl8LcOQWK2N9I2",
+            "name": "CHARGEBEE"
+          },
+          "status": "succeeded",
+          "timestamp": 1506418548767,
+          "payment_method": "card",
+          "card_type": "visa"
+        }
+      ],
+      "order_items": [
+        {
+          "entity_type": "plan",
+          "entity_id": "basic"
+        }
+      ],
+      "shipping.ship.to.billing": "true",
+      "customer": {
+        "email": "john@acmeinc.com"
+      },
+      "billing_address": {
+        "first_name": "Hello",
+        "last_name": "World",
+        "line1": "Wow",
+        "line2": "Cool",
+        "city": "Chennai",
+        "zip": "600041",
+        "country": "IN",
+        "state_code": "TN",
+        "phone": "122242222"
+      }
+    }
+  }
+}

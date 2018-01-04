@@ -1,0 +1,17 @@
+{
+  "list": [
+    {
+      "hosted_page": {
+        "id": "CNUS2Lcu8os1NNM72B1wmPSn8aZBI4rxD",
+        "type": "update_card",
+        "url": "https://yourapp.chargebee.com/pages/v2/CNUS2Lcu8os1NNM72B1wmPSn8aZBI4rxD/update_card",
+        "state": "created",
+        "embed": true,
+        "created_at": 1506418667,
+        "expires_at": 1506505067,
+        "object": "hosted_page"
+      }
+    }
+  ],
+  "next_offset": "[\"1506418667000\",\"117000000004\"]"
+}

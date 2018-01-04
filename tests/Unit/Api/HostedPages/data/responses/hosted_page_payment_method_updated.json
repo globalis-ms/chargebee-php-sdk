@@ -1,0 +1,14 @@
+{
+  "hosted_page": {
+    "id": "Sc5DTpgoV80mhXqSpbsO25xhDgBJqOoV",
+    "type": "update_payment_method",
+    "url": "https://yourapp.chargebee.com/pages/v2/Sc5DTpgoV80mhXqSpbsO25xhDgBJqOoV/update_payment_method",
+    "state": "created",
+    "embed": true,
+    "created_at": 1506418667,
+    "expires_at": 1506505067,
+    "object": "hosted_page",
+    "updated_at": 1506418667,
+    "resource_version": 1506418667000
+  }
+}
