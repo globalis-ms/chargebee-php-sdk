@@ -1,0 +1,14 @@
+{
+  "list": [
+    {
+      "site_migration_detail": {
+        "entity_id": "4gkYnd21ouvW",
+        "other_site_name": "cbdemo-test",
+        "entity_id_at_other_site": "4gkYnd21ouvW",
+        "migrated_at": 1506418554,
+        "object": "site_migration_detail",
+        "entity_type": "customer"
+      }
+    }
+  ]
+}
