@@ -1,0 +1,37 @@
+{
+  "list": [
+    {
+      "transaction": {
+        "id": "txn_3Nl8LlrQWK2waO1q",
+        "customer_id": "monthly_super_saver-1",
+        "subscription_id": "monthly_super_saver-1",
+        "payment_method": "bank_transfer",
+        "gateway": "not_applicable",
+        "type": "refund",
+        "date": 1506418664,
+        "exchange_rate": 1.0,
+        "amount": 1000,
+        "status": "success",
+        "updated_at": 1506418604,
+        "resource_version": 1506418604000,
+        "deleted": false,
+        "object": "transaction",
+        "linked_credit_notes": [
+          {
+            "cn_id": "TEST-CN-3",
+            "applied_amount": 1000,
+            "applied_at": 1506418604,
+            "cn_reason_code": "product_unsatisfactory",
+            "cn_date": 1506418604,
+            "cn_total": 1000,
+            "cn_status": "refunded",
+            "cn_reference_invoice_id": "39"
+          }
+        ],
+        "currency_code": "USD",
+        "base_currency_code": "USD"
+      }
+    }
+  ],
+  "next_offset": "[\"1506418664000\",\"175000000044\"]"
+}

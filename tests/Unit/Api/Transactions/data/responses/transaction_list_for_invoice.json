@@ -1,0 +1,40 @@
+{
+  "list": [
+    {
+      "transaction": {
+        "id": "txn_3Nl8LcOQWK2T26O",
+        "customer_id": "8avVGOkx8U1MX",
+        "subscription_id": "8avVGOkx8U1MX",
+        "gateway_account_id": "gw_3Nl8LcOQWK2N9I2",
+        "payment_source_id": "pm_3Nl8LcOQWK2Rkh6",
+        "payment_method": "card",
+        "gateway": "chargebee",
+        "type": "payment",
+        "date": 1414780246,
+        "exchange_rate": 1.0,
+        "amount": 900,
+        "id_at_gateway": "cb_3Nl8LcOQWK2T3KP",
+        "status": "success",
+        "updated_at": 1414780246,
+        "resource_version": 1414780246000,
+        "deleted": false,
+        "object": "transaction",
+        "masked_card_number": "************1111",
+        "currency_code": "USD",
+        "base_currency_code": "USD",
+        "amount_unused": 0,
+        "linked_invoices": [
+          {
+            "invoice_id": "1",
+            "applied_amount": 900,
+            "applied_at": 1414780246,
+            "invoice_date": 1414780245,
+            "invoice_total": 900,
+            "invoice_status": "paid"
+          }
+        ],
+        "linked_refunds": []
+      }
+    }
+  ]
+}
