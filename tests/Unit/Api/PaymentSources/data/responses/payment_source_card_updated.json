@@ -1,0 +1,83 @@
+{
+  "payment_source": {
+    "id": "pm_3Nl8LcOQWK2Rkh6",
+    "object": "payment_source",
+    "customer_id": "8avVGOkx8U1MX",
+    "type": "card",
+    "reference_id": "tok_3Nl8LcOQWK2Rk95",
+    "status": "valid",
+    "gateway": "chargebee",
+    "gateway_account_id": "gw_3Nl8LcOQWK2N9I2",
+    "card": {
+      "first_name": "John",
+      "last_name": "Doe",
+      "iin": "411111",
+      "last4": "1111",
+      "funding_type": "credit",
+      "expiry_month": 5,
+      "expiry_year": 2022,
+      "billing_addr1": "#678 Mission Street",
+      "billing_city": "New York City",
+      "billing_state_code": "NY",
+      "billing_state": "New York",
+      "billing_country": "US",
+      "billing_zip": "10002",
+      "masked_number": "************1111",
+      "object": "card",
+      "brand": "visa"
+    }
+  },
+  "customer": {
+    "id": "8avVGOkx8U1MX",
+    "first_name": "Benjamin",
+    "last_name": "Ross",
+    "email": "Benjamin@test.com",
+    "auto_collection": "on",
+    "net_term_days": 0,
+    "allow_direct_debit": false,
+    "created_at": 1412101845,
+    "taxability": "taxable",
+    "updated_at": 1506418801,
+    "resource_version": 1506418801000,
+    "deleted": false,
+    "object": "customer",
+    "card_status": "valid",
+    "contacts": [
+      {
+        "id": "d334f4g45",
+        "first_name": "aasca",
+        "last_name": "asas",
+        "email": "sss@wss.asc",
+        "label": "ascasc",
+        "enabled": true,
+        "send_account_email": true,
+        "send_billing_email": false,
+        "object": "contact"
+      }
+    ],
+    "primary_payment_source_id": "pm_3Nl8LcOQWK2Rkh6",
+    "payment_method": {
+      "object": "payment_method",
+      "type": "card",
+      "reference_id": "tok_3Nl8LcOQWK2Rk95",
+      "gateway": "chargebee",
+      "gateway_account_id": "gw_3Nl8LcOQWK2N9I2",
+      "status": "valid"
+    },
+    "balances": [
+      {
+        "promotional_credits": 0,
+        "excess_payments": 0,
+        "refundable_credits": 0,
+        "unbilled_charges": 0,
+        "object": "customer_balance",
+        "currency_code": "USD"
+      }
+    ],
+    "promotional_credits": 0,
+    "refundable_credits": 0,
+    "excess_payments": 0,
+    "unbilled_charges": 0,
+    "preferred_currency_code": "USD"
+  }
+}

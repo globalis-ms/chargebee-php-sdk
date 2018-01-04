@@ -1,0 +1,69 @@
+{
+  "payment_source": {
+    "id": "pm_3Nl8LlrQWK2u9Ij",
+    "object": "payment_source",
+    "customer_id": "3Nl8LcOQWK2o1M7D",
+    "type": "card",
+    "reference_id": "cus_BTBsjOUZC2OiMF/card_BTBshUVgfSdD6n",
+    "status": "valid",
+    "gateway": "stripe",
+    "gateway_account_id": "gw_3Nl8LcOQWK2o5b7N",
+    "issuing_country": "US",
+    "card": {
+      "first_name": "Hello",
+      "last_name": "World",
+      "iin": "******",
+      "last4": "4242",
+      "funding_type": "credit",
+      "expiry_month": 10,
+      "expiry_year": 2020,
+      "masked_number": "************4242",
+      "object": "card",
+      "brand": "visa"
+    }
+  },
+  "customer": {
+    "id": "3Nl8LcOQWK2o1M7D",
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "john@test.com",
+    "auto_collection": "on",
+    "net_term_days": 0,
+    "allow_direct_debit": false,
+    "created_at": 1506418571,
+    "taxability": "taxable",
+    "updated_at": 1506418595,
+    "resource_version": 1506418595000,
+    "deleted": false,
+    "object": "customer",
+    "billing_address": {
+      "first_name": "Hello",
+      "last_name": "World",
+      "phone": "122242222",
+      "line1": "Wow",
+      "line2": "Cool",
+      "city": "Chennai",
+      "state_code": "TN",
+      "state": "Tamil Nadu",
+      "country": "IN",
+      "zip": "600041",
+      "validation_status": "not_validated",
+      "object": "billing_address"
+    },
+    "card_status": "valid",
+    "primary_payment_source_id": "pm_3Nl8LlrQWK2u9Ij",
+    "payment_method": {
+      "object": "payment_method",
+      "type": "card",
+      "reference_id": "cus_BTBsjOUZC2OiMF/card_BTBshUVgfSdD6n",
+      "gateway": "stripe",
+      "gateway_account_id": "gw_3Nl8LcOQWK2o5b7N",
+      "status": "valid"
+    },
+    "promotional_credits": 0,
+    "refundable_credits": 0,
+    "excess_payments": 0,
+    "unbilled_charges": 0,
+    "preferred_currency_code": "USD"
+  }
+}

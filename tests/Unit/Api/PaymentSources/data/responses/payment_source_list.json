@@ -1,0 +1,30 @@
+{
+  "list": [
+    {
+      "payment_source": {
+        "id": "pm_3Nl8LlrQWK3lpy6b",
+        "object": "payment_source",
+        "customer_id": "8avVGOkx8U1MX",
+        "type": "card",
+        "reference_id": "cus_BTBvy1z4X6JLhe/card_BTBvztp7M258n7",
+        "status": "valid",
+        "gateway": "stripe",
+        "gateway_account_id": "gw_3Nl8LcOQWK2o5b7N",
+        "issuing_country": "CA",
+        "card": {
+          "first_name": "Richard",
+          "last_name": "Fox",
+          "iin": "401288",
+          "last4": "1881",
+          "funding_type": "credit",
+          "expiry_month": 10,
+          "expiry_year": 2022,
+          "masked_number": "************1881",
+          "object": "card",
+          "brand": "visa"
+        }
+      }
+    }
+  ],
+  "next_offset": "[\"1506418801000\",\"134000000067\"]"
+}

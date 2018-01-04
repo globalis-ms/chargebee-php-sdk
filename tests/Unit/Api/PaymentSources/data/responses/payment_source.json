@@ -1,0 +1,30 @@
+{
+  "payment_source": {
+    "id": "pm_3Nl8LcOQWK2Rkh6",
+    "object": "payment_source",
+    "customer_id": "8avVGOkx8U1MX",
+    "type": "card",
+    "reference_id": "tok_3Nl8LcOQWK2Rk95",
+    "status": "valid",
+    "gateway": "chargebee",
+    "gateway_account_id": "gw_3Nl8LcOQWK2N9I2",
+    "card": {
+      "first_name": "John",
+      "last_name": "Doe",
+      "iin": "411111",
+      "last4": "1111",
+      "funding_type": "credit",
+      "expiry_month": 5,
+      "expiry_year": 2022,
+      "billing_addr1": "#678 Mission Street",
+      "billing_city": "New York City",
+      "billing_state_code": "NY",
+      "billing_state": "New York",
+      "billing_country": "US",
+      "billing_zip": "10002",
+      "masked_number": "************1111",
+      "object": "card",
+      "brand": "visa"
+    }
+  }
+}

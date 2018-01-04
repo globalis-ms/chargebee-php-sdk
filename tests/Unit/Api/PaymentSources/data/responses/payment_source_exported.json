@@ -1,0 +1,9 @@
+{
+  "third_party_payment_method": {
+    "gateway": "stripe",
+    "gateway_account_id": "gw_3Nl8LcOQWK2o5b7N",
+    "type": "card",
+    "reference_id": "cus_BTBsYDBw7OZ170/card_BTBsCruku4sNjp",
+    "object": "third_party_payment_method"
+  }
+}
