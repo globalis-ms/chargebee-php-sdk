@@ -1,0 +1,44 @@
+{
+  "customer": {
+    "id": "4gkYnd21ouvW",
+    "email": "jane@test.com",
+    "auto_collection": "off",
+    "net_term_days": 0,
+    "allow_direct_debit": false,
+    "created_at": 1412101845,
+    "taxability": "taxable",
+    "updated_at": 1506418796,
+    "resource_version": 1506418796000,
+    "deleted": false,
+    "object": "customer",
+    "card_status": "no_card",
+    "contacts": [
+      {
+        "id": "ty68op521m",
+        "first_name": "Michel",
+        "last_name": "Ross",
+        "email": "Mike@test.com",
+        "label": "Mike",
+        "enabled": true,
+        "send_account_email": true,
+        "send_billing_email": false,
+        "object": "contact"
+      }
+    ],
+    "balances": [
+      {
+        "promotional_credits": 100,
+        "excess_payments": 0,
+        "refundable_credits": 0,
+        "unbilled_charges": 0,
+        "object": "customer_balance",
+        "currency_code": "USD"
+      }
+    ],
+    "promotional_credits": 100,
+    "refundable_credits": 0,
+    "excess_payments": 0,
+    "unbilled_charges": 0,
+    "preferred_currency_code": "USD"
+  }
+}

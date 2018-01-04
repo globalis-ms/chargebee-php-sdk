@@ -1,0 +1,11 @@
+{
+  "resource_migration": {
+    "from_site": "cbdemo-test",
+    "entity_type": "customer",
+    "entity_id": "copy-customer-123",
+    "status": "scheduled",
+    "created_at": 1506418804,
+    "updated_at": 1506418804,
+    "object": "resource_migration"
+  }
+}

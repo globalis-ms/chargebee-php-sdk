@@ -1,0 +1,52 @@
+{
+  "payment_source": {
+    "id": "pm_3Nl8LcOQWK2c1u64",
+    "object": "payment_source",
+    "customer_id": "5cDfREwp3I5lJ",
+    "type": "card",
+    "reference_id": "tok_3Nl8LcOQWK2c1i63",
+    "status": "valid",
+    "gateway": "chargebee",
+    "gateway_account_id": "gw_3Nl8LcOQWK2N9I2",
+    "card": {
+      "iin": "400551",
+      "last4": "0004",
+      "funding_type": "not_known",
+      "expiry_month": 12,
+      "expiry_year": 2022,
+      "masked_number": "************0004",
+      "object": "card",
+      "brand": "visa"
+    }
+  },
+  "customer": {
+    "id": "5cDfREwp3I5lJ",
+    "first_name": "David",
+    "last_name": "White",
+    "email": "David@test.com",
+    "auto_collection": "on",
+    "net_term_days": 0,
+    "allow_direct_debit": false,
+    "created_at": 1506418524,
+    "taxability": "taxable",
+    "updated_at": 1506245725,
+    "resource_version": 1506245725000,
+    "deleted": false,
+    "object": "customer",
+    "card_status": "valid",
+    "primary_payment_source_id": "pm_3Nl8LcOQWK2c1u64",
+    "payment_method": {
+      "object": "payment_method",
+      "type": "card",
+      "reference_id": "tok_3Nl8LcOQWK2c1i63",
+      "gateway": "chargebee",
+      "gateway_account_id": "gw_3Nl8LcOQWK2N9I2",
+      "status": "valid"
+    },
+    "promotional_credits": 0,
+    "refundable_credits": 0,
+    "excess_payments": 0,
+    "unbilled_charges": 0,
+    "preferred_currency_code": "USD"
+  }
+}

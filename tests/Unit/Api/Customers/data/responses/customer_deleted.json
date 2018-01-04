@@ -1,0 +1,59 @@
+{
+  "customer": {
+    "id": "4gkYnd21ouvW",
+    "first_name": "Denise",
+    "last_name": "Barone",
+    "email": "jane@test.com",
+    "auto_collection": "off",
+    "net_term_days": 0,
+    "allow_direct_debit": false,
+    "created_at": 1412101845,
+    "taxability": "taxable",
+    "updated_at": 1506418804,
+    "locale": "fr-CA",
+    "resource_version": 1506418804000,
+    "deleted": false,
+    "object": "customer",
+    "billing_address": {
+      "first_name": "John",
+      "last_name": "Doe",
+      "line1": "PO Box 9999",
+      "city": "Walnut",
+      "state_code": "CA",
+      "state": "California",
+      "country": "US",
+      "zip": "91789",
+      "validation_status": "not_validated",
+      "object": "billing_address"
+    },
+    "card_status": "no_card",
+    "contacts": [
+      {
+        "id": "ty68op521m",
+        "first_name": "Michel",
+        "last_name": "Ross",
+        "email": "Mike@test.com",
+        "label": "Mike",
+        "enabled": true,
+        "send_account_email": true,
+        "send_billing_email": false,
+        "object": "contact"
+      }
+    ],
+    "balances": [
+      {
+        "promotional_credits": 1200,
+        "excess_payments": 500,
+        "refundable_credits": 0,
+        "unbilled_charges": 0,
+        "object": "customer_balance",
+        "currency_code": "USD"
+      }
+    ],
+    "promotional_credits": 1200,
+    "refundable_credits": 0,
+    "excess_payments": 500,
+    "unbilled_charges": 0,
+    "preferred_currency_code": "USD"
+  }
+}

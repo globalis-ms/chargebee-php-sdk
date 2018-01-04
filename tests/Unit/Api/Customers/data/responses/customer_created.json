@@ -1,0 +1,36 @@
+{
+  "customer": {
+    "id": "3Nl8LlrQWK3lzY6j",
+    "first_name": "John",
+    "last_name": "Doe",
+    "email": "john@test.com",
+    "auto_collection": "on",
+    "net_term_days": 0,
+    "allow_direct_debit": false,
+    "created_at": 1506418802,
+    "taxability": "taxable",
+    "updated_at": 1506418802,
+    "locale": "fr-CA",
+    "resource_version": 1506418802000,
+    "deleted": false,
+    "object": "customer",
+    "billing_address": {
+      "first_name": "John",
+      "last_name": "Doe",
+      "line1": "PO Box 9999",
+      "city": "Walnut",
+      "state_code": "CA",
+      "state": "California",
+      "country": "US",
+      "zip": "91789",
+      "validation_status": "not_validated",
+      "object": "billing_address"
+    },
+    "card_status": "no_card",
+    "promotional_credits": 0,
+    "refundable_credits": 0,
+    "excess_payments": 0,
+    "unbilled_charges": 0,
+    "preferred_currency_code": "USD"
+  }
+}

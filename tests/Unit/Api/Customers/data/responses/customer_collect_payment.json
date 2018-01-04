@@ -1,0 +1,57 @@
+{
+  "customer": {
+    "allow_direct_debit": false,
+    "auto_collection": "off",
+    "card_status": "no_card",
+    "created_at": 1506418657,
+    "deleted": false,
+    "email": "henry@gmail.com",
+    "excess_payments": 0,
+    "first_name": "Henry",
+    "id": "3Nl8LlrQWK3ALp2p",
+    "last_name": "Richard",
+    "net_term_days": 0,
+    "object": "customer",
+    "preferred_currency_code": "USD",
+    "promotional_credits": 0,
+    "refundable_credits": 0,
+    "resource_version": 1506418660000,
+    "taxability": "taxable",
+    "unbilled_charges": 0,
+    "updated_at": 1506418660
+  },
+  "transaction": {
+    "amount": 1000,
+    "amount_unused": 0,
+    "base_currency_code": "USD",
+    "currency_code": "USD",
+    "customer_id": "3Nl8LlrQWK3ALp2p",
+    "date": 1506418660,
+    "deleted": false,
+    "exchange_rate": 1,
+    "fraud_reason": "Payment complete.",
+    "gateway": "stripe",
+    "gateway_account_id": "gw_3Nl8LcOQWK2o5b7N",
+    "id": "txn_3Nl8LlrQWK3AzU2y",
+    "id_at_gateway": "ch_BTBtlfsLLLbVDF",
+    "linked_invoices": [
+      {
+        "applied_amount": 1000,
+        "applied_at": 1506418660,
+        "invoice_date": 1506418657,
+        "invoice_id": "40",
+        "invoice_status": "paid",
+        "invoice_total": 1000
+      }
+    ],
+    "linked_refunds": [],
+    "masked_card_number": "************4242",
+    "object": "transaction",
+    "payment_method": "card",
+    "resource_version": 1506418660000,
+    "status": "success",
+    "subscription_id": "3Nl8LlrQWK3ANt2r",
+    "type": "payment",
+    "updated_at": 1506418660
+  }
+}
