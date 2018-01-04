@@ -41,7 +41,7 @@ abstract class AbstractApi
      * @return array|string
      * @throws Exception
      */
-    protected function get($path, array $parameters = [], $requestHeaders = [])
+    protected function get($path, array $parameters = [], array $requestHeaders = [])
     {
         $path = $this->preparePath($path, $parameters);
 
