@@ -1,0 +1,25 @@
+{
+  "portal_session": {
+    "id": "portal_3Nl8LlrQWK2nt6R",
+    "token": "ZOTbkdKeuv2WFKyphPtGL46DQyAGpTTY",
+    "access_url": "https://yourapp.chargebeeportal.com/portal/access/ZOTbkdKeuv2WFKyphPtGL46DQyAGpTTY",
+    "redirect_url": "https://cbdemo.com:8080/mock/mock.jsp",
+    "status": "activated",
+    "created_at": 1506418570,
+    "expires_at": 1506418870,
+    "object": "portal_session",
+    "customer_id": "3Nl8LcOQWK2iuE6p",
+    "login_at": 1506418570,
+    "login_ipaddress": "127.0.0.1",
+    "linked_customers": [
+      {
+        "object": "linked_customer",
+        "customer_id": "3Nl8LcOQWK2iuE6p",
+        "email": "john@user.com",
+        "has_billing_address": false,
+        "has_payment_method": true,
+        "has_active_subscription": false
+      }
+    ]
+  }
+}
