@@ -1,6 +1,6 @@
 {
-  "name": "nathandunn/chargebee-client",
-  "description": "PHP Client for using Chargebee API.",
+  "name": "nathandunn/chargebee-php-sdk",
+  "description": "PHP Client for using the Chargebee API.",
   "license": "MIT",
   "keywords": ["chargebee", "api-client"],
   "type": "library",
