@@ -1,0 +1,57 @@
+{
+  "estimate": {
+    "created_at": 1506418810,
+    "object": "estimate",
+    "subscription_estimate": {
+      "id": "8avVGOkx8U1MX",
+      "status": "active",
+      "next_billing_at": 1509010808,
+      "object": "subscription_estimate",
+      "currency_code": "USD",
+      "shipping_address": {
+        "first_name": "Benjamin",
+        "last_name": "Ross",
+        "line1": "PO Box 9999",
+        "city": "Walnut",
+        "state_code": "CA",
+        "state": "California",
+        "country": "US",
+        "zip": "91789",
+        "validation_status": "not_validated",
+        "object": "shipping_address"
+      }
+    },
+    "invoice_estimate": {
+      "recurring": true,
+      "price_type": "tax_exclusive",
+      "sub_total": 2395,
+      "total": 2395,
+      "credits_applied": 0,
+      "amount_paid": 0,
+      "amount_due": 2395,
+      "object": "invoice_estimate",
+      "line_items": [
+        {
+          "id": "li_3Nl8LlrQWK3o757M",
+          "date_from": 1506418810,
+          "date_to": 1506418810,
+          "unit_amount": 1000,
+          "quantity": 1,
+          "is_taxed": false,
+          "tax_amount": 0,
+          "object": "line_item",
+          "subscription_id": "8avVGOkx8U1MX",
+          "amount": 1000,
+          "description": "Support charge",
+          "entity_type": "adhoc",
+          "discount_amount": 0,
+          "item_level_discount_amount": 0
+        }
+      ],
+      "taxes": [],
+      "line_item_taxes": [],
+      "currency_code": "USD",
+      "line_item_discounts": []
+    }
+  }
+}
