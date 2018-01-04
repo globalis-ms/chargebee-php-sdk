@@ -1,0 +1,90 @@
+{
+  "list": [
+    {
+      "event": {
+        "id": "ev_3Nl8LlrQWK3BQX31",
+        "occurred_at": 1506418661,
+        "source": "api",
+        "user": "full_access_key_v1",
+        "object": "event",
+        "api_version": "v2",
+        "content": {
+          "invoice": {
+            "id": "40",
+            "customer_id": "3Nl8LlrQWK3ALp2p",
+            "subscription_id": "3Nl8LlrQWK3ANt2r",
+            "recurring": true,
+            "status": "paid",
+            "price_type": "tax_exclusive",
+            "date": 1506418657,
+            "due_date": 1506418657,
+            "net_term_days": 0,
+            "exchange_rate": 1.0,
+            "total": 1000,
+            "amount_paid": 1000,
+            "amount_adjusted": 0,
+            "write_off_amount": 0,
+            "credits_applied": 0,
+            "amount_due": 0,
+            "paid_at": 1506418660,
+            "updated_at": 1506418660,
+            "resource_version": 1506418660000,
+            "deleted": false,
+            "object": "invoice",
+            "first_invoice": true,
+            "amount_to_collect": 0,
+            "new_sales_amount": 1000,
+            "has_advance_charges": false,
+            "currency_code": "USD",
+            "base_currency_code": "USD",
+            "tax": 0,
+            "line_items": [
+              {
+                "id": "li_3Nl8LlrQWK3APC2t",
+                "date_from": 1506418657,
+                "date_to": 1509010657,
+                "unit_amount": 1000,
+                "quantity": 1,
+                "is_taxed": false,
+                "tax_amount": 0,
+                "object": "line_item",
+                "subscription_id": "3Nl8LlrQWK3ANt2r",
+                "amount": 1000,
+                "description": "No Trial",
+                "entity_type": "plan",
+                "entity_id": "no_trial",
+                "tax_exempt_reason": "tax_not_configured",
+                "discount_amount": 0,
+                "item_level_discount_amount": 0
+              }
+            ],
+            "sub_total": 1000,
+            "linked_payments": [
+              {
+                "txn_id": "txn_3Nl8LlrQWK3AzU2y",
+                "applied_amount": 1000,
+                "applied_at": 1506418660,
+                "txn_status": "success",
+                "txn_date": 1506418660,
+                "txn_amount": 1000
+              }
+            ],
+            "applied_credits": [],
+            "adjustment_credit_notes": [],
+            "issued_credit_notes": [],
+            "linked_orders": [],
+            "billing_address": {
+              "first_name": "Henry",
+              "last_name": "Richard",
+              "validation_status": "not_validated",
+              "object": "billing_address"
+            }
+          }
+        },
+        "event_type": "invoice_updated",
+        "webhook_status": "scheduled"
+      }
+    }
+  ],
+  "next_offset": "[\"1506418661000\",\"294000000439\"]"
+}
