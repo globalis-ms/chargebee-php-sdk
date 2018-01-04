@@ -51,7 +51,7 @@ class Addon extends AbstractApi
      * @return array|string
      * @throws Exception
      */
-    public function update(string $id, $data = [])
+    public function update(string $id, array $data = [])
     {
         $url = $this->url('addons/%s', $id);
 
