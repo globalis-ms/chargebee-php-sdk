@@ -1,0 +1,13 @@
+{
+  "order": {
+    "id": "XpbG8t4OvwWgjzM",
+    "invoice_id": "1",
+    "status": "processing",
+    "reference_id": "1002",
+    "fulfillment_status": "Awaiting Shipment",
+    "note": "This is a test note",
+    "created_at": 1506418525,
+    "status_update_at": 1506418667,
+    "object": "order"
+  }
+}
