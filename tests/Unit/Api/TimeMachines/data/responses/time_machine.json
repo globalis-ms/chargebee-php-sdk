@@ -1,0 +1,9 @@
+{
+  "time_machine": {
+    "name": "delorean",
+    "time_travel_status": "succeeded",
+    "genesis_time": 1490521002,
+    "destination_time": 1506418602,
+    "object": "time_machine"
+  }
+}
