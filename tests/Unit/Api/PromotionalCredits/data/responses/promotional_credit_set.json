@@ -1,0 +1,14 @@
+{
+  "promotional_credit": {
+    "id": "pc_3Nl8LlrQWK3CzN3d",
+    "customer_id": "4gkYnd21ouvW",
+    "type": "increment",
+    "amount": 100,
+    "description": "set promotional credits",
+    "credit_type": "general",
+    "closing_balance": 100,
+    "created_at": 1506418667,
+    "object": "promotional_credit",
+    "currency_code": "USD"
+  }
+}

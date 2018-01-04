@@ -1,0 +1,15 @@
+{
+  "promotional_credit": {
+    "id": "3Nl8LcOQWK2jMp74",
+    "customer_id": "4gkYnd21ouvW",
+    "type": "increment",
+    "amount": 1000,
+    "description": "Promotional credits added",
+    "credit_type": "general",
+    "closing_balance": 1000,
+    "done_by": "rr@mannar.com",
+    "created_at": 1506418553,
+    "object": "promotional_credit",
+    "currency_code": "USD"
+  }
+}
