@@ -1,0 +1,19 @@
+{
+  "unbilled_charge": {
+    "id": "li_3Nl8LlrQWK3DHW3q",
+    "customer_id": "3Nl8LcOQWK3DAw7S",
+    "subscription_id": "3Nl8LcOQWK3DAw7S",
+    "date_from": 1506418668,
+    "date_to": 1506418668,
+    "unit_amount": 1000,
+    "quantity": 1,
+    "amount": 1000,
+    "discount_amount": 0,
+    "description": "Trainer",
+    "is_voided": false,
+    "deleted": false,
+    "object": "unbilled_charge",
+    "entity_type": "adhoc",
+    "currency_code": "USD"
+  }
+}
