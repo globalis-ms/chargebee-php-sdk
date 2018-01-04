@@ -1,0 +1,7 @@
+{
+  "download": {
+    "download_url": "https://cb-downloads-dev.s3.amazonaws.com/yourapp/invoice/3Nl8LlrQWK3YSe5C.pdf?response-content-disposition=attachment%3Bfilename%3Dyourapp%2Finvoice%2F3Nl8LlrQWK3YSe5C.pdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20170926T093913Z&X-Amz-SignedHeaders=host&X-Amz-Expires=59&X-Amz-Credential=AKIAJ3MOW2V2DPJQTCMQ%2F20170926%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=b561164e32298448bc69376fa9214526c9316805254290443fbb5badf33d09a4",
+    "valid_till": 1506418813,
+    "object": "download"
+  }
+}

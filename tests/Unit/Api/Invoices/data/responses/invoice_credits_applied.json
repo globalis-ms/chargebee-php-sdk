@@ -1,0 +1,69 @@
+{"invoice": {
+  "id": "50",
+  "customer_id": "3Nl8LcOQWK3VHQ9X",
+  "subscription_id": "3Nl8LcOQWK3VHQ9X",
+  "recurring": false,
+  "status": "payment_due",
+  "price_type": "tax_exclusive",
+  "date": 1506418738,
+  "due_date": 1506418738,
+  "net_term_days": 0,
+  "exchange_rate": 1.0,
+  "total": 200,
+  "amount_paid": 0,
+  "amount_adjusted": 0,
+  "write_off_amount": 0,
+  "credits_applied": 100,
+  "amount_due": 100,
+  "updated_at": 1506418739,
+  "resource_version": 1506418739000,
+  "deleted": false,
+  "object": "invoice",
+  "first_invoice": true,
+  "amount_to_collect": 100,
+  "new_sales_amount": 200,
+  "has_advance_charges": false,
+  "currency_code": "USD",
+  "base_currency_code": "USD",
+  "tax": 0,
+  "line_items": [
+    {
+      "id": "li_3Nl8LlrQWK3VcR56",
+      "date_from": 1506418738,
+      "date_to": 1506418738,
+      "unit_amount": 200,
+      "quantity": 1,
+      "is_taxed": false,
+      "tax_amount": 0,
+      "object": "line_item",
+      "subscription_id": "3Nl8LcOQWK3VHQ9X",
+      "amount": 200,
+      "description": "One time charges",
+      "entity_type": "adhoc",
+      "tax_exempt_reason": "tax_not_configured",
+      "discount_amount": 0,
+      "item_level_discount_amount": 0
+    }
+  ],
+  "sub_total": 200,
+  "linked_payments": [],
+  "applied_credits": [
+    {
+      "applied_amount": 100,
+      "applied_at": 1506418739,
+      "cn_id": "TEST-CN-7",
+      "cn_reason_code": "waiver",
+      "cn_date": 1506418739,
+      "cn_status": "refunded"
+    }
+  ],
+  "adjustment_credit_notes": [],
+  "issued_credit_notes": [],
+  "linked_orders": [],
+  "billing_address": {
+    "first_name": "Rudolf",
+    "last_name": "Bob",
+    "validation_status": "not_validated",
+    "object": "billing_address"
+  }
+}}

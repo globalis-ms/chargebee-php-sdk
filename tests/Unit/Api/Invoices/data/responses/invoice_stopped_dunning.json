@@ -1,0 +1,72 @@
+{
+  "invoice": {
+    "id": "47",
+    "customer_id": "3Nl8LcOQWK3JA67f",
+    "subscription_id": "3Nl8LcOQWK3JA67f",
+    "recurring": true,
+    "status": "not_paid",
+    "price_type": "tax_exclusive",
+    "date": 1506166691,
+    "due_date": 1506166691,
+    "net_term_days": 0,
+    "exchange_rate": 1.0,
+    "total": 1000,
+    "amount_paid": 0,
+    "amount_adjusted": 0,
+    "write_off_amount": 0,
+    "credits_applied": 0,
+    "amount_due": 1000,
+    "dunning_status": "stopped",
+    "updated_at": 1506418736,
+    "resource_version": 1506418736000,
+    "deleted": false,
+    "object": "invoice",
+    "first_invoice": false,
+    "amount_to_collect": 1000,
+    "has_advance_charges": false,
+    "currency_code": "USD",
+    "base_currency_code": "USD",
+    "tax": 0,
+    "line_items": [
+      {
+        "id": "li_3Nl8LcOQWK3KBG84",
+        "date_from": 1506166691,
+        "date_to": 1508758691,
+        "unit_amount": 1000,
+        "quantity": 1,
+        "is_taxed": false,
+        "tax_amount": 0,
+        "object": "line_item",
+        "subscription_id": "3Nl8LcOQWK3JA67f",
+        "amount": 1000,
+        "description": "No Trial",
+        "entity_type": "plan",
+        "entity_id": "no_trial",
+        "tax_exempt_reason": "tax_not_configured",
+        "discount_amount": 0,
+        "item_level_discount_amount": 0
+      }
+    ],
+    "sub_total": 1000,
+    "linked_payments": [
+      {
+        "txn_id": "txn_3Nl8LcOQWK3KCM85",
+        "applied_amount": 1000,
+        "applied_at": 1506166692,
+        "txn_status": "failure",
+        "txn_date": 1506166692,
+        "txn_amount": 1000
+      }
+    ],
+    "applied_credits": [],
+    "adjustment_credit_notes": [],
+    "issued_credit_notes": [],
+    "linked_orders": [],
+    "billing_address": {
+      "first_name": "Rachel",
+      "last_name": "Green",
+      "validation_status": "not_validated",
+      "object": "billing_address"
+    }
+  }
+}

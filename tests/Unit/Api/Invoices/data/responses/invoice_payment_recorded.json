@@ -1,0 +1,103 @@
+{
+  "invoice": {
+    "id": "60",
+    "customer_id": "3Nl8LcOQWK3fukBn",
+    "subscription_id": "3Nl8LcOQWK3fukBn",
+    "recurring": true,
+    "status": "payment_due",
+    "price_type": "tax_exclusive",
+    "date": 1506166778,
+    "due_date": 1506166778,
+    "net_term_days": 0,
+    "exchange_rate": 1.0,
+    "total": 1000,
+    "amount_paid": 200,
+    "amount_adjusted": 0,
+    "write_off_amount": 0,
+    "credits_applied": 0,
+    "amount_due": 800,
+    "dunning_status": "in_progress",
+    "next_retry_at": 1506512380,
+    "updated_at": 1506418784,
+    "resource_version": 1506418784000,
+    "deleted": false,
+    "object": "invoice",
+    "first_invoice": false,
+    "amount_to_collect": 800,
+    "has_advance_charges": false,
+    "currency_code": "USD",
+    "base_currency_code": "USD",
+    "tax": 0,
+    "line_items": [
+      {
+        "id": "li_3Nl8LcOQWK3grzCC",
+        "date_from": 1506166778,
+        "date_to": 1508758778,
+        "unit_amount": 1000,
+        "quantity": 1,
+        "is_taxed": false,
+        "tax_amount": 0,
+        "object": "line_item",
+        "subscription_id": "3Nl8LcOQWK3fukBn",
+        "amount": 1000,
+        "description": "No Trial",
+        "entity_type": "plan",
+        "entity_id": "no_trial",
+        "tax_exempt_reason": "tax_not_configured",
+        "discount_amount": 0,
+        "item_level_discount_amount": 0
+      }
+    ],
+    "sub_total": 1000,
+    "linked_payments": [
+      {
+        "txn_id": "txn_3Nl8LlrQWK3hOh5l",
+        "applied_amount": 200,
+        "applied_at": 1506418784,
+        "txn_status": "success",
+        "txn_date": 1435054328,
+        "txn_amount": 200
+      }
+    ],
+    "applied_credits": [],
+    "adjustment_credit_notes": [],
+    "issued_credit_notes": [],
+    "linked_orders": [],
+    "billing_address": {
+      "first_name": "Rachel",
+      "last_name": "Green",
+      "validation_status": "not_validated",
+      "object": "billing_address"
+    }
+  },
+  "transaction": {
+    "id": "txn_3Nl8LlrQWK3hOh5l",
+    "customer_id": "3Nl8LcOQWK3fukBn",
+    "subscription_id": "3Nl8LcOQWK3fukBn",
+    "payment_method": "bank_transfer",
+    "gateway": "not_applicable",
+    "type": "payment",
+    "date": 1435054328,
+    "exchange_rate": 1.0,
+    "amount": 200,
+    "status": "success",
+    "updated_at": 1506418784,
+    "resource_version": 1506418784000,
+    "deleted": false,
+    "object": "transaction",
+    "currency_code": "USD",
+    "base_currency_code": "USD",
+    "amount_unused": 0,
+    "linked_invoices": [
+      {
+        "invoice_id": "60",
+        "applied_amount": 200,
+        "applied_at": 1506418784,
+        "invoice_date": 1506166778,
+        "invoice_total": 1000,
+        "invoice_status": "payment_due"
+      }
+    ],
+    "linked_refunds": []
+  }
+}
