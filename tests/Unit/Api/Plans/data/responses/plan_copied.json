@@ -1,0 +1,24 @@
+{
+  "plan": {
+    "id": "cbdemo_scale",
+    "name": "Scale",
+    "invoice_name": "Plan - Scale",
+    "description": "This is enterprise level plan comes with a 14-day trial period and has a setup cost.",
+    "price": 27900,
+    "period": 6,
+    "period_unit": "month",
+    "trial_period": 14,
+    "trial_period_unit": "day",
+    "charge_model": "flat_fee",
+    "free_quantity": 0,
+    "setup_cost": 20000,
+    "status": "active",
+    "enabled_in_hosted_pages": true,
+    "enabled_in_portal": true,
+    "updated_at": 1506418664,
+    "resource_version": 1506418664000,
+    "object": "plan",
+    "taxable": false,
+    "currency_code": "USD"
+  }
+}

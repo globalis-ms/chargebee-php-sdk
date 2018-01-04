@@ -1,0 +1,27 @@
+{
+  "list": [
+    {
+      "plan": {
+        "id": "basic",
+        "name": "Basic",
+        "invoice_name": "sample plan",
+        "price": 900,
+        "period": 1,
+        "period_unit": "month",
+        "trial_period": 1,
+        "trial_period_unit": "month",
+        "charge_model": "per_unit",
+        "free_quantity": 0,
+        "status": "active",
+        "enabled_in_hosted_pages": true,
+        "enabled_in_portal": true,
+        "updated_at": 1506418663,
+        "resource_version": 1506418663000,
+        "object": "plan",
+        "taxable": true,
+        "currency_code": "USD"
+      }
+    }
+  ],
+  "next_offset": "[\"900\",\"104000000054\"]"
+}
