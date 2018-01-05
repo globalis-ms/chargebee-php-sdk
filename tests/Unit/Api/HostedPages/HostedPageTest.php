@@ -29,7 +29,7 @@ class HostedPageTest extends TestCase
         $hostedPages = $this->getApiMock();
         $hostedPages->expects($this->once())
             ->method('get')
-            ->with('https://123456789.chargebee.com/api/v2/hosted_pages')
+            ->with('https://123456789.chargebee.com/api/v2/hosted_pages/QxjWg9dNDn3TeokQWefsTrfRHvaqNuP4')
             ->will($this->returnValue($expected));
 
         $this->assertEquals($expected, $hostedPages->find('QxjWg9dNDn3TeokQWefsTrfRHvaqNuP4'));

@@ -24,13 +24,13 @@ class HostedPage extends AbstractApi
     }
 
     /**
-     * @param array $id
+     * @param string $id
      *
      * @throws Exception
      *
      * @return array|string
      */
-    public function find(array $id)
+    public function find(string $id)
     {
         $url = $this->url('hosted_pages/%s', $id);
 
