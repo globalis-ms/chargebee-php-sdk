@@ -5,6 +5,20 @@
 [![Coveralls](https://img.shields.io/coveralls/github/nathanjdunn/chargebee-php-sdk.svg?style=flat-square)](https://coveralls.io/github/nathanjdunn/chargebee-php-sdk)
 [![StyleCI](https://styleci.io/repos/116197434/shield)](https://styleci.io/repos/116197434)
 
-## License
+Installation
+------------
+
+Via [composer](https://getcomposer.org)
+
+```bash
+composer require nathandunn/chargebee-php-sdk php-http/guzzle6-adapter
+```
+
+Why `php-http/guzzle6-adapter`? We are decoupled from any HTTP messaging client with help by [HTTPlug](http://httplug.io).
+
+You can visit [HTTPlug for library users](http://docs.php-http.org/en/latest/httplug/users.html) to get more information about installing HTTPlug related packages.
+
+License
+-------
 
 See the LICENSE file.
