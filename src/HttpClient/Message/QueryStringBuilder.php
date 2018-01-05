@@ -17,14 +17,16 @@ final class QueryStringBuilder
         if (!is_array($query)) {
             return static::rawurlencode($query);
         }
+
         return implode('&', array_map(function ($value, $key) {
             return static::encode($value, $key);
         }, $query, array_keys($query)));
     }
 
     /**
-     * Encode a value
-     * @param mixed $query
+     * Encode a value.
+     *
+     * @param mixed  $query
      * @param string $prefix
      *
      * @return string
@@ -36,8 +38,10 @@ final class QueryStringBuilder
         }
 
         $isIndexedArray = static::isIndexedArray($query);
+
         return implode('&', array_map(function ($value, $key) use ($prefix, $isIndexedArray) {
             $prefix = $isIndexedArray ? $prefix.'[]' : $prefix.'['.$key.']';
+
             return static::encode($value, $prefix);
         }, $query, array_keys($query)));
     }

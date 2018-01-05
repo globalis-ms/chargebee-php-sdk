@@ -32,12 +32,12 @@ class TestCase extends PHPUnitTestCase
     public $client;
 
     /**
-     * Set up test case
+     * Set up test case.
      */
     public function setUp()
     {
         $this->builder = new Builder(
-            self::$key, new MockClient, MessageFactoryDiscovery::find(), StreamFactoryDiscovery::find()
+            self::$key, new MockClient(), MessageFactoryDiscovery::find(), StreamFactoryDiscovery::find()
         );
         $this->client = new Client(self::$site, self::$key, $this->builder);
     }

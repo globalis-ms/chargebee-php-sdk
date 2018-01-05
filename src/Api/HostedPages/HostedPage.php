@@ -9,8 +9,10 @@ class HostedPage extends AbstractApi
 {
     /**
      * @param array $parameters
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function list(array $parameters = [])
     {
@@ -23,8 +25,10 @@ class HostedPage extends AbstractApi
 
     /**
      * @param array $id
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function find(array $id)
     {
@@ -35,8 +39,10 @@ class HostedPage extends AbstractApi
 
     /**
      * @param array $data
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function checkoutNewSubscription(array $data = [])
     {
@@ -47,8 +53,10 @@ class HostedPage extends AbstractApi
 
     /**
      * @param array $data
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function checkoutExistingSubscription(array $data = [])
     {
@@ -59,8 +67,10 @@ class HostedPage extends AbstractApi
 
     /**
      * @param array $data
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function updatePaymentMethod(array $data)
     {
@@ -71,8 +81,10 @@ class HostedPage extends AbstractApi
 
     /**
      * @param string $id
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function acknowledge(string $id)
     {

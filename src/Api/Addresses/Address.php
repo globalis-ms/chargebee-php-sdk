@@ -10,12 +10,14 @@ class Address extends AbstractApi
 {
     /**
      * @param array $parameters
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function find(array $parameters)
     {
-        $resolver = new OptionsResolver;
+        $resolver = new OptionsResolver();
 
         $resolver->setDefined('subscription_id')
             ->setAllowedTypes('subscription_id', 'string')
@@ -32,8 +34,10 @@ class Address extends AbstractApi
 
     /**
      * @param array $data
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function update(array $data)
     {

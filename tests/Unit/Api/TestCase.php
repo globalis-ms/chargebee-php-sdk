@@ -42,6 +42,7 @@ abstract class TestCase extends BaseTestCase
 
     /**
      * @param $path
+     *
      * @return mixed
      */
     public function getContent($path)

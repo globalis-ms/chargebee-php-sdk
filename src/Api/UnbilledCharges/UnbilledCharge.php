@@ -8,8 +8,9 @@ use NathanDunn\Chargebee\Api\AbstractApi;
 class UnbilledCharge extends AbstractApi
 {
     /**
-     * @return array|string
      * @throws Exception
+     *
+     * @return array|string
      */
     public function list()
     {
@@ -20,8 +21,10 @@ class UnbilledCharge extends AbstractApi
 
     /**
      * @param array $data
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function invoiceUnbilledCharges(array $data)
     {
@@ -32,8 +35,10 @@ class UnbilledCharge extends AbstractApi
 
     /**
      * @param array $data
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function invoiceNowEstimate(array $data)
     {
@@ -44,8 +49,10 @@ class UnbilledCharge extends AbstractApi
 
     /**
      * @param string $id
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function delete(string $id)
     {

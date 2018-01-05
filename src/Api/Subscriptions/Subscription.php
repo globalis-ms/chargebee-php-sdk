@@ -4,15 +4,17 @@ namespace NathanDunn\Chargebee\Api\Subscriptions;
 
 use Http\Client\Exception;
 use NathanDunn\Chargebee\Api\AbstractApi;
-use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class Subscription extends AbstractApi
 {
     /**
-     * Get subscriptions
+     * Get subscriptions.
+     *
      * @param array $parameters
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function list(array $parameters = [])
     {
@@ -30,10 +32,13 @@ class Subscription extends AbstractApi
     }
 
     /**
-     * Find subscriptions
+     * Find subscriptions.
+     *
      * @param $id
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function find(string $id)
     {
@@ -43,11 +48,13 @@ class Subscription extends AbstractApi
     }
 
     /**
-     * Create a subscription
+     * Create a subscription.
      *
      * @param array $data
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function create(array $data)
     {
@@ -58,8 +65,10 @@ class Subscription extends AbstractApi
 
     /**
      * @param $id
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function retrieveWithScheduledChanges(string $id)
     {
@@ -70,8 +79,10 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function removeScheduledChanges(string $id)
     {
@@ -82,8 +93,10 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function removeScheduledCancellation(string $id)
     {
@@ -94,9 +107,11 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @return array|string
+     * @param array  $data
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function removeCoupons(string $id, array $data)
     {
@@ -107,9 +122,11 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @return array|string
+     * @param array  $data
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function update(string $id, array $data)
     {
@@ -120,9 +137,11 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @return array|string
+     * @param array  $data
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function changeTermEnd(string $id, array $data)
     {
@@ -133,9 +152,11 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @return array|string
+     * @param array  $data
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function cancel(string $id, array $data)
     {
@@ -146,9 +167,11 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @return array|string
+     * @param array  $data
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function reactivate(string $id, array $data)
     {
@@ -159,9 +182,11 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @return array|string
+     * @param array  $data
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function addChargeAtTermEnd(string $id, array $data)
     {
@@ -172,9 +197,11 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @return array|string
+     * @param array  $data
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function chargeAddonAtTermEnd(string $id, array $data)
     {
@@ -185,9 +212,11 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @return array|string
+     * @param array  $data
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function chargeFutureRenewals(string $id, array $data)
     {
@@ -198,8 +227,10 @@ class Subscription extends AbstractApi
 
     /**
      * @param array $data
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function import(array $data)
     {
@@ -210,9 +241,11 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $customerId
-     * @param array $data
-     * @return array|string
+     * @param array  $data
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function importForCustomer(string $customerId, array $data)
     {
@@ -223,9 +256,11 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @return array|string
+     * @param array  $data
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function overrideBillingProfile(string $id, array $data)
     {
@@ -236,8 +271,10 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function delete(string $id)
     {

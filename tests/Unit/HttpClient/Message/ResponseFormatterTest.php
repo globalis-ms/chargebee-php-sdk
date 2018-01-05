@@ -14,7 +14,7 @@ class ResponseFormatterTest extends TestCase
         $body = ['foo' => 'bar'];
         $response = new Response(
             200,
-            ['Content-Type'=>'application/json'],
+            ['Content-Type'=> 'application/json'],
             \GuzzleHttp\Psr7\stream_for(json_encode($body))
         );
 
@@ -23,6 +23,7 @@ class ResponseFormatterTest extends TestCase
 
     /**
      * If content-type is not json we should get the raw body.
+     *
      * @test
      */
     public function should_get_content_not_json()
@@ -38,7 +39,8 @@ class ResponseFormatterTest extends TestCase
     }
 
     /**
-     * Make sure we return the body if we have invalid json
+     * Make sure we return the body if we have invalid json.
+     *
      * @test
      */
     public function should_get_content_invalid_json()
@@ -46,7 +48,7 @@ class ResponseFormatterTest extends TestCase
         $body = 'foobar';
         $response = new Response(
             200,
-            ['Content-Type'=>'application/json'],
+            ['Content-Type'=> 'application/json'],
             \GuzzleHttp\Psr7\stream_for($body)
         );
 

@@ -9,8 +9,10 @@ class Event extends AbstractApi
 {
     /**
      * @param array $parameters
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function list(array $parameters = [])
     {
@@ -23,8 +25,10 @@ class Event extends AbstractApi
 
     /**
      * @param $id
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function find($id)
     {

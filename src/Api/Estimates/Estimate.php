@@ -10,8 +10,10 @@ class Estimate extends AbstractApi
 {
     /**
      * @param array $data
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function createSubscription(array $data)
     {
@@ -22,9 +24,11 @@ class Estimate extends AbstractApi
 
     /**
      * @param string $customerId
-     * @param array $data
-     * @return array|string
+     * @param array  $data
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function createSubscriptionEstimate(string $customerId, array $data)
     {
@@ -35,13 +39,15 @@ class Estimate extends AbstractApi
 
     /**
      * @param string $subscriptionId
-     * @param array $parameters
-     * @return array|string
+     * @param array  $parameters
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function renewalEstimate(string $subscriptionId, array $parameters = [])
     {
-        $resolver = new OptionsResolver;
+        $resolver = new OptionsResolver();
 
         $resolver->setDefined('use_existing_balances')
             ->setAllowedTypes('use_existing_balances', 'boolean');
@@ -69,8 +75,10 @@ class Estimate extends AbstractApi
 
     /**
      * @param string $customerId
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function upcomingInvoicesEstimate(string $customerId)
     {
@@ -81,9 +89,11 @@ class Estimate extends AbstractApi
 
     /**
      * @param string $subscriptionId
-     * @param array $data
-     * @return array|string
+     * @param array  $data
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function changeTermEndEstimate(string $subscriptionId, array $data)
     {
@@ -94,9 +104,11 @@ class Estimate extends AbstractApi
 
     /**
      * @param string $subscriptionId
-     * @param array $data
-     * @return array|string
+     * @param array  $data
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function cancelSubscriptionEstimate(string $subscriptionId, array $data)
     {

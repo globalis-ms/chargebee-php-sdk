@@ -9,8 +9,10 @@ class Comment extends AbstractApi
 {
     /**
      * @param array $parameters
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function list(array $parameters = [])
     {
@@ -23,8 +25,10 @@ class Comment extends AbstractApi
 
     /**
      * @param string $id
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function find(string $id)
     {
@@ -35,8 +39,10 @@ class Comment extends AbstractApi
 
     /**
      * @param array $data
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function create(array $data)
     {
@@ -47,8 +53,10 @@ class Comment extends AbstractApi
 
     /**
      * @param string $id
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function delete(string $id)
     {
