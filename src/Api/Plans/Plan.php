@@ -76,11 +76,11 @@ class Plan extends AbstractApi
      *
      * @return array|string
      */
-    public function delete(string $id, array $data)
+    public function delete(string $id)
     {
         $url = $this->url('plans/%s/delete', $id);
 
-        return $this->post($url, $data);
+        return $this->post($url, []);
     }
 
     /**

@@ -91,6 +91,20 @@ class PlanTest extends TestCase
         $this->assertEquals($expected, $plan->unarchive('basic_v2'));
     }
 
+    /** @test */
+    public function should_delete_plan()
+    {
+        $expected = $this->getContent(sprintf('%s/data/responses/plan_deleted.json', __DIR__));
+
+        $plan = $this->getApiMock();
+        $plan->expects($this->once())
+            ->method('post')
+            ->with('https://123456789.chargebee.com/api/v2/plans/silver/delete', [])
+            ->will($this->returnValue($expected));
+
+        $this->assertEquals($expected, $plan->delete('silver'));
+    }
+
     /**
      * @return string
      */
