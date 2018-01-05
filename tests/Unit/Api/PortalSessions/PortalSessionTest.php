@@ -62,7 +62,7 @@ class PortalSessionTest extends TestCase
 
         $this->assertEquals($expected, $portalSession->create([]));
     }
-    
+
     protected function getApiClass()
     {
         return PortalSession::class;

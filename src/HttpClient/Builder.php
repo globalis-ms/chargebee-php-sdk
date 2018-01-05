@@ -43,18 +43,17 @@ class Builder
     protected $key;
 
     /**
-     * @param string $key
-     * @param HttpClient $httpClient
+     * @param string         $key
+     * @param HttpClient     $httpClient
      * @param RequestFactory $requestFactory
-     * @param StreamFactory $streamFactory
+     * @param StreamFactory  $streamFactory
      */
     public function __construct(
         string $key,
         HttpClient $httpClient = null,
         RequestFactory $requestFactory = null,
         StreamFactory $streamFactory = null
-    )
-    {
+    ) {
         $this->key = $key;
         $this->httpClient = $httpClient ?: HttpClientDiscovery::find();
         $this->requestFactory = $requestFactory ?: MessageFactoryDiscovery::find();

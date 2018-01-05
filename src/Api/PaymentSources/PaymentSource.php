@@ -9,8 +9,10 @@ class PaymentSource extends AbstractApi
 {
     /**
      * @param array $parameters
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function list(array $parameters = [])
     {
@@ -23,8 +25,10 @@ class PaymentSource extends AbstractApi
 
     /**
      * @param string $id
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function find(string $id)
     {
@@ -35,8 +39,10 @@ class PaymentSource extends AbstractApi
 
     /**
      * @param array $data
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function createUsingTemporaryToken(array $data)
     {
@@ -47,8 +53,10 @@ class PaymentSource extends AbstractApi
 
     /**
      * @param array $data
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function createUsingPermanentToken(array $data)
     {
@@ -59,8 +67,10 @@ class PaymentSource extends AbstractApi
 
     /**
      * @param array $data
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function createCard(array $data)
     {
@@ -71,9 +81,11 @@ class PaymentSource extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @return array|string
+     * @param array  $data
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function updateCard(string $id, array $data)
     {
@@ -84,8 +96,10 @@ class PaymentSource extends AbstractApi
 
     /**
      * @param string $id
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function delete(string $id)
     {
@@ -96,9 +110,11 @@ class PaymentSource extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @return array|string
+     * @param array  $data
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function switchGatewayAccount(string $id, array $data)
     {
@@ -109,9 +125,11 @@ class PaymentSource extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @return array|string
+     * @param array  $data
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function export(string $id, array $data)
     {

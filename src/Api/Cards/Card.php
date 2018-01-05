@@ -9,8 +9,10 @@ class Card extends AbstractApi
 {
     /**
      * @param string $id
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function find(string $id)
     {
@@ -21,9 +23,11 @@ class Card extends AbstractApi
 
     /**
      * @param string $customerId
-     * @param array $data
-     * @return array|string
+     * @param array  $data
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function copy(string $customerId, array $data)
     {
@@ -34,9 +38,11 @@ class Card extends AbstractApi
 
     /**
      * @param string $customerId
-     * @param array $data
-     * @return array|string
+     * @param array  $data
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function update(string $customerId, array $data)
     {
@@ -48,8 +54,10 @@ class Card extends AbstractApi
     /**
      * @param $customerId
      * @param array $data
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function switchGateway($customerId, array $data)
     {
@@ -60,14 +68,15 @@ class Card extends AbstractApi
 
     /**
      * @param string $customerId
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function delete(string $customerId)
     {
         $url = $this->url('customers/%s/delete_card', $customerId);
 
         return $this->post($url, []);
-
     }
 }

@@ -9,8 +9,10 @@ class SiteMigrationDetail extends AbstractApi
 {
     /**
      * @param array $parameters
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function list($parameters = [])
     {

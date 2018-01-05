@@ -9,8 +9,10 @@ class CreditNote extends AbstractApi
 {
     /**
      * @param array $parameters
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function list(array $parameters = [])
     {
@@ -23,8 +25,10 @@ class CreditNote extends AbstractApi
 
     /**
      * @param string $id
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function find(string $id)
     {
@@ -35,8 +39,10 @@ class CreditNote extends AbstractApi
 
     /**
      * @param string $id
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function findAsPdf(string $id)
     {
@@ -47,8 +53,10 @@ class CreditNote extends AbstractApi
 
     /**
      * @param array $data
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function create(array $data)
     {
@@ -59,9 +67,11 @@ class CreditNote extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @return array|string
+     * @param array  $data
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function recordRefund(string $id, array $data)
     {
@@ -72,9 +82,11 @@ class CreditNote extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @return array|string
+     * @param array  $data
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function void(string $id, array $data)
     {
@@ -85,9 +97,11 @@ class CreditNote extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @return array|string
+     * @param array  $data
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function delete(string $id, array $data)
     {

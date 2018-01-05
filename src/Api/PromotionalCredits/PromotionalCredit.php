@@ -8,8 +8,9 @@ use NathanDunn\Chargebee\Api\AbstractApi;
 class PromotionalCredit extends AbstractApi
 {
     /**
-     * @return array|string
      * @throws Exception
+     *
+     * @return array|string
      */
     public function list()
     {
@@ -20,8 +21,10 @@ class PromotionalCredit extends AbstractApi
 
     /**
      * @param string $id
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function find(string $id)
     {
@@ -32,8 +35,10 @@ class PromotionalCredit extends AbstractApi
 
     /**
      * @param array $data
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function set(array $data)
     {
@@ -44,8 +49,10 @@ class PromotionalCredit extends AbstractApi
 
     /**
      * @param array $data
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function add(array $data)
     {
@@ -56,8 +63,10 @@ class PromotionalCredit extends AbstractApi
 
     /**
      * @param array $data
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function deduct(array $data)
     {

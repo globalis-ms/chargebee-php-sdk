@@ -38,8 +38,10 @@ abstract class AbstractApi
      * @param $path
      * @param array $parameters
      * @param array $requestHeaders
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     protected function get($path, array $parameters = [], array $requestHeaders = [])
     {
@@ -55,8 +57,10 @@ abstract class AbstractApi
      * @param array $parameters
      * @param array $requestHeaders
      * @param array $files
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     protected function post($path, array $parameters = [], $requestHeaders = [], array $files = [])
     {
@@ -80,7 +84,7 @@ abstract class AbstractApi
                 ]);
             }
             $body = $builder->build();
-            $requestHeaders['Content-Type'] = 'multipart/form-data; boundary=' . $builder->getBoundary();
+            $requestHeaders['Content-Type'] = 'multipart/form-data; boundary='.$builder->getBoundary();
         }
 
         $response = $this->client->getHttpClient()->post($path, $requestHeaders, $body);
@@ -89,26 +93,28 @@ abstract class AbstractApi
     }
 
     /**
-     * Generate URL from base url and given endpoint
+     * Generate URL from base url and given endpoint.
      *
      * @param string $endpoint
-     * @param array $replacements
+     * @param array  $replacements
+     *
      * @return string
      */
     protected function url(string $endpoint, ...$replacements): string
     {
-        return $this->client->baseUrl . vsprintf($endpoint, $replacements);
+        return $this->client->baseUrl.vsprintf($endpoint, $replacements);
     }
 
     /**
      * @param $path
      * @param array $parameters
+     *
      * @return string
      */
     private function preparePath($path, array $parameters = []): string
     {
         if (count($parameters) > 0) {
-            $path .= '?' . QueryStringBuilder::build($parameters);
+            $path .= '?'.QueryStringBuilder::build($parameters);
         }
 
         return $path;
@@ -121,7 +127,7 @@ abstract class AbstractApi
      */
     protected function createOptionsResolver(): OptionsResolver
     {
-        $resolver = new OptionsResolver;
+        $resolver = new OptionsResolver();
 
         $resolver->setDefined('limit')
             ->setAllowedTypes('limit', 'int')
@@ -137,6 +143,7 @@ abstract class AbstractApi
 
     /**
      * @param $file
+     *
      * @return string
      */
     private function guessContentType($file): string

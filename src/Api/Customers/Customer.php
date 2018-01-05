@@ -8,10 +8,13 @@ use NathanDunn\Chargebee\Api\AbstractApi;
 class Customer extends AbstractApi
 {
     /**
-     * Get customers
+     * Get customers.
+     *
      * @param array $parameters
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function list(array $parameters = [])
     {
@@ -24,8 +27,10 @@ class Customer extends AbstractApi
 
     /**
      * @param string $id
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function find(string $id)
     {
@@ -36,8 +41,10 @@ class Customer extends AbstractApi
 
     /**
      * @param array $data
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function create(array $data)
     {
@@ -48,9 +55,11 @@ class Customer extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @return array|string
+     * @param array  $data
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function update(string $id, array $data)
     {
@@ -61,9 +70,11 @@ class Customer extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @return array|string
+     * @param array  $data
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function updatePaymentMethod(string $id, array $data)
     {
@@ -74,9 +85,11 @@ class Customer extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @return array|string
+     * @param array  $data
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function updateBillingInfo(string $id, array $data)
     {
@@ -87,9 +100,11 @@ class Customer extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @return array|string
+     * @param array  $data
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function assignPaymentRole(string $id, array $data)
     {
@@ -100,9 +115,11 @@ class Customer extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @return array|string
+     * @param array  $data
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function addContact(string $id, array $data)
     {
@@ -113,9 +130,11 @@ class Customer extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @return array|string
+     * @param array  $data
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function updateContact(string $id, array $data)
     {
@@ -126,9 +145,11 @@ class Customer extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @return array|string
+     * @param array  $data
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function deleteContact(string $id, array $data)
     {
@@ -139,9 +160,11 @@ class Customer extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @return array|string
+     * @param array  $data
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function recordExcessPayment(string $id, array $data)
     {
@@ -152,9 +175,11 @@ class Customer extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @return array|string
+     * @param array  $data
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function collectPayment(string $id, array $data)
     {
@@ -165,9 +190,11 @@ class Customer extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @return array|string
+     * @param array  $data
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function delete(string $id, array $data)
     {
@@ -178,8 +205,10 @@ class Customer extends AbstractApi
 
     /**
      * @param array $data
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function move(array $data)
     {
@@ -190,9 +219,11 @@ class Customer extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @return array|string
+     * @param array  $data
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function changeBillingDate(string $id, array $data)
     {

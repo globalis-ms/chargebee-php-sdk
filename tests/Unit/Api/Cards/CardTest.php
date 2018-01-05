@@ -76,7 +76,7 @@ class CardTest extends TestCase
 
         $this->assertEquals($expected, $card->update('4gkYnd21ouvW', []));
     }
-    
+
     /**
      * @return string
      */

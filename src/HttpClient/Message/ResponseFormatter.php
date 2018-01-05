@@ -9,6 +9,7 @@ class ResponseFormatter
     /**
      * Return the response body as a string or json array if content type is application/json.
      *.
+     *
      * @param ResponseInterface $response
      *
      * @return array|string
