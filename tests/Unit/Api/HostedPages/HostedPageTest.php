@@ -32,7 +32,7 @@ class HostedPageTest extends TestCase
             ->with('https://123456789.chargebee.com/api/v2/hosted_pages')
             ->will($this->returnValue($expected));
 
-        $this->assertEquals($expected, $hostedPages->list([]));
+        $this->assertEquals($expected, $hostedPages->find('QxjWg9dNDn3TeokQWefsTrfRHvaqNuP4'));
     }
 
     /** @test */
