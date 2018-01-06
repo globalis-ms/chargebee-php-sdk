@@ -43,6 +43,7 @@ class ApiExceptionHandler
 
     /**
      * @param array $content
+     *
      * @return string|null
      */
     private function formatException(array $content)
@@ -50,7 +51,5 @@ class ApiExceptionHandler
         if (isset($content['api_error_code'])) {
             return sprintf('NathanDunn\Chargebee\Exceptions\%sException', Str::studly($content['api_error_code']));
         }
-
-        return null;
     }
 }

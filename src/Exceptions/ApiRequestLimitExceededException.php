@@ -6,5 +6,4 @@ use Http\Client\Exception\HttpException;
 
 class ApiRequestLimitExceededException extends HttpException
 {
-
 }
