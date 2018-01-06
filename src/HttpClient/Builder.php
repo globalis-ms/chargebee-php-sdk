@@ -68,8 +68,7 @@ class Builder
         $authenticator = $this->getAuthenticationPlugin();
 
         $this->httpMethodsClient = new HttpMethodsClient(
-//            new PluginClient($this->httpClient, [$authenticator, new ErrorPlugin]),
-            new PluginClient($this->httpClient, [$authenticator]),
+            new PluginClient($this->httpClient, [$authenticator, new ErrorPlugin]),
             $this->requestFactory
         );
 
