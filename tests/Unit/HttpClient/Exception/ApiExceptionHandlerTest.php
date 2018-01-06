@@ -36,6 +36,7 @@ class ApiExceptionHandlerTest extends TestCase
 
     /**
      * @param string $path
+     *
      * @return Response
      */
     private function getResponse(string $path)
@@ -44,28 +45,28 @@ class ApiExceptionHandlerTest extends TestCase
 
         $headers = [
             'Cache-Control' => [
-                "no-store, no-cache, must-revalidate"
+                'no-store, no-cache, must-revalidate',
             ],
             'Content-Type' => [
-                "application/json;charset=UTF-8"
+                'application/json;charset=UTF-8',
             ],
             'Date' => [
-                "Sat, 06 Jan 2018 20:23:27 GMT"
+                'Sat, 06 Jan 2018 20:23:27 GMT',
             ],
             'Pragma' => [
-                "no-cache"
+                'no-cache',
             ],
             'Server' => [
-                "ChargeBee"
+                'ChargeBee',
             ],
             'Vary' => [
-                "Accept-Encoding"
+                'Accept-Encoding',
             ],
             'Content-Length' => [
-                "212"
+                '212',
             ],
             'Connection' => [
-                "keep-alive"
+                'keep-alive',
             ],
         ];
 
@@ -79,13 +80,13 @@ class ApiExceptionHandlerTest extends TestCase
     {
         $headers = [
             'Host' => [
-                "test.chargebee.com",
+                'test.chargebee.com',
             ],
             'Content-Type' => [
-                "application/x-www-form-urlencoded"
+                'application/x-www-form-urlencoded',
             ],
             'Authorization' => [
-                "Basic xxx"
+                'Basic xxx',
             ],
         ];
 
