@@ -1,0 +1,10 @@
+{
+  "message": "email : wrong format",
+  "type": "invalid_request",
+  "api_error_code": "some_other_error",
+  "param": "email",
+  "error_code": "wrong_format",
+  "error_msg": "wrong format",
+  "error_param": "email",
+  "http_status_code": 400
+}
