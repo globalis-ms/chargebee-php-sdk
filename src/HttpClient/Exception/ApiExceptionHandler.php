@@ -2,7 +2,6 @@
 
 namespace NathanDunn\Chargebee\HttpClient\Exception;
 
-use Http\Client\Common\Exception\ClientErrorException;
 use Http\Client\Exception\HttpException;
 use NathanDunn\Chargebee\HttpClient\Message\ResponseFormatter;
 use NathanDunn\Chargebee\Util\Str;
@@ -17,7 +16,7 @@ class ApiExceptionHandler
     /**
      * @param $exception
      */
-    public function __construct(ClientErrorException $exception)
+    public function __construct(HttpException $exception)
     {
         $this->exception = $exception;
     }
