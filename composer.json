@@ -27,7 +27,8 @@
     "phpunit/phpunit": "^6.5",
     "php-http/mock-client": "^1.0",
     "php-coveralls/php-coveralls": "^2.0",
-    "phpunit/phpcov": "^4.0"
+    "phpunit/phpcov": "^4.0",
+    "php-http/guzzle6-adapter": "^1.1"
   },
   "autoload": {
     "psr-4": {
