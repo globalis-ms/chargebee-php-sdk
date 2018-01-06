@@ -4,9 +4,11 @@ namespace NathanDunn\Chargebee\Api;
 
 use finfo;
 use Http\Client\Exception;
+use Http\Client\Exception\HttpException;
 use Http\Message\MultipartStream\MultipartStreamBuilder;
 use Http\Message\StreamFactory;
 use NathanDunn\Chargebee\Client;
+use NathanDunn\Chargebee\HttpClient\Exception\ApiExceptionHandler;
 use NathanDunn\Chargebee\HttpClient\Message\QueryStringBuilder;
 use NathanDunn\Chargebee\HttpClient\Message\ResponseFormatter;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -47,9 +49,13 @@ abstract class AbstractApi
     {
         $path = $this->preparePath($path, $parameters);
 
-        $response = $this->client->getHttpClient()->get($path, $requestHeaders);
+        try {
+            $response = $this->client->getHttpClient()->get($path, $requestHeaders);
 
-        return ResponseFormatter::getContent($response);
+            return ResponseFormatter::getContent($response);
+        } catch (HttpException $e) {
+            (new ApiExceptionHandler($e))->handle();
+        }
     }
 
     /**
@@ -87,7 +93,11 @@ abstract class AbstractApi
             $requestHeaders['Content-Type'] = 'multipart/form-data; boundary='.$builder->getBoundary();
         }
 
-        $response = $this->client->getHttpClient()->post($path, $requestHeaders, $body);
+        try {
+            $response = $this->client->getHttpClient()->post($path, $requestHeaders, $body);
+        } catch (HttpException $e) {
+            (new ApiExceptionHandler($e))->handle();
+        }
 
         return ResponseFormatter::getContent($response);
     }
