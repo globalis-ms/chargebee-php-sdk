@@ -11,8 +11,9 @@ class Coupon extends AbstractApi
      * @param array $parameters
      * @param array $headers
      *
-     * @return array|string
      * @throws Exception
+     *
+     * @return array|string
      */
     public function list(array $parameters = [], array $headers = [])
     {
@@ -25,10 +26,11 @@ class Coupon extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $headers
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function find(string $id, array $headers = [])
     {
@@ -41,8 +43,9 @@ class Coupon extends AbstractApi
      * @param array $data
      * @param array $headers
      *
-     * @return array|string
      * @throws Exception
+     *
+     * @return array|string
      */
     public function create(array $data, array $headers = [])
     {
@@ -53,10 +56,11 @@ class Coupon extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $headers
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function delete(string $id, array $headers = [])
     {
@@ -69,8 +73,9 @@ class Coupon extends AbstractApi
      * @param $id
      * @param array $headers
      *
-     * @return array|string
      * @throws Exception
+     *
+     * @return array|string
      */
     public function unarchive($id, array $headers = [])
     {

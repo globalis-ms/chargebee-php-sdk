@@ -11,8 +11,9 @@ class Transaction extends AbstractApi
      * @param array $parameters
      * @param array $headers
      *
-     * @return array|string
      * @throws Exception
+     *
+     * @return array|string
      */
     public function list(array $parameters = [], array $headers = [])
     {
@@ -25,10 +26,11 @@ class Transaction extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $headers
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function find(string $id, array $headers = [])
     {
@@ -39,10 +41,11 @@ class Transaction extends AbstractApi
 
     /**
      * @param string $invoiceId
-     * @param array $headers
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function listPaymentsForInvoice(string $invoiceId, array $headers = [])
     {

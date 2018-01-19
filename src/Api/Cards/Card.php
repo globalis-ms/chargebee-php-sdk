@@ -9,10 +9,11 @@ class Card extends AbstractApi
 {
     /**
      * @param string $id
-     * @param array $headers
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function find(string $id, array $headers = [])
     {
@@ -23,11 +24,12 @@ class Card extends AbstractApi
 
     /**
      * @param string $customerId
-     * @param array $data
-     * @param array $headers
+     * @param array  $data
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function copy(string $customerId, array $data, array $headers = [])
     {
@@ -38,11 +40,12 @@ class Card extends AbstractApi
 
     /**
      * @param string $customerId
-     * @param array $data
-     * @param array $headers
+     * @param array  $data
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function update(string $customerId, array $data, array $headers = [])
     {
@@ -56,8 +59,9 @@ class Card extends AbstractApi
      * @param array $data
      * @param array $headers
      *
-     * @return array|string
      * @throws Exception
+     *
+     * @return array|string
      */
     public function switchGateway($customerId, array $data, array $headers = [])
     {
@@ -68,10 +72,11 @@ class Card extends AbstractApi
 
     /**
      * @param string $customerId
-     * @param array $headers
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function delete(string $customerId, array $headers = [])
     {

@@ -11,10 +11,11 @@ class TimeMachine extends AbstractApi
      * Retrieves a specified time machine.
      *
      * @param string $id
-     * @param array $headers
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function find(string $id, array $headers = [])
     {
@@ -27,11 +28,12 @@ class TimeMachine extends AbstractApi
      * Restart the time machine.
      *
      * @param string $id
-     * @param array $data
-     * @param array $headers
+     * @param array  $data
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function startAfresh(string $id, array $data, array $headers = [])
     {
@@ -44,11 +46,12 @@ class TimeMachine extends AbstractApi
      * Travel forward in time.
      *
      * @param string $id
-     * @param array $data
-     * @param array $headers
+     * @param array  $data
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function travelForward(string $id, array $data, array $headers = [])
     {

@@ -11,8 +11,9 @@ class Event extends AbstractApi
      * @param array $parameters
      * @param array $headers
      *
-     * @return array|string
      * @throws Exception
+     *
+     * @return array|string
      */
     public function list(array $parameters = [], array $headers = [])
     {
@@ -27,8 +28,9 @@ class Event extends AbstractApi
      * @param $id
      * @param array $headers
      *
-     * @return array|string
      * @throws Exception
+     *
+     * @return array|string
      */
     public function find($id, array $headers = [])
     {

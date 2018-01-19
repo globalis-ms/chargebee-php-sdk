@@ -11,8 +11,9 @@ class Invoice extends AbstractApi
      * @param array $parameters
      * @param array $headers
      *
-     * @return array|string
      * @throws Exception
+     *
+     * @return array|string
      */
     public function list(array $parameters = [], array $headers = [])
     {
@@ -33,8 +34,9 @@ class Invoice extends AbstractApi
      * @param array $data
      * @param array $headers
      *
-     * @return array|string
      * @throws Exception
+     *
+     * @return array|string
      */
     public function create(array $data, array $headers = [])
     {
@@ -47,8 +49,9 @@ class Invoice extends AbstractApi
      * @param array $data
      * @param array $headers
      *
-     * @return array|string
      * @throws Exception
+     *
+     * @return array|string
      */
     public function createForCharge(array $data, array $headers = [])
     {
@@ -61,8 +64,9 @@ class Invoice extends AbstractApi
      * @param array $data
      * @param array $headers
      *
-     * @return array|string
      * @throws Exception
+     *
+     * @return array|string
      */
     public function createForAddon(array $data, array $headers = [])
     {
@@ -73,10 +77,11 @@ class Invoice extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $headers
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function stopDunning(string $id, array $headers = [])
     {
@@ -89,8 +94,9 @@ class Invoice extends AbstractApi
      * @param array $data
      * @param array $headers
      *
-     * @return array|string
      * @throws Exception
+     *
+     * @return array|string
      */
     public function import(array $data, array $headers = [])
     {
@@ -101,11 +107,12 @@ class Invoice extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @param array $headers
+     * @param array  $data
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function applyPayments(string $id, array $data, array $headers = [])
     {
@@ -116,11 +123,12 @@ class Invoice extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @param array $headers
+     * @param array  $data
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function applyCredits(string $id, array $data, array $headers = [])
     {
@@ -131,7 +139,7 @@ class Invoice extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $headers
+     * @param array  $headers
      *
      * @throws Exception
      *
@@ -146,7 +154,7 @@ class Invoice extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $headers
+     * @param array  $headers
      *
      * @throws Exception
      *
@@ -161,11 +169,12 @@ class Invoice extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @param array $headers
+     * @param array  $data
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function addChargeItem(string $id, array $data, array $headers = [])
     {
@@ -176,11 +185,12 @@ class Invoice extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @param array $headers
+     * @param array  $data
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function addAddonItem(string $id, array $data, array $headers = [])
     {
@@ -206,11 +216,12 @@ class Invoice extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @param array $headers
+     * @param array  $data
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function collectPayment(string $id, array $data, array $headers = [])
     {
@@ -221,11 +232,12 @@ class Invoice extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @param array $headers
+     * @param array  $data
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function recordPayment(string $id, array $data, array $headers = [])
     {
@@ -236,11 +248,12 @@ class Invoice extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @param array $headers
+     * @param array  $data
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function refund(string $id, array $data, array $headers = [])
     {
@@ -251,11 +264,12 @@ class Invoice extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @param array $headers
+     * @param array  $data
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function recordRefund(string $id, array $data, array $headers = [])
     {
@@ -266,11 +280,12 @@ class Invoice extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @param array $headers
+     * @param array  $data
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function removePayment(string $id, array $data, array $headers = [])
     {
@@ -281,11 +296,12 @@ class Invoice extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @param array $headers
+     * @param array  $data
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function removeCreditNote(string $id, array $data, array $headers = [])
     {
@@ -296,11 +312,12 @@ class Invoice extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @param array $headers
+     * @param array  $data
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function void(string $id, array $data, array $headers = [])
     {
@@ -311,11 +328,12 @@ class Invoice extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @param array $headers
+     * @param array  $data
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function writeOff(string $id, array $data, array $headers = [])
     {
@@ -326,11 +344,12 @@ class Invoice extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @param array $headers
+     * @param array  $data
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function delete(string $id, array $data, array $headers = [])
     {

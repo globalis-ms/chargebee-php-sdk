@@ -11,8 +11,9 @@ class HostedPage extends AbstractApi
      * @param array $parameters
      * @param array $headers
      *
-     * @return array|string
      * @throws Exception
+     *
+     * @return array|string
      */
     public function list(array $parameters = [], array $headers = [])
     {
@@ -25,24 +26,26 @@ class HostedPage extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $headers
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function find(string $id, array $headers = [])
     {
         $url = $this->url('hosted_pages/%s', $id);
 
-        return $this->get($url,[], $headers);
+        return $this->get($url, [], $headers);
     }
 
     /**
      * @param array $data
      * @param array $headers
      *
-     * @return array|string
      * @throws Exception
+     *
+     * @return array|string
      */
     public function checkoutNewSubscription(array $data = [], array $headers = [])
     {
@@ -55,8 +58,9 @@ class HostedPage extends AbstractApi
      * @param array $data
      * @param array $headers
      *
-     * @return array|string
      * @throws Exception
+     *
+     * @return array|string
      */
     public function checkoutExistingSubscription(array $data = [], array $headers = [])
     {
@@ -69,8 +73,9 @@ class HostedPage extends AbstractApi
      * @param array $data
      * @param array $headers
      *
-     * @return array|string
      * @throws Exception
+     *
+     * @return array|string
      */
     public function updatePaymentMethod(array $data, array $headers = [])
     {
@@ -81,10 +86,11 @@ class HostedPage extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $headers
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function acknowledge(string $id, array $headers = [])
     {
