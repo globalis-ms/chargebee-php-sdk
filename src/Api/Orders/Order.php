@@ -9,60 +9,64 @@ class Order extends AbstractApi
 {
     /**
      * @param array $parameters
+     * @param array $headers
      *
      * @throws Exception
      *
      * @return array|string
      */
-    public function list(array $parameters = [])
+    public function list(array $parameters = [], array $headers = [])
     {
         $resolver = $this->createOptionsResolver();
 
         $url = $this->url('orders');
 
-        return $this->get($url, $resolver->resolve($parameters));
+        return $this->get($url, $resolver->resolve($parameters), $headers);
     }
 
     /**
      * @param string $id
+     * @param array  $headers
      *
      * @throws Exception
      *
      * @return array|string
      */
-    public function find(string $id)
+    public function find(string $id, array $headers = [])
     {
         $url = $this->url('orders/%s', $id);
 
-        return $this->get($url);
+        return $this->get($url, [], $headers);
     }
 
     /**
      * @param array $data
+     * @param array $headers
      *
      * @throws Exception
      *
      * @return array|string
      */
-    public function create(array $data)
+    public function create(array $data, array $headers = [])
     {
         $url = $this->url('orders');
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
      * @param string $id
      * @param array  $data
+     * @param array  $headers
      *
      * @throws Exception
      *
      * @return array|string
      */
-    public function update(string $id, array $data)
+    public function update(string $id, array $data, array $headers = [])
     {
         $url = $this->url('orders/%s', $id);
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 }

@@ -9,17 +9,18 @@ class SiteMigrationDetail extends AbstractApi
 {
     /**
      * @param array $parameters
+     * @param array $headers
      *
      * @throws Exception
      *
      * @return array|string
      */
-    public function list($parameters = [])
+    public function list($parameters = [], array $headers = [])
     {
         $resolver = $this->createOptionsResolver();
 
         $url = $this->url('site_migration_details');
 
-        return $this->get($url, $resolver->resolve($parameters));
+        return $this->get($url, $resolver->resolve($parameters), $headers);
     }
 }

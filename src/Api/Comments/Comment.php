@@ -9,12 +9,13 @@ class Comment extends AbstractApi
 {
     /**
      * @param array $parameters
+     * @param array $headers
      *
      * @throws Exception
      *
      * @return array|string
      */
-    public function list(array $parameters = [])
+    public function list(array $parameters = [], array $headers = [])
     {
         $resolver = $this->createOptionsResolver();
 
@@ -25,12 +26,13 @@ class Comment extends AbstractApi
 
     /**
      * @param string $id
+     * @param array  $headers
      *
      * @throws Exception
      *
      * @return array|string
      */
-    public function find(string $id)
+    public function find(string $id, array $headers = [])
     {
         $url = $this->url('comments/%s', $id);
 
@@ -39,29 +41,31 @@ class Comment extends AbstractApi
 
     /**
      * @param array $data
+     * @param array $headers
      *
      * @throws Exception
      *
      * @return array|string
      */
-    public function create(array $data)
+    public function create(array $data, array $headers = [])
     {
         $url = $this->url('comments');
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
      * @param string $id
+     * @param array  $headers
      *
      * @throws Exception
      *
      * @return array|string
      */
-    public function delete(string $id)
+    public function delete(string $id, array $headers = [])
     {
         $url = $this->url('comments/%s', $id);
 
-        return $this->post($url, []);
+        return $this->post($url, [], $headers);
     }
 }
