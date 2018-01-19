@@ -9,12 +9,12 @@ class Invoice extends AbstractApi
 {
     /**
      * @param array $parameters
-     *
-     * @throws Exception
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function list(array $parameters = [])
+    public function list(array $parameters = [], array $headers = [])
     {
         $resolver = $this->createOptionsResolver();
 
@@ -26,165 +26,167 @@ class Invoice extends AbstractApi
 
         $url = $this->url('invoices');
 
-        return $this->get($url, $resolver->resolve($parameters));
+        return $this->get($url, $resolver->resolve($parameters), $headers);
     }
 
     /**
      * @param array $data
-     *
-     * @throws Exception
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function create(array $data)
+    public function create(array $data, array $headers = [])
     {
         $url = $this->url('invoices');
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
      * @param array $data
-     *
-     * @throws Exception
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function createForCharge(array $data)
+    public function createForCharge(array $data, array $headers = [])
     {
         $url = $this->url('invoices/charge');
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
      * @param array $data
-     *
-     * @throws Exception
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function createForAddon(array $data)
+    public function createForAddon(array $data, array $headers = [])
     {
         $url = $this->url('invoices/charge_addon');
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
      * @param string $id
-     *
-     * @throws Exception
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function stopDunning(string $id)
+    public function stopDunning(string $id, array $headers = [])
     {
         $url = $this->url('invoices/%s/stop_dunning', $id);
 
-        return $this->post($url, []);
+        return $this->post($url, [], $headers);
     }
 
     /**
      * @param array $data
-     *
-     * @throws Exception
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function import(array $data)
+    public function import(array $data, array $headers = [])
     {
         $url = $this->url('invoices/import_invoice');
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
      * @param string $id
-     * @param array  $data
-     *
-     * @throws Exception
+     * @param array $data
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function applyPayments(string $id, array $data)
+    public function applyPayments(string $id, array $data, array $headers = [])
     {
         $url = $this->url('invoices/%s/apply_payments', $id);
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
      * @param string $id
-     * @param array  $data
-     *
-     * @throws Exception
+     * @param array $data
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function applyCredits(string $id, array $data)
+    public function applyCredits(string $id, array $data, array $headers = [])
     {
         $url = $this->url('invoices/%s/apply_credits', $id);
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
      * @param string $id
+     * @param array $headers
      *
      * @throws Exception
      *
      * @return array|string
      */
-    public function find(string $id)
+    public function find(string $id, array $headers = [])
     {
         $url = $this->url('invoices/%s', $id);
 
-        return $this->get($url);
+        return $this->get($url, [], $headers);
     }
 
     /**
      * @param string $id
+     * @param array $headers
      *
      * @throws Exception
      *
      * @return array|string
      */
-    public function findAsPdf(string $id)
+    public function findAsPdf(string $id, array $headers = [])
     {
         $url = $this->url('invoices/%s/pdf', $id);
 
-        return $this->get($url);
+        return $this->get($url, [], $headers);
     }
 
     /**
      * @param string $id
-     * @param array  $data
-     *
-     * @throws Exception
+     * @param array $data
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function addChargeItem(string $id, array $data)
+    public function addChargeItem(string $id, array $data, array $headers = [])
     {
         $url = $this->url('invoices/%s/add_charge', $id);
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
      * @param string $id
-     * @param array  $data
-     *
-     * @throws Exception
+     * @param array $data
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function addAddonItem(string $id, array $data)
+    public function addAddonItem(string $id, array $data, array $headers = [])
     {
         $url = $this->url('invoices/%s/add_addon_charge', $id);
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
@@ -195,7 +197,7 @@ class Invoice extends AbstractApi
      *
      * @return array|string
      */
-    public function close(string $id, array $data)
+    public function close(string $id, array $data, array $headers = [])
     {
         $url = $this->url('invoices/%s/close', $id);
 
@@ -204,136 +206,136 @@ class Invoice extends AbstractApi
 
     /**
      * @param string $id
-     * @param array  $data
-     *
-     * @throws Exception
+     * @param array $data
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function collectPayment(string $id, array $data)
+    public function collectPayment(string $id, array $data, array $headers = [])
     {
         $url = $this->url('invoices/%s/collect_payment', $id);
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
      * @param string $id
-     * @param array  $data
-     *
-     * @throws Exception
+     * @param array $data
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function recordPayment(string $id, array $data)
+    public function recordPayment(string $id, array $data, array $headers = [])
     {
         $url = $this->url('invoices/%s/record_payment', $id);
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
      * @param string $id
-     * @param array  $data
-     *
-     * @throws Exception
+     * @param array $data
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function refund(string $id, array $data)
+    public function refund(string $id, array $data, array $headers = [])
     {
         $url = $this->url('invoices/%s/refund', $id);
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
      * @param string $id
-     * @param array  $data
-     *
-     * @throws Exception
+     * @param array $data
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function recordRefund(string $id, array $data)
+    public function recordRefund(string $id, array $data, array $headers = [])
     {
         $url = $this->url('invoices/%s/record_refund', $id);
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
      * @param string $id
-     * @param array  $data
-     *
-     * @throws Exception
+     * @param array $data
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function removePayment(string $id, array $data)
+    public function removePayment(string $id, array $data, array $headers = [])
     {
         $url = $this->url('invoices/%s/remove_payment', $id);
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
      * @param string $id
-     * @param array  $data
-     *
-     * @throws Exception
+     * @param array $data
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function removeCreditNote(string $id, array $data)
+    public function removeCreditNote(string $id, array $data, array $headers = [])
     {
         $url = $this->url('invoices/%s/remove_credit_note', $id);
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
      * @param string $id
-     * @param array  $data
-     *
-     * @throws Exception
+     * @param array $data
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function void(string $id, array $data)
+    public function void(string $id, array $data, array $headers = [])
     {
         $url = $this->url('invoices/%s/void', $id);
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
      * @param string $id
-     * @param array  $data
-     *
-     * @throws Exception
+     * @param array $data
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function writeOff(string $id, array $data)
+    public function writeOff(string $id, array $data, array $headers = [])
     {
         $url = $this->url('invoices/%s/write_off', $id);
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
      * @param string $id
-     * @param array  $data
-     *
-     * @throws Exception
+     * @param array $data
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function delete(string $id, array $data)
+    public function delete(string $id, array $data, array $headers = [])
     {
         $url = $this->url('invoices/%s/delete', $id);
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 }

@@ -9,31 +9,31 @@ class Event extends AbstractApi
 {
     /**
      * @param array $parameters
-     *
-     * @throws Exception
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function list(array $parameters = [])
+    public function list(array $parameters = [], array $headers = [])
     {
         $resolver = $this->createOptionsResolver();
 
         $url = $this->url('events');
 
-        return $this->get($url, $resolver->resolve($parameters));
+        return $this->get($url, $resolver->resolve($parameters), $headers);
     }
 
     /**
      * @param $id
-     *
-     * @throws Exception
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function find($id)
+    public function find($id, array $headers = [])
     {
         $url = $this->url('events/%s', $id);
 
-        return $this->get($url);
+        return $this->get($url, [], $headers);
     }
 }

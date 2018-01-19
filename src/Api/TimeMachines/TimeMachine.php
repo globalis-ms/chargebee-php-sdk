@@ -11,49 +11,49 @@ class TimeMachine extends AbstractApi
      * Retrieves a specified time machine.
      *
      * @param string $id
-     *
-     * @throws Exception
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function find(string $id)
+    public function find(string $id, array $headers = [])
     {
         $url = $this->url('time_machines/%s', $id);
 
-        return $this->get($url);
+        return $this->get($url, [], $headers);
     }
 
     /**
      * Restart the time machine.
      *
      * @param string $id
-     * @param array  $data
-     *
-     * @throws Exception
+     * @param array $data
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function startAfresh(string $id, array $data)
+    public function startAfresh(string $id, array $data, array $headers = [])
     {
         $url = $this->url('time_machines/%s/start_afresh', $id);
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
      * Travel forward in time.
      *
      * @param string $id
-     * @param array  $data
-     *
-     * @throws Exception
+     * @param array $data
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function travelForward(string $id, array $data)
+    public function travelForward(string $id, array $data, array $headers = [])
     {
         $url = $this->url('time_machines/%s/travel_forward', $id);
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 }

@@ -9,28 +9,28 @@ class PaymentSource extends AbstractApi
 {
     /**
      * @param array $parameters
-     *
-     * @throws Exception
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function list(array $parameters = [])
+    public function list(array $parameters = [], array $headers = [])
     {
         $resolver = $this->createOptionsResolver();
 
         $url = $this->url('payment_sources');
 
-        return $this->get($url, $resolver->resolve($parameters));
+        return $this->get($url, $resolver->resolve($parameters), $headers);
     }
 
     /**
      * @param string $id
-     *
-     * @throws Exception
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function find(string $id)
+    public function find(string $id, array $headers = [])
     {
         $url = $this->url('payment_sources/%s', $id);
 
@@ -39,44 +39,44 @@ class PaymentSource extends AbstractApi
 
     /**
      * @param array $data
-     *
-     * @throws Exception
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function createUsingTemporaryToken(array $data)
+    public function createUsingTemporaryToken(array $data, array $headers = [])
     {
         $url = $this->url('payment_sources/create_using_temp_token');
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
      * @param array $data
-     *
-     * @throws Exception
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function createUsingPermanentToken(array $data)
+    public function createUsingPermanentToken(array $data, array $headers = [])
     {
         $url = $this->url('payment_sources/create_using_permanent_token');
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
      * @param array $data
-     *
-     * @throws Exception
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function createCard(array $data)
+    public function createCard(array $data, array $headers = [])
     {
         $url = $this->url('payment_sources/create_card');
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
@@ -87,54 +87,54 @@ class PaymentSource extends AbstractApi
      *
      * @return array|string
      */
-    public function updateCard(string $id, array $data)
+    public function updateCard(string $id, array $data, array $headers = [])
     {
         $url = $this->url('payment_sources/%s/update_card', $id);
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
      * @param string $id
-     *
-     * @throws Exception
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function delete(string $id)
+    public function delete(string $id, array $headers = [])
     {
         $url = $this->url('payment_sources/%s/delete', $id);
 
-        return $this->post($url, []);
+        return $this->post($url, [], $headers);
     }
 
     /**
      * @param string $id
-     * @param array  $data
-     *
-     * @throws Exception
+     * @param array $data
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function switchGatewayAccount(string $id, array $data)
+    public function switchGatewayAccount(string $id, array $data, array $headers = [])
     {
         $url = $this->url('payment_sources/%s/switch_gateway_account', $id);
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
      * @param string $id
-     * @param array  $data
-     *
-     * @throws Exception
+     * @param array $data
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function export(string $id, array $data)
+    public function export(string $id, array $data, array $headers = [])
     {
         $url = $this->url('payment_sources/%s/export_payment_source', $id);
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 }

@@ -10,17 +10,17 @@ class CreditNote extends AbstractApi
     /**
      * @param array $parameters
      *
-     * @throws Exception
-     *
+     * @param array $headers
      * @return array|string
+     * @throws Exception
      */
-    public function list(array $parameters = [])
+    public function list(array $parameters = [], array $headers = [])
     {
         $resolver = $this->createOptionsResolver();
 
         $url = $this->url('credit_notes');
 
-        return $this->get($url, $resolver->resolve($parameters));
+        return $this->get($url, $resolver->resolve($parameters), $headers);
     }
 
     /**
@@ -30,83 +30,83 @@ class CreditNote extends AbstractApi
      *
      * @return array|string
      */
-    public function find(string $id)
+    public function find(string $id, array $headers = [])
     {
         $url = $this->url('credit_notes/%s', $id);
 
-        return $this->get($url);
+        return $this->get($url, [], $headers);
     }
 
     /**
      * @param string $id
-     *
-     * @throws Exception
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function findAsPdf(string $id)
+    public function findAsPdf(string $id, array $headers = [])
     {
         $url = $this->url('credit_notes/%s/pdf', $id);
 
-        return $this->get($url);
+        return $this->get($url, [], $headers);
     }
 
     /**
      * @param array $data
-     *
-     * @throws Exception
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function create(array $data)
+    public function create(array $data, array $headers = [])
     {
         $url = $this->url('credit_notes');
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
      * @param string $id
-     * @param array  $data
-     *
-     * @throws Exception
+     * @param array $data
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function recordRefund(string $id, array $data)
+    public function recordRefund(string $id, array $data, array $headers = [])
     {
         $url = $this->url('credit_notes/%s/record_refund', $id);
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
      * @param string $id
-     * @param array  $data
-     *
-     * @throws Exception
+     * @param array $data
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function void(string $id, array $data)
+    public function void(string $id, array $data, array $headers = [])
     {
         $url = $this->url('credit_notes/%s/void', $id);
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
      * @param string $id
-     * @param array  $data
-     *
-     * @throws Exception
+     * @param array $data
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function delete(string $id, array $data)
+    public function delete(string $id, array $data, array $headers = [])
     {
         $url = $this->url('credit_notes/%s/delete', $id);
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 }

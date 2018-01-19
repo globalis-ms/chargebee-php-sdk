@@ -8,70 +8,70 @@ use NathanDunn\Chargebee\Api\AbstractApi;
 class PromotionalCredit extends AbstractApi
 {
     /**
-     * @throws Exception
-     *
+     * @param array $headers
      * @return array|string
+     * @throws Exception
      */
-    public function list()
+    public function list(array $headers = [])
     {
         $url = $this->url('promotional_credits');
 
-        return $this->get($url);
+        return $this->get($url, [], $headers);
     }
 
     /**
      * @param string $id
-     *
-     * @throws Exception
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function find(string $id)
+    public function find(string $id, array $headers = [])
     {
         $url = $this->url('promotional_credits/%s', $id);
 
-        return $this->get($url);
+        return $this->get($url, [], $headers);
     }
 
     /**
      * @param array $data
-     *
-     * @throws Exception
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function set(array $data)
+    public function set(array $data, array $headers = [])
     {
         $url = $this->url('promotional_credits/set');
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
      * @param array $data
-     *
-     * @throws Exception
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function add(array $data)
+    public function add(array $data, array $headers = [])
     {
         $url = $this->url('promotional_credits/add');
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
      * @param array $data
-     *
-     * @throws Exception
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function deduct(array $data)
+    public function deduct(array $data, array $headers = [])
     {
         $url = $this->url('promotional_credits/deduct');
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 }

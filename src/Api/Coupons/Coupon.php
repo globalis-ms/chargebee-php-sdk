@@ -9,73 +9,73 @@ class Coupon extends AbstractApi
 {
     /**
      * @param array $parameters
-     *
-     * @throws Exception
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function list(array $parameters = [])
+    public function list(array $parameters = [], array $headers = [])
     {
         $resolver = $this->createOptionsResolver();
 
         $url = $this->url('coupons');
 
-        return $this->get($url, $resolver->resolve($parameters));
+        return $this->get($url, $resolver->resolve($parameters), $headers);
     }
 
     /**
-     * @param $id
-     *
-     * @throws Exception
+     * @param string $id
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function find(string $id)
+    public function find(string $id, array $headers = [])
     {
         $url = $this->url('coupons/%s', $id);
 
-        return $this->get($url);
+        return $this->get($url, [], $headers);
     }
 
     /**
      * @param array $data
-     *
-     * @throws Exception
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function create(array $data)
+    public function create(array $data, array $headers = [])
     {
         $url = $this->url('coupons');
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
-     * @param $id
-     *
-     * @throws Exception
+     * @param string $id
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function delete(string $id)
+    public function delete(string $id, array $headers = [])
     {
         $url = $this->url('coupons/%s/delete', $id);
 
-        return $this->post($url, []);
+        return $this->post($url, [], $headers);
     }
 
     /**
      * @param $id
-     *
-     * @throws Exception
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function unarchive($id)
+    public function unarchive($id, array $headers = [])
     {
         $url = $this->url('coupons/%s/unarchive', $id);
 
-        return $this->post($url, []);
+        return $this->post($url, [], $headers);
     }
 }

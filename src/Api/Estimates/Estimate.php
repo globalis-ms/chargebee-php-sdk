@@ -10,42 +10,42 @@ class Estimate extends AbstractApi
 {
     /**
      * @param array $data
-     *
-     * @throws Exception
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function createSubscription(array $data)
+    public function createSubscription(array $data, array $headers = [])
     {
         $url = $this->url('estimates/create_subscription');
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
      * @param string $customerId
-     * @param array  $data
-     *
-     * @throws Exception
+     * @param array $data
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function createSubscriptionEstimate(string $customerId, array $data)
+    public function createSubscriptionEstimate(string $customerId, array $data, array $headers = [])
     {
         $url = $this->url('customers/%s/create_subscription_estimate', $customerId);
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
      * @param string $subscriptionId
-     * @param array  $parameters
-     *
-     * @throws Exception
+     * @param array $parameters
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function renewalEstimate(string $subscriptionId, array $parameters = [])
+    public function renewalEstimate(string $subscriptionId, array $parameters = [], array $headers = [])
     {
         $resolver = new OptionsResolver();
 
@@ -70,50 +70,50 @@ class Estimate extends AbstractApi
 
         $url = $this->url('subscriptions/%s/renewal_estimate', $subscriptionId);
 
-        return $this->get($url, $resolver->resolve($parameters));
+        return $this->get($url, $resolver->resolve($parameters), $headers);
     }
 
     /**
      * @param string $customerId
-     *
-     * @throws Exception
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function upcomingInvoicesEstimate(string $customerId)
+    public function upcomingInvoicesEstimate(string $customerId, array $headers = [])
     {
         $url = $this->url('customers/%s/upcoming_invoices_estimate', $customerId);
 
-        return $this->get($url);
+        return $this->get($url, [], $headers);
     }
 
     /**
      * @param string $subscriptionId
-     * @param array  $data
-     *
-     * @throws Exception
+     * @param array $data
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function changeTermEndEstimate(string $subscriptionId, array $data)
+    public function changeTermEndEstimate(string $subscriptionId, array $data, array $headers = [])
     {
         $url = $this->url('subscriptions/%s/change_term_end_estimate', $subscriptionId);
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
      * @param string $subscriptionId
-     * @param array  $data
-     *
-     * @throws Exception
+     * @param array $data
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
      */
-    public function cancelSubscriptionEstimate(string $subscriptionId, array $data)
+    public function cancelSubscriptionEstimate(string $subscriptionId, array $data, array $headers = [])
     {
         $url = $this->url('subscriptions/%s/cancel_subscription_estimate', $subscriptionId);
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 }
