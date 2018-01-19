@@ -11,8 +11,9 @@ class CouponSet extends AbstractApi
      * @param array $parameters
      * @param array $headers
      *
-     * @return array|string
      * @throws Exception
+     *
+     * @return array|string
      */
     public function list(array $parameters = [], array $headers = [])
     {
@@ -25,10 +26,11 @@ class CouponSet extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $headers
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function find(string $id, array $headers = [])
     {
@@ -41,8 +43,9 @@ class CouponSet extends AbstractApi
      * @param array $data
      * @param array $headers
      *
-     * @return array|string
      * @throws Exception
+     *
+     * @return array|string
      */
     public function create(array $data, array $headers = [])
     {
@@ -53,11 +56,12 @@ class CouponSet extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @param array $headers
+     * @param array  $data
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function addCouponCodes(string $id, array $data, array $headers = [])
     {
@@ -68,11 +72,12 @@ class CouponSet extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @param array $headers
+     * @param array  $data
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function update(string $id, array $data, array $headers = [])
     {
@@ -83,10 +88,11 @@ class CouponSet extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $headers
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function delete(string $id, array $headers = [])
     {
@@ -97,10 +103,11 @@ class CouponSet extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $headers
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function deleteUnusedCouponCodes(string $id, array $headers = [])
     {

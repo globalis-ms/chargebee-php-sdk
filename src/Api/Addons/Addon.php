@@ -11,9 +11,9 @@ class Addon extends AbstractApi
      * @param array $parameters
      * @param array $headers
      *
-     * @return array|string
-     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function list(array $parameters = [], array $headers = [])
     {
@@ -26,11 +26,11 @@ class Addon extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $headers
-     *
-     * @return array|string
+     * @param array  $headers
      *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function find(string $id, array $headers = [])
     {
@@ -43,9 +43,9 @@ class Addon extends AbstractApi
      * @param array $data
      * @param array $headers
      *
-     * @return array|string
-     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function create(array $data, array $headers = [])
     {
@@ -56,11 +56,12 @@ class Addon extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @param array $headers
+     * @param array  $data
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function update(string $id, array $data = [], array $headers = [])
     {
@@ -71,11 +72,11 @@ class Addon extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $headers
-     *
-     * @return array|string
+     * @param array  $headers
      *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function delete(string $id, array $headers = [])
     {
@@ -88,9 +89,9 @@ class Addon extends AbstractApi
      * @param array $data
      * @param array $headers
      *
-     * @return array|string
-     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function copy(array $data, array $headers = [])
     {
@@ -101,11 +102,11 @@ class Addon extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $headers
-     *
-     * @return array|string
+     * @param array  $headers
      *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function unarchive(string $id, array $headers = [])
     {

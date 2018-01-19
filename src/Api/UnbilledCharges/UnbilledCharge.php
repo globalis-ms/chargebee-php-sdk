@@ -9,8 +9,10 @@ class UnbilledCharge extends AbstractApi
 {
     /**
      * @param array $headers
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function list(array $headers = [])
     {
@@ -23,8 +25,9 @@ class UnbilledCharge extends AbstractApi
      * @param array $data
      * @param array $headers
      *
-     * @return array|string
      * @throws Exception
+     *
+     * @return array|string
      */
     public function invoiceUnbilledCharges(array $data, array $headers = [])
     {
@@ -37,8 +40,9 @@ class UnbilledCharge extends AbstractApi
      * @param array $data
      * @param array $headers
      *
-     * @return array|string
      * @throws Exception
+     *
+     * @return array|string
      */
     public function invoiceNowEstimate(array $data, array $headers = [])
     {
@@ -49,10 +53,11 @@ class UnbilledCharge extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $headers
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function delete(string $id, array $headers = [])
     {

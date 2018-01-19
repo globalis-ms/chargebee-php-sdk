@@ -70,9 +70,11 @@ class Plan extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $headers
-     * @return array|string
+     * @param array  $headers
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function delete(string $id, array $headers = [])
     {
@@ -83,10 +85,11 @@ class Plan extends AbstractApi
 
     /**
      * @param array $data
-     *
      * @param array $headers
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function copy(array $data, array $headers = [])
     {
@@ -97,10 +100,11 @@ class Plan extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $headers
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function unarchive(string $id, array $headers = [])
     {
