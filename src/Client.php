@@ -5,9 +5,28 @@ namespace NathanDunn\Chargebee;
 use Http\Client\Common\HttpMethodsClient;
 use Http\Message\RequestFactory;
 use Http\Message\StreamFactory;
-use NathanDunn\Chargebee\Api\{
-    Addons\Addon, Addresses\Address, Cards\Card, CouponCodes\CouponCode, Coupons\Coupon, CouponSets\CouponSet, CreditNotes\CreditNote, Customers\Customer, Estimates\Estimate, Events\Event, HostedPages\HostedPage, Invoices\Invoice, Orders\Order, PaymentSources\PaymentSource, Plans\Plan, PortalSessions\PortalSession, PromotionalCredits\PromotionalCredit, SiteMigrationDetails\SiteMigrationDetail, Subscriptions\Subscription, TimeMachines\TimeMachine, Transactions\Transaction, UnbilledCharges\UnbilledCharge
-};
+use NathanDunn\Chargebee\Api\Addons\Addon;
+use NathanDunn\Chargebee\Api\Addresses\Address;
+use NathanDunn\Chargebee\Api\Cards\Card;
+use NathanDunn\Chargebee\Api\CouponCodes\CouponCode;
+use NathanDunn\Chargebee\Api\Coupons\Coupon;
+use NathanDunn\Chargebee\Api\CouponSets\CouponSet;
+use NathanDunn\Chargebee\Api\CreditNotes\CreditNote;
+use NathanDunn\Chargebee\Api\Customers\Customer;
+use NathanDunn\Chargebee\Api\Estimates\Estimate;
+use NathanDunn\Chargebee\Api\Events\Event;
+use NathanDunn\Chargebee\Api\HostedPages\HostedPage;
+use NathanDunn\Chargebee\Api\Invoices\Invoice;
+use NathanDunn\Chargebee\Api\Orders\Order;
+use NathanDunn\Chargebee\Api\PaymentSources\PaymentSource;
+use NathanDunn\Chargebee\Api\Plans\Plan;
+use NathanDunn\Chargebee\Api\PortalSessions\PortalSession;
+use NathanDunn\Chargebee\Api\PromotionalCredits\PromotionalCredit;
+use NathanDunn\Chargebee\Api\SiteMigrationDetails\SiteMigrationDetail;
+use NathanDunn\Chargebee\Api\Subscriptions\Subscription;
+use NathanDunn\Chargebee\Api\TimeMachines\TimeMachine;
+use NathanDunn\Chargebee\Api\Transactions\Transaction;
+use NathanDunn\Chargebee\Api\UnbilledCharges\UnbilledCharge;
 use NathanDunn\Chargebee\HttpClient\Builder;
 
 class Client
