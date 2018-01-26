@@ -104,7 +104,7 @@ class Client
     /**
      * @return Addon
      */
-    public function addon()
+    public function addon(): Addon
     {
         return new Addon($this);
     }
@@ -112,7 +112,7 @@ class Client
     /**
      * @return Address
      */
-    public function address()
+    public function address(): Address
     {
         return new Address($this);
     }
@@ -120,7 +120,7 @@ class Client
     /**
      * @return Card
      */
-    public function card()
+    public function card(): Card
     {
         return new Card($this);
     }
@@ -128,7 +128,7 @@ class Client
     /**
      * @return Coupon
      */
-    public function coupon()
+    public function coupon(): Coupon
     {
         return new Coupon($this);
     }
@@ -136,7 +136,7 @@ class Client
     /**
      * @return CouponCode
      */
-    public function couponCode()
+    public function couponCode(): CouponCode
     {
         return new CouponCode($this);
     }
@@ -144,7 +144,7 @@ class Client
     /**
      * @return CouponSet
      */
-    public function couponSet()
+    public function couponSet(): CouponSet
     {
         return new CouponSet($this);
     }
@@ -152,7 +152,7 @@ class Client
     /**
      * @return CreditNote
      */
-    public function creditNote()
+    public function creditNote(): CreditNote
     {
         return new CreditNote($this);
     }
@@ -160,7 +160,7 @@ class Client
     /**
      * @return Customer
      */
-    public function customer()
+    public function customer(): Customer
     {
         return new Customer($this);
     }
@@ -168,7 +168,7 @@ class Client
     /**
      * @return Event
      */
-    public function event()
+    public function event(): Event
     {
         return new Event($this);
     }
@@ -176,7 +176,7 @@ class Client
     /**
      * @return Estimate
      */
-    public function estimate()
+    public function estimate(): Estimate
     {
         return new Estimate($this);
     }
@@ -184,7 +184,7 @@ class Client
     /**
      * @return HostedPage
      */
-    public function hostedPage()
+    public function hostedPage(): HostedPage
     {
         return new HostedPage($this);
     }
@@ -192,7 +192,7 @@ class Client
     /**
      * @return Invoice
      */
-    public function invoice()
+    public function invoice(): Invoice
     {
         return new Invoice($this);
     }
@@ -200,7 +200,7 @@ class Client
     /**
      * @return Order
      */
-    public function order()
+    public function order(): Order
     {
         return new Order($this);
     }
@@ -208,7 +208,7 @@ class Client
     /**
      * @return PaymentSource
      */
-    public function paymentSource()
+    public function paymentSource(): PaymentSource
     {
         return new PaymentSource($this);
     }
@@ -216,7 +216,7 @@ class Client
     /**
      * @return Plan
      */
-    public function plan()
+    public function plan(): Plan
     {
         return new Plan($this);
     }
@@ -224,7 +224,7 @@ class Client
     /**
      * @return PortalSession
      */
-    public function portalSession()
+    public function portalSession(): PortalSession
     {
         return new PortalSession($this);
     }
@@ -232,7 +232,7 @@ class Client
     /**
      * @return PromotionalCredit
      */
-    public function promotionalCredit()
+    public function promotionalCredit(): PromotionalCredit
     {
         return new PromotionalCredit($this);
     }
@@ -240,7 +240,7 @@ class Client
     /**
      * @return SiteMigrationDetail
      */
-    public function siteMigrationDetail()
+    public function siteMigrationDetail(): SiteMigrationDetail
     {
         return new SiteMigrationDetail($this);
     }
@@ -248,7 +248,7 @@ class Client
     /**
      * @return Subscription
      */
-    public function subscription()
+    public function subscription(): Subscription
     {
         return new Subscription($this);
     }
@@ -256,7 +256,7 @@ class Client
     /**
      * @return TimeMachine
      */
-    public function timeMachine()
+    public function timeMachine(): TimeMachine
     {
         return new TimeMachine($this);
     }
@@ -264,7 +264,7 @@ class Client
     /**
      * @return Transaction
      */
-    public function transaction()
+    public function transaction(): Transaction
     {
         return new Transaction($this);
     }
@@ -272,7 +272,7 @@ class Client
     /**
      * @return UnbilledCharge
      */
-    public function unbilledCharge()
+    public function unbilledCharge(): UnbilledCharge
     {
         return new UnbilledCharge($this);
     }
