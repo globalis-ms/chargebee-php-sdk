@@ -23,3 +23,8 @@ License
 -------
 
 See the LICENSE file.
+
+Documentation
+-------------
+
+For documentation, see the [Wiki](https://github.com/nathanjdunn/chargebee-php-sdk/wiki)
