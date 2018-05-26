@@ -102,8 +102,10 @@ class HostedPage extends AbstractApi
     /**
      * @param array $data
      * @param array $headers
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function collectNow(array $data = [], array $headers = [])
     {
@@ -115,8 +117,10 @@ class HostedPage extends AbstractApi
     /**
      * @param array $data
      * @param array $headers
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function managePaymentSources(array $data = [], array $headers = [])
     {
