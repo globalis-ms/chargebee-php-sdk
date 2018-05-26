@@ -5,4 +5,5 @@ install:
   - composer install
 script:
   - php ./vendor/bin/phpunit ./tests/Unit
+after_script:
   - php ./vendor/bin/php-coveralls
