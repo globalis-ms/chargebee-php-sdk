@@ -5,7 +5,6 @@ namespace NathanDunn\Chargebee\Api;
 use finfo;
 use Http\Client\Exception;
 use Http\Client\Exception\HttpException;
-use Http\Message\MultipartStream\MultipartStreamBuilder;
 use Http\Message\StreamFactory;
 use NathanDunn\Chargebee\Client;
 use NathanDunn\Chargebee\HttpClient\Exception\ApiExceptionHandler;
