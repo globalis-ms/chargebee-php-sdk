@@ -62,35 +62,19 @@ abstract class AbstractApi
      * @param $path
      * @param array $parameters
      * @param array $requestHeaders
-     * @param array $files
      *
      * @throws Exception
      *
      * @return array|string
      */
-    protected function post($path, array $parameters = [], $requestHeaders = [], array $files = [])
+    protected function post($path, array $parameters = [], $requestHeaders = [])
     {
         $path = $this->preparePath($path);
 
         $body = null;
-        if (empty($files) && !empty($parameters)) {
+        if (!empty($parameters)) {
             $body = $this->streamFactory->createStream(QueryStringBuilder::build($parameters));
             $requestHeaders['Content-Type'] = 'application/x-www-form-urlencoded';
-        } elseif (!empty($files)) {
-            $builder = new MultipartStreamBuilder($this->streamFactory);
-            foreach ($parameters as $name => $value) {
-                $builder->addResource($name, $value);
-            }
-            foreach ($files as $name => $file) {
-                $builder->addResource($name, fopen($file, 'r'), [
-                    'headers' => [
-                        'Content-Type' => $this->guessContentType($file),
-                    ],
-                    'filename' => basename($file),
-                ]);
-            }
-            $body = $builder->build();
-            $requestHeaders['Content-Type'] = 'multipart/form-data; boundary='.$builder->getBoundary();
         }
 
         try {
