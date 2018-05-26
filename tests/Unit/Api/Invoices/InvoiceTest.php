@@ -315,6 +315,20 @@ class InvoiceTest extends TestCase
         $this->assertEquals($expected, $invoice->delete('66', []));
     }
 
+    /** @test */
+    public function should_update_invoice_details()
+    {
+        $expected = $this->getContent(sprintf('%s/data/responses/invoice_details_updated.json', __DIR__));
+
+        $invoice = $this->getApiMock();
+        $invoice->expects($this->once())
+            ->method('post')
+            ->with('https://123456789.chargebee.com/api/v2/invoices/66/update_details', [])
+            ->will($this->returnValue($expected));
+
+        $this->assertEquals($expected, $invoice->updateDetails('66', []));
+    }
+
     /**
      * @return string
      */

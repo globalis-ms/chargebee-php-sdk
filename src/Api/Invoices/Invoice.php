@@ -357,4 +357,18 @@ class Invoice extends AbstractApi
 
         return $this->post($url, $data, $headers);
     }
+
+    /**
+     * @param string $id
+     * @param array $data
+     * @param array $headers
+     * @return array|string
+     * @throws Exception
+     */
+    public function updateDetails(string $id, array $data, array $headers = [])
+    {
+        $url = $this->url('invoices/%s/update_details', $id);
+
+        return $this->post($url, $data, $headers);
+    }
 }

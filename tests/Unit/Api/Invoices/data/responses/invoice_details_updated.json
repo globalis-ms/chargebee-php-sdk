@@ -1,0 +1,95 @@
+{
+  "invoice": {
+    "id": "1",
+    "customer_id": "8avVGOkx8U1MX",
+    "subscription_id": "8avVGOkx8U1MX",
+    "recurring": true,
+    "status": "paid",
+    "price_type": "tax_exclusive",
+    "date": 1414780254,
+    "due_date": 1414780254,
+    "net_term_days": 0,
+    "exchange_rate": 1.0,
+    "total": 900,
+    "amount_paid": 900,
+    "amount_adjusted": 0,
+    "write_off_amount": 0,
+    "credits_applied": 0,
+    "amount_due": 0,
+    "paid_at": 1414780255,
+    "updated_at": 1522747266,
+    "resource_version": 1522747266000,
+    "deleted": false,
+    "object": "invoice",
+    "first_invoice": false,
+    "amount_to_collect": 0,
+    "round_off_amount": 0,
+    "has_advance_charges": false,
+    "currency_code": "USD",
+    "base_currency_code": "USD",
+    "tax": 0,
+    "line_items": [
+      {
+        "id": "li_5SK0b4wlQo94IIoN",
+        "date_from": 1414780254,
+        "date_to": 1417372254,
+        "unit_amount": 900,
+        "quantity": 1,
+        "is_taxed": false,
+        "tax_amount": 0,
+        "object": "line_item",
+        "subscription_id": "8avVGOkx8U1MX",
+        "amount": 900,
+        "description": "Basic",
+        "entity_type": "plan",
+        "entity_id": "basic",
+        "tax_exempt_reason": "tax_not_configured",
+        "discount_amount": 0,
+        "item_level_discount_amount": 0
+      }
+    ],
+    "sub_total": 900,
+    "linked_payments": [
+      {
+        "txn_id": "txn_5SK0b4wlQo94IL6O",
+        "applied_amount": 900,
+        "applied_at": 1414780255,
+        "txn_status": "success",
+        "txn_date": 1414780255,
+        "txn_amount": 900
+      }
+    ],
+    "applied_credits": [],
+    "adjustment_credit_notes": [],
+    "issued_credit_notes": [
+      {
+        "cn_id": "TEST-CN-1",
+        "cn_reason_code": "waiver",
+        "cn_date": 1522746828,
+        "cn_total": 100,
+        "cn_status": "refunded"
+      }
+    ],
+    "linked_orders": [
+      {
+        "id": "XpbG8t4OvwWgjzM",
+        "status": "processing",
+        "reference_id": "1002",
+        "fulfillment_status": "Awaiting Shipment",
+        "created_at": 1522746807
+      }
+    ],
+    "billing_address": {
+      "first_name": "John",
+      "last_name": "Doe",
+      "line1": "PO Box 9999",
+      "city": "Walnut",
+      "state_code": "CA",
+      "state": "California",
+      "country": "US",
+      "zip": "91789",
+      "validation_status": "not_validated",
+      "object": "billing_address"
+    }
+  }
+}
