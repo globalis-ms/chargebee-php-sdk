@@ -91,6 +91,34 @@ class HostedPageTest extends TestCase
         $this->assertEquals($expected, $hostedPages->checkoutExistingSubscription([]));
     }
 
+    /** @test */
+    public function should_checkout_and_collect_now()
+    {
+        $expected = $this->getContent(sprintf('%s/data/responses/hosted_page_collect_now.json', __DIR__));
+
+        $hostedPages = $this->getApiMock();
+        $hostedPages->expects($this->once())
+            ->method('post')
+            ->with('https://123456789.chargebee.com/api/v2/hosted_pages/collect_now')
+            ->will($this->returnValue($expected));
+
+        $this->assertEquals($expected, $hostedPages->collectNow());
+    }
+
+    /** @test */
+    public function should_checkout_and_manage_payment_sources()
+    {
+        $expected = $this->getContent(sprintf('%s/data/responses/hosted_page_manage_payment_sources.json', __DIR__));
+
+        $hostedPages = $this->getApiMock();
+        $hostedPages->expects($this->once())
+            ->method('post')
+            ->with('https://123456789.chargebee.com/api/v2/hosted_pages/manage_payment_sources')
+            ->will($this->returnValue($expected));
+
+        $this->assertEquals($expected, $hostedPages->managePaymentSources());
+    }
+
     /**
      * @return string
      */

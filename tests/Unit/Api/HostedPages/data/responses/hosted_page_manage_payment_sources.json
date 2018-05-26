@@ -1,0 +1,14 @@
+{
+  "hosted_page": {
+    "created_at": 1526373343,
+    "embed": true,
+    "expires_at": 1526459743,
+    "id": "ujkMbU0EsYdWYoy4rPbHuX76c7FWiqU3",
+    "object": "hosted_page",
+    "resource_version": 1526373343000,
+    "state": "created",
+    "type": "manage_payment_sources",
+    "updated_at": 1526373343,
+    "url": "https://yourapp.chargebee.com/pages/v3/ujkMbU0EsYdWYoy4rPbHuX76c7FWiqU3/"
+  }
+}

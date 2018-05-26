@@ -98,4 +98,30 @@ class HostedPage extends AbstractApi
 
         return $this->post($url, [], $headers);
     }
+
+    /**
+     * @param array $data
+     * @param array $headers
+     * @return array|string
+     * @throws Exception
+     */
+    public function collectNow(array $data = [], array $headers = [])
+    {
+        $url = $this->url('hosted_pages/collect_now');
+
+        return $this->post($url, $data, $headers);
+    }
+
+    /**
+     * @param array $data
+     * @param array $headers
+     * @return array|string
+     * @throws Exception
+     */
+    public function managePaymentSources(array $data = [], array $headers = [])
+    {
+        $url = $this->url('hosted_pages/manage_payment_sources');
+
+        return $this->post($url, $data, $headers);
+    }
 }

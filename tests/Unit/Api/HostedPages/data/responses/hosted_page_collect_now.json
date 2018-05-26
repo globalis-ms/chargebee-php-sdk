@@ -1,0 +1,14 @@
+{
+  "hosted_page": {
+    "id": "EQmkh1HULpOlJQJHncumqg5yp7V78AIci",
+    "type": "collect_now",
+    "url": "https://yourapp.chargebee.com/pages/v3/EQmkh1HULpOlJQJHncumqg5yp7V78AIci/collect_now",
+    "state": "created",
+    "embed": true,
+    "created_at": 1522747132,
+    "expires_at": 1522833532,
+    "object": "hosted_page",
+    "updated_at": 1522747132,
+    "resource_version": 1522747132000
+  }
+}
