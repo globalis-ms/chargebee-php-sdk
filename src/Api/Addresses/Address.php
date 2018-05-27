@@ -16,7 +16,7 @@ class Address extends AbstractApi
      *
      * @return array|string
      */
-    public function find(array $parameters, array $headers = [])
+    public function find(array $parameters = [], array $headers = [])
     {
         $resolver = new OptionsResolver();
 
