@@ -13,6 +13,7 @@ use NathanDunn\Chargebee\Api\CreditNotes\CreditNote;
 use NathanDunn\Chargebee\Api\Customers\Customer;
 use NathanDunn\Chargebee\Api\Estimates\Estimate;
 use NathanDunn\Chargebee\Api\Events\Event;
+use NathanDunn\Chargebee\Api\Exports\Export;
 use NathanDunn\Chargebee\Api\HostedPages\HostedPage;
 use NathanDunn\Chargebee\Api\Invoices\Invoice;
 use NathanDunn\Chargebee\Api\Orders\Order;
@@ -25,6 +26,7 @@ use NathanDunn\Chargebee\Api\Subscriptions\Subscription;
 use NathanDunn\Chargebee\Api\TimeMachines\TimeMachine;
 use NathanDunn\Chargebee\Api\Transactions\Transaction;
 use NathanDunn\Chargebee\Api\UnbilledCharges\UnbilledCharge;
+use NathanDunn\Chargebee\Api\VirtualBankAccounts\VirtualBankAccount;
 use Tests\TestCase;
 
 class ClientTest extends TestCase
@@ -142,6 +144,14 @@ class ClientTest extends TestCase
     }
 
     /** @test */
+    public function should_get_export()
+    {
+        $event = $this->client->export();
+
+        $this->assertInstanceOf(Export::class, $event);
+    }
+
+    /** @test */
     public function should_get_hosted_page()
     {
         $hostedPage = $this->client->hostedPage();
@@ -211,5 +221,13 @@ class ClientTest extends TestCase
         $unbilledCharge = $this->client->unbilledCharge();
 
         $this->assertInstanceOf(UnbilledCharge::class, $unbilledCharge);
+    }
+
+    /** @test */
+    public function should_get_virtual_bank_account()
+    {
+        $virtualBankAccount = $this->client->virtualBankAccount();
+
+        $this->assertInstanceOf(VirtualBankAccount::class, $virtualBankAccount);
     }
 }

@@ -15,6 +15,7 @@ use NathanDunn\Chargebee\Api\CreditNotes\CreditNote;
 use NathanDunn\Chargebee\Api\Customers\Customer;
 use NathanDunn\Chargebee\Api\Estimates\Estimate;
 use NathanDunn\Chargebee\Api\Events\Event;
+use NathanDunn\Chargebee\Api\Exports\Export;
 use NathanDunn\Chargebee\Api\HostedPages\HostedPage;
 use NathanDunn\Chargebee\Api\Invoices\Invoice;
 use NathanDunn\Chargebee\Api\Orders\Order;
@@ -27,6 +28,7 @@ use NathanDunn\Chargebee\Api\Subscriptions\Subscription;
 use NathanDunn\Chargebee\Api\TimeMachines\TimeMachine;
 use NathanDunn\Chargebee\Api\Transactions\Transaction;
 use NathanDunn\Chargebee\Api\UnbilledCharges\UnbilledCharge;
+use NathanDunn\Chargebee\Api\VirtualBankAccounts\VirtualBankAccount;
 use NathanDunn\Chargebee\HttpClient\Builder;
 
 class Client
@@ -164,6 +166,14 @@ class Client
     }
 
     /**
+     * @return Estimate
+     */
+    public function estimate(): Estimate
+    {
+        return new Estimate($this);
+    }
+
+    /**
      * @return Event
      */
     public function event(): Event
@@ -172,11 +182,11 @@ class Client
     }
 
     /**
-     * @return Estimate
+     * @return Export
      */
-    public function estimate(): Estimate
+    public function export(): Export
     {
-        return new Estimate($this);
+        return new Export($this);
     }
 
     /**
@@ -273,5 +283,13 @@ class Client
     public function unbilledCharge(): UnbilledCharge
     {
         return new UnbilledCharge($this);
+    }
+
+    /**
+     * @return VirtualBankAccount
+     */
+    public function virtualBankAccount(): VirtualBankAccount
+    {
+        return new VirtualBankAccount($this);
     }
 }
