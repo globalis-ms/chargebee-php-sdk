@@ -9,9 +9,11 @@ class Export extends AbstractApi
 {
     /**
      * @param string $id
-     * @param array $headers
-     * @return array|string
+     * @param array  $headers
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function find(string $id, array $headers = [])
     {
@@ -23,8 +25,10 @@ class Export extends AbstractApi
     /**
      * @param array $data
      * @param array $headers
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function revenueRecognition(array $data = [], array $headers = [])
     {
@@ -36,8 +40,10 @@ class Export extends AbstractApi
     /**
      * @param array $data
      * @param array $headers
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function deferredRevenue(array $data = [], array $headers = [])
     {
