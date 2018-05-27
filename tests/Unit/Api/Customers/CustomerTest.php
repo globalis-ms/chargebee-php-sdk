@@ -217,6 +217,20 @@ class CustomerTest extends TestCase
         $this->assertEquals($expected, $customer->changeBillingDate('4gkYnd21ouvW', []));
     }
 
+    /** @test */
+    public function should_list_contacts()
+    {
+        $expected = $this->getContent(sprintf('%s/data/responses/customer_contacts_list.json', __DIR__));
+
+        $customer = $this->getApiMock();
+        $customer->expects($this->once())
+            ->method('get')
+            ->with('https://123456789.chargebee.com/api/v2/customers/4gkYnd21ouvW/contacts', [])
+            ->will($this->returnValue($expected));
+
+        $this->assertEquals($expected, $customer->contacts('4gkYnd21ouvW', []));
+    }
+
     /**
      * @return string
      */

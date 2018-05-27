@@ -245,4 +245,21 @@ class Customer extends AbstractApi
 
         return $this->post($url, $data, $headers);
     }
+
+    /**
+     * @param string $id
+     * @param array $parameters
+     * @param array $headers
+     * @return array|string
+     * @throws Exception
+     */
+    public function contacts(string $id, array $parameters = [], array $headers = [])
+    {
+        $resolver = $this->createOptionsResolver();
+
+        $url = $this->url('customers/%s/contacts', $id);
+
+        return $this->get($url, $resolver->resolve($parameters), $headers);
+
+    }
 }
