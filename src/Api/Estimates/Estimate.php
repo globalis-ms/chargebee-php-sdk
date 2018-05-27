@@ -125,10 +125,12 @@ class Estimate extends AbstractApi
 
     /**
      * @param string $subscriptionId
-     * @param array $data
-     * @param array $headers
-     * @return array|string
+     * @param array  $data
+     * @param array  $headers
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function pauseSubscriptionEstimate(string $subscriptionId, array $data, array $headers = [])
     {
@@ -139,10 +141,12 @@ class Estimate extends AbstractApi
 
     /**
      * @param string $subscriptionId
-     * @param array $data
-     * @param array $headers
-     * @return array|string
+     * @param array  $data
+     * @param array  $headers
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function resumeSubscriptionEstimate(string $subscriptionId, array $data, array $headers = [])
     {
