@@ -247,6 +247,62 @@ class SubscriptionTest extends TestCase
         $this->assertEquals($expected, $subscription->delete('8avVGOkx8U1MX'));
     }
 
+    /** @test */
+    public function should_pause_subscription()
+    {
+        $expected = $this->getContent(sprintf('%s/data/responses/subscription_paused.json', __DIR__));
+
+        $subscription = $this->getApiMock();
+        $subscription->expects($this->once())
+            ->method('post')
+            ->with('https://123456789.chargebee.com/api/v2/subscriptions/5SK0b4wlQo95kck8R/pause', [])
+            ->will($this->returnValue($expected));
+
+        $this->assertEquals($expected, $subscription->pause('5SK0b4wlQo95kck8R', []));
+    }
+
+    /** @test */
+    public function should_resume_subscription()
+    {
+        $expected = $this->getContent(sprintf('%s/data/responses/subscription_resumed.json', __DIR__));
+
+        $subscription = $this->getApiMock();
+        $subscription->expects($this->once())
+            ->method('post')
+            ->with('https://123456789.chargebee.com/api/v2/subscriptions/5SK0b4wlQo95kck8R/resume', [])
+            ->will($this->returnValue($expected));
+
+        $this->assertEquals($expected, $subscription->resume('5SK0b4wlQo95kck8R', []));
+    }
+
+    /** @test */
+    public function should_remove_scheduled_pause()
+    {
+        $expected = $this->getContent(sprintf('%s/data/responses/subscription_scheduled_pause_removed.json', __DIR__));
+
+        $subscription = $this->getApiMock();
+        $subscription->expects($this->once())
+            ->method('post')
+            ->with('https://123456789.chargebee.com/api/v2/subscriptions/5SK0b4wlQo95kck8R/remove_scheduled_pause', [])
+            ->will($this->returnValue($expected));
+
+        $this->assertEquals($expected, $subscription->removeScheduledPause('5SK0b4wlQo95kck8R', []));
+    }
+
+    /** @test */
+    public function remove_scheduled_resumption()
+    {
+        $expected = $this->getContent(sprintf('%s/data/responses/subscription_scheduled_resumption_removed.json', __DIR__));
+
+        $subscription = $this->getApiMock();
+        $subscription->expects($this->once())
+            ->method('post')
+            ->with('https://123456789.chargebee.com/api/v2/subscriptions/5SK0b4wlQo95kck8R/remove_scheduled_resumption', [])
+            ->will($this->returnValue($expected));
+
+        $this->assertEquals($expected, $subscription->removeScheduledResumption('5SK0b4wlQo95kck8R', []));
+    }
+
     /**
      * @return string
      */

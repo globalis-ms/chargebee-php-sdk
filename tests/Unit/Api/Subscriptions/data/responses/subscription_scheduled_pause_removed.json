@@ -1,0 +1,80 @@
+{
+  "card": {
+    "card_type": "visa",
+    "customer_id": "5SK0b4wlQo95kck8R",
+    "expiry_month": 1,
+    "expiry_year": 2032,
+    "funding_type": "credit",
+    "gateway": "chargebee",
+    "gateway_account_id": "gw_5SK0b4wlQo94FjJ2",
+    "iin": "411111",
+    "last4": "1111",
+    "masked_number": "************1111",
+    "object": "card",
+    "payment_source_id": "pm_5SK0b4wlQo95keX8T",
+    "status": "valid"
+  },
+  "customer": {
+    "allow_direct_debit": false,
+    "auto_collection": "on",
+    "card_status": "valid",
+    "created_at": 1522747124,
+    "deleted": false,
+    "email": "joe@user.com",
+    "excess_payments": 0,
+    "first_name": "Joe",
+    "id": "5SK0b4wlQo95kck8R",
+    "last_name": "D",
+    "net_term_days": 0,
+    "object": "customer",
+    "payment_method": {
+      "gateway": "chargebee",
+      "gateway_account_id": "gw_5SK0b4wlQo94FjJ2",
+      "object": "payment_method",
+      "reference_id": "tok_5SK0b4wlQo95keT8S",
+      "status": "valid",
+      "type": "card"
+    },
+    "preferred_currency_code": "USD",
+    "primary_payment_source_id": "pm_5SK0b4wlQo95keX8T",
+    "promotional_credits": 0,
+    "refundable_credits": 0,
+    "resource_version": 1522747125000,
+    "taxability": "taxable",
+    "unbilled_charges": 0,
+    "updated_at": 1522747125
+  },
+  "subscription": {
+    "activated_at": 1522747124,
+    "addons": [
+      {
+        "id": "data_usage",
+        "object": "addon",
+        "quantity": 2,
+        "unit_price": 95
+      }
+    ],
+    "billing_period": 1,
+    "billing_period_unit": "month",
+    "created_at": 1522747124,
+    "currency_code": "USD",
+    "current_term_end": 1525339126,
+    "current_term_start": 1522747126,
+    "customer_id": "5SK0b4wlQo95kck8R",
+    "deleted": false,
+    "due_invoices_count": 0,
+    "has_scheduled_changes": false,
+    "id": "5SK0b4wlQo95kck8R",
+    "mrr": 0,
+    "next_billing_at": 1525339126,
+    "object": "subscription",
+    "plan_free_quantity": 0,
+    "plan_id": "no_trial",
+    "plan_quantity": 3,
+    "plan_unit_price": 1000,
+    "resource_version": 1522747126000,
+    "started_at": 1522747124,
+    "status": "active",
+    "updated_at": 1522747126
+  }
+}

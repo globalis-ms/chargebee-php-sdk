@@ -300,4 +300,62 @@ class Subscription extends AbstractApi
 
         return $this->post($url, [], $headers);
     }
+
+    /**
+     * @param string $id
+     * @param array $data
+     * @param array $headers
+     *
+     * @return array|string
+     * @throws Exception
+     */
+    public function pause(string $id, array $data = [], array $headers = [])
+    {
+        $url = $this->url('subscriptions/%s/pause', $id);
+
+        return $this->post($url, $data, $headers);
+    }
+
+    /**
+     * @param string $id
+     * @param array $data
+     * @param array $headers
+     *
+     * @return array|string
+     * @throws Exception
+     */
+    public function resume(string $id, array $data = [], array $headers = [])
+    {
+        $url = $this->url('subscriptions/%s/resume', $id);
+
+        return $this->post($url, $data, $headers);
+    }
+
+    /**
+     * @param string $id
+     * @param array $data
+     * @param array $headers
+     * @return array|string
+     * @throws Exception
+     */
+    public function removeScheduledPause(string $id, array $data = [], array $headers = [])
+    {
+        $url = $this->url('subscriptions/%s/remove_scheduled_pause', $id);
+
+        return $this->post($url, $data, $headers);
+    }
+
+    /**
+     * @param string $id
+     * @param array $data
+     * @param array $headers
+     * @return array|string
+     * @throws Exception
+     */
+    public function removeScheduledResumption(string $id, array $data = [], array $headers = [])
+    {
+        $url = $this->url('subscriptions/%s/remove_scheduled_resumption', $id);
+
+        return $this->post($url, $data, $headers);
+    }
 }
