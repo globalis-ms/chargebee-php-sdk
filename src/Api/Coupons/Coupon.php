@@ -56,6 +56,20 @@ class Coupon extends AbstractApi
 
     /**
      * @param string $id
+     * @param array $data
+     * @param array $headers
+     * @return array|string
+     * @throws Exception
+     */
+    public function update(string $id, array $data, array $headers = [])
+    {
+        $url = $this->url('coupons/%s', $id);
+
+        return $this->post($url, $data, $headers);
+    }
+
+    /**
+     * @param string $id
      * @param array  $headers
      *
      * @throws Exception

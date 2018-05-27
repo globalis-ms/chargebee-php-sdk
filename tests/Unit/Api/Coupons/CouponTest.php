@@ -77,6 +77,20 @@ class CouponTest extends TestCase
         $this->assertEquals($expected, $coupon->unarchive('beta'));
     }
 
+    /** @test */
+    public function should_update_coupon()
+    {
+        $expected = $this->getContent(sprintf('%s/data/responses/coupon_updated.json', __DIR__));
+
+        $coupon = $this->getApiMock();
+        $coupon->expects($this->once())
+            ->method('post')
+            ->with('https://123456789.chargebee.com/api/v2/coupons/beta_offer', [])
+            ->will($this->returnValue($expected));
+
+        $this->assertEquals($expected, $coupon->update('beta_offer', []));
+    }
+
     /**
      * @return string
      */

@@ -1,0 +1,20 @@
+{
+  "coupon": {
+    "id": "beta_offer",
+    "name": "Beta Offer",
+    "discount_type": "fixed_amount",
+    "discount_amount": 500,
+    "duration_type": "forever",
+    "status": "active",
+    "apply_discount_on": "not_applicable",
+    "apply_on": "invoice_amount",
+    "plan_constraint": "not_applicable",
+    "addon_constraint": "not_applicable",
+    "created_at": 1522925966,
+    "updated_at": 1522926001,
+    "resource_version": 1522926001000,
+    "object": "coupon",
+    "redemptions": 0,
+    "currency_code": "USD"
+  }
+}
