@@ -248,10 +248,12 @@ class Customer extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $parameters
-     * @param array $headers
-     * @return array|string
+     * @param array  $parameters
+     * @param array  $headers
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function contacts(string $id, array $parameters = [], array $headers = [])
     {
@@ -260,6 +262,5 @@ class Customer extends AbstractApi
         $url = $this->url('customers/%s/contacts', $id);
 
         return $this->get($url, $resolver->resolve($parameters), $headers);
-
     }
 }

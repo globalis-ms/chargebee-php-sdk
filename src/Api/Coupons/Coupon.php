@@ -56,10 +56,12 @@ class Coupon extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @param array $headers
-     * @return array|string
+     * @param array  $data
+     * @param array  $headers
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function update(string $id, array $data, array $headers = [])
     {
