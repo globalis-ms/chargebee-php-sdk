@@ -10,8 +10,10 @@ class VirtualBankAccount extends AbstractApi
     /**
      * @param array $parameters
      * @param array $headers
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function list(array $parameters = [], array $headers = [])
     {
@@ -23,8 +25,10 @@ class VirtualBankAccount extends AbstractApi
     /**
      * @param array $data
      * @param array $headers
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function create(array $data, array $headers = [])
     {
@@ -36,8 +40,10 @@ class VirtualBankAccount extends AbstractApi
     /**
      * @param array $data
      * @param array $headers
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function createWithPermanentToken(array $data, array $headers = [])
     {
@@ -48,9 +54,11 @@ class VirtualBankAccount extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $headers
-     * @return array|string
+     * @param array  $headers
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function find(string $id, array $headers = [])
     {
