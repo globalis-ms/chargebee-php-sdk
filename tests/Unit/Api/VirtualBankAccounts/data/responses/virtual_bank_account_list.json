@@ -1,0 +1,21 @@
+{
+  "list": [
+    {
+      "virtual_bank_account": {
+        "id": "vba_XpbG6h6Qo96MJw7f",
+        "email": "active_direct@test.com",
+        "bank_name": "TEST BANK",
+        "account_number": "test_ae78ce9ac03f",
+        "routing_number": "110000000",
+        "swift_code": "TSTEZ122",
+        "gateway": "stripe",
+        "gateway_account_id": "gw_5SK0b4wlQo94Vg783",
+        "deleted": false,
+        "object": "virtual_bank_account",
+        "customer_id": "4gkYnd21ouvW",
+        "reference_id": "cus_CbzIeGNGObojAy/src_CbzIX1MJvwbeN9"
+      }
+    }
+  ],
+  "next_offset": "[\"1522747269000\",\"147000000012\"]"
+}

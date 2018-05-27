@@ -1,0 +1,59 @@
+{
+  "virtual_bank_account": {
+    "id": "vba_XpbG6h6Qo96M4g7c",
+    "email": "active_direct@test.com",
+    "bank_name": "TEST BANK",
+    "account_number": "test_e721e75112eb",
+    "routing_number": "110000000",
+    "swift_code": "TSTEZ122",
+    "gateway": "stripe",
+    "gateway_account_id": "gw_5SK0b4wlQo94Vg783",
+    "deleted": false,
+    "object": "virtual_bank_account",
+    "customer_id": "4gkYnd21ouvW",
+    "reference_id": "cus_C680lewsuvXgH9/src_C680EHUqh8tIbM"
+  },
+  "customer": {
+    "id": "4gkYnd21ouvW",
+    "email": "active_direct@test.com",
+    "auto_collection": "off",
+    "net_term_days": 0,
+    "allow_direct_debit": false,
+    "created_at": 1412101854,
+    "taxability": "taxable",
+    "updated_at": 1522747268,
+    "resource_version": 1522747268000,
+    "deleted": false,
+    "object": "customer",
+    "card_status": "no_card",
+    "contacts": [
+      {
+        "id": "ty68op521m",
+        "first_name": "Michel",
+        "last_name": "Ross",
+        "email": "Mike@test.com",
+        "label": "Mike",
+        "enabled": true,
+        "send_account_email": true,
+        "send_billing_email": false,
+        "object": "contact"
+      }
+    ],
+    "balances": [
+      {
+        "promotional_credits": 100,
+        "excess_payments": 0,
+        "refundable_credits": 0,
+        "unbilled_charges": 0,
+        "object": "customer_balance",
+        "currency_code": "USD",
+        "balance_currency_code": "USD"
+      }
+    ],
+    "promotional_credits": 100,
+    "refundable_credits": 0,
+    "excess_payments": 0,
+    "unbilled_charges": 0,
+    "preferred_currency_code": "USD"
+  }
+}

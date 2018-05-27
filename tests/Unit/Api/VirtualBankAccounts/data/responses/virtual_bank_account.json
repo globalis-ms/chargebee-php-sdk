@@ -1,0 +1,16 @@
+{
+  "virtual_bank_account": {
+    "id": "vba_5SK0b4wlQo94Vhl84",
+    "email": "jane@test.com",
+    "bank_name": "TEST BANK",
+    "account_number": "test_fe44816c8682",
+    "routing_number": "110000000",
+    "swift_code": "TSTEZ122",
+    "gateway": "stripe",
+    "gateway_account_id": "gw_5SK0b4wlQo94Vg783",
+    "deleted": false,
+    "object": "virtual_bank_account",
+    "customer_id": "4gkYnd21ouvW",
+    "reference_id": "cus_CWoNXpK2VvGgzC/src_CWoNzGgWNsbreG"
+  }
+}
