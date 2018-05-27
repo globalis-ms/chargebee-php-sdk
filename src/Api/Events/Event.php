@@ -32,7 +32,7 @@ class Event extends AbstractApi
      *
      * @return array|string
      */
-    public function find($id, array $headers = [])
+    public function find(string $id, array $headers = [])
     {
         $url = $this->url('events/%s', $id);
 
