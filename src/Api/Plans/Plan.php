@@ -36,7 +36,7 @@ class Plan extends AbstractApi
     {
         $url = $this->url('plans');
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
@@ -65,7 +65,7 @@ class Plan extends AbstractApi
     {
         $url = $this->url('plans/%s', $id);
 
-        return $this->post($url, $data);
+        return $this->post($url, $data, $headers);
     }
 
     /**
