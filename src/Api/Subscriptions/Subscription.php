@@ -303,11 +303,12 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @param array $headers
+     * @param array  $data
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function pause(string $id, array $data = [], array $headers = [])
     {
@@ -318,11 +319,12 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @param array $headers
+     * @param array  $data
+     * @param array  $headers
+     *
+     * @throws Exception
      *
      * @return array|string
-     * @throws Exception
      */
     public function resume(string $id, array $data = [], array $headers = [])
     {
@@ -333,10 +335,12 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @param array $headers
-     * @return array|string
+     * @param array  $data
+     * @param array  $headers
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function removeScheduledPause(string $id, array $data = [], array $headers = [])
     {
@@ -347,10 +351,12 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @param array $headers
-     * @return array|string
+     * @param array  $data
+     * @param array  $headers
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function removeScheduledResumption(string $id, array $data = [], array $headers = [])
     {
