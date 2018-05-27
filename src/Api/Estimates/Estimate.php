@@ -122,4 +122,32 @@ class Estimate extends AbstractApi
 
         return $this->post($url, $data, $headers);
     }
+
+    /**
+     * @param string $subscriptionId
+     * @param array $data
+     * @param array $headers
+     * @return array|string
+     * @throws Exception
+     */
+    public function pauseSubscriptionEstimate(string $subscriptionId, array $data, array $headers = [])
+    {
+        $url = $this->url('subscriptions/%s/pause_subscription_estimate', $subscriptionId);
+
+        return $this->post($url, $data, $headers);
+    }
+
+    /**
+     * @param string $subscriptionId
+     * @param array $data
+     * @param array $headers
+     * @return array|string
+     * @throws Exception
+     */
+    public function resumeSubscriptionEstimate(string $subscriptionId, array $data, array $headers = [])
+    {
+        $url = $this->url('subscriptions/%s/resume_subscription_estimate', $subscriptionId);
+
+        return $this->post($url, $data, $headers);
+    }
 }

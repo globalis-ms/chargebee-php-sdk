@@ -91,6 +91,34 @@ class EstimateTest extends TestCase
         $this->assertEquals($expected, $estimate->cancelSubscriptionEstimate('8avVGOkx8U1MX', []));
     }
 
+    /** @test */
+    public function should_pause_subscription_estimate()
+    {
+        $expected = $this->getContent(sprintf('%s/data/responses/estimate_subscription_paused.json', __DIR__));
+
+        $estimate = $this->getApiMock();
+        $estimate->expects($this->once())
+            ->method('post')
+            ->with('https://123456789.chargebee.com/api/v2/subscriptions/5SK0b4wlQo95lIb8g/pause_subscription_estimate', [])
+            ->will($this->returnValue($expected));
+
+        $this->assertEquals($expected, $estimate->pauseSubscriptionEstimate('5SK0b4wlQo95lIb8g', []));
+    }
+
+    /** @test */
+    public function should_resume_subscription_estimate()
+    {
+        $expected = $this->getContent(sprintf('%s/data/responses/estimate_subscription_resumed.json', __DIR__));
+
+        $estimate = $this->getApiMock();
+        $estimate->expects($this->once())
+            ->method('post')
+            ->with('https://123456789.chargebee.com/api/v2/subscriptions/5SK0b4wlQo95lIb8g/resume_subscription_estimate', [])
+            ->will($this->returnValue($expected));
+
+        $this->assertEquals($expected, $estimate->resumeSubscriptionEstimate('5SK0b4wlQo95lIb8g', []));
+    }
+
     /**
      * @return string
      */

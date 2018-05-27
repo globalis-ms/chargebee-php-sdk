@@ -1,0 +1,47 @@
+{
+  "estimate": {
+    "created_at": 1522747127,
+    "credit_note_estimates": [],
+    "invoice_estimate": {
+      "amount_due": 1000,
+      "amount_paid": 0,
+      "credits_applied": 0,
+      "currency_code": "USD",
+      "line_item_discounts": [],
+      "line_item_taxes": [],
+      "line_items": [
+        {
+          "amount": 1000,
+          "date_from": 1522747127,
+          "date_to": 1522747127,
+          "description": "unbilled_charges",
+          "discount_amount": 0,
+          "entity_type": "adhoc",
+          "id": "li_XpbG6h6Qo95lP43R",
+          "is_taxed": false,
+          "item_level_discount_amount": 0,
+          "object": "line_item",
+          "quantity": 1,
+          "subscription_id": "5SK0b4wlQo95lIb8g",
+          "tax_amount": 0,
+          "unit_amount": 1000
+        }
+      ],
+      "object": "invoice_estimate",
+      "price_type": "tax_exclusive",
+      "recurring": false,
+      "sub_total": 1000,
+      "taxes": [],
+      "total": 1000
+    },
+    "object": "estimate",
+    "subscription_estimate": {
+      "currency_code": "USD",
+      "id": "5SK0b4wlQo95lIb8g",
+      "object": "subscription_estimate",
+      "pause_date": 1522747127,
+      "resume_date": 1525339127,
+      "status": "paused"
+    }
+  }
+}

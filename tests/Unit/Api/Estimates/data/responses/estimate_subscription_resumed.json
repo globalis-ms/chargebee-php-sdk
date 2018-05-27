@@ -1,0 +1,46 @@
+{
+  "estimate": {
+    "created_at": 1522747128,
+    "invoice_estimate": {
+      "amount_due": 3190,
+      "amount_paid": 0,
+      "credits_applied": 0,
+      "currency_code": "USD",
+      "line_item_discounts": [],
+      "line_item_taxes": [],
+      "line_items": [
+        {
+          "amount": 3000,
+          "date_from": 1522747128,
+          "date_to": 1525339128,
+          "description": "No Trial",
+          "discount_amount": 0,
+          "entity_id": "no_trial",
+          "entity_type": "plan",
+          "id": "li_XpbG6h6Qo95lb33f",
+          "is_taxed": false,
+          "item_level_discount_amount": 0,
+          "object": "line_item",
+          "quantity": 3,
+          "subscription_id": "5SK0b4wlQo95lIb8g",
+          "tax_amount": 0,
+          "unit_amount": 1000
+        }
+      ],
+      "object": "invoice_estimate",
+      "price_type": "tax_exclusive",
+      "recurring": true,
+      "sub_total": 3190,
+      "taxes": [],
+      "total": 3190
+    },
+    "object": "estimate",
+    "subscription_estimate": {
+      "currency_code": "USD",
+      "id": "5SK0b4wlQo95lIb8g",
+      "next_billing_at": 1525339128,
+      "object": "subscription_estimate",
+      "status": "active"
+    }
+  }
+}
