@@ -3,6 +3,7 @@
 namespace Tests\Unit\Api\Customers;
 
 use NathanDunn\Chargebee\Api\Customers\Customer;
+use Symfony\Component\OptionsResolver\Exception\UndefinedOptionsException;
 use Tests\Unit\Api\TestCase;
 
 class CustomerTest extends TestCase
@@ -19,6 +20,49 @@ class CustomerTest extends TestCase
             ->will($this->returnValue($expected));
 
         $this->assertEquals($expected, $customer->list());
+    }
+
+    /**
+     * @test
+     * @dataProvider filters
+     */
+    public function should_filter_customers($filters)
+    {
+        $expected = $this->getContent(sprintf('%s/data/responses/customer_list.json', __DIR__));
+
+        $customer = $this->getApiMock();
+        $customer->expects($this->once())
+            ->method('get')
+            ->with('https://123456789.chargebee.com/api/v2/customers', $filters)
+            ->will($this->returnValue($expected));
+
+        $this->assertEquals($expected, $customer->list($filters));
+    }
+
+    public function filters()
+    {
+        return [
+            'email'      => [['email[is]' => 'test@test.com']],
+            'first name' => [['first_name[is]' => 'John']],
+            'last name'  => [['last_name[is]' => 'Doe']],
+        ];
+    }
+
+    /**
+     * @test
+     */
+    public function should_reject_unregistered_filters()
+    {
+        $filters = ['unkown' => 'field'];
+
+        $expected = $this->getContent(sprintf('%s/data/responses/customer_list.json', __DIR__));
+
+        $customer = $this->getApiMock();
+        $customer->expects($this->never())
+            ->method('get');
+
+        $this->expectException(UndefinedOptionsException::class);
+        $customer->list($filters);
     }
 
     /** @test */
