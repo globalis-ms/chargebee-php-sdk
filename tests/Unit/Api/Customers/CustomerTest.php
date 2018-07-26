@@ -23,9 +23,9 @@ class CustomerTest extends TestCase
     }
 
     /**
-    * @test
-    * @dataProvider filters
-    */
+     * @test
+     * @dataProvider filters
+     */
     public function should_filter_customers($filters)
     {
         $expected = $this->getContent(sprintf('%s/data/responses/customer_list.json', __DIR__));
@@ -42,15 +42,15 @@ class CustomerTest extends TestCase
     public function filters()
     {
         return [
-            'email' => [['email[is]' => 'test@test.com']],
+            'email'      => [['email[is]' => 'test@test.com']],
             'first name' => [['first_name[is]' => 'John']],
-            'last name' => [['last_name[is]' => 'Doe']],
+            'last name'  => [['last_name[is]' => 'Doe']],
         ];
     }
 
     /**
-    * @test
-    */
+     * @test
+     */
     public function should_reject_unregistered_filters()
     {
         $filters = ['unkown' => 'field'];
