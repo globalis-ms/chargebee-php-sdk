@@ -19,6 +19,7 @@ use NathanDunn\Chargebee\Api\Exports\Export;
 use NathanDunn\Chargebee\Api\HostedPages\HostedPage;
 use NathanDunn\Chargebee\Api\Invoices\Invoice;
 use NathanDunn\Chargebee\Api\Orders\Order;
+use NathanDunn\Chargebee\Api\PaymentIntents\PaymentIntent;
 use NathanDunn\Chargebee\Api\PaymentSources\PaymentSource;
 use NathanDunn\Chargebee\Api\Plans\Plan;
 use NathanDunn\Chargebee\Api\PortalSessions\PortalSession;
@@ -54,8 +55,8 @@ class Client
     private $key;
 
     /**
-     * @param string       $site
-     * @param string       $key
+     * @param string $site
+     * @param string $key
      * @param Builder|null $httpClientBuilder
      */
     public function __construct(string $site, string $key, Builder $httpClientBuilder = null)
@@ -211,6 +212,14 @@ class Client
     public function order(): Order
     {
         return new Order($this);
+    }
+
+    /**
+     * @return PaymentIntent
+     */
+    public function paymentIntent(): PaymentIntent
+    {
+        return new PaymentIntent($this);
     }
 
     /**

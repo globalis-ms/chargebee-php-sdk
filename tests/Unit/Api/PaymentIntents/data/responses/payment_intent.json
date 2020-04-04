@@ -1,0 +1,14 @@
+{
+  "payment_intent":{
+    "amount":5000,
+    "created_at":1517470174,
+    "currency_code":"USD",
+    "expires_at":1517471974,
+    "gateway":"chargebee",
+    "gateway_account_id":"gw___test__KyVnHuRnFcq6W1X",
+    "id":"__test__KyVnJjRnFcqrx8nl__test__nJYZzyzNQhx1JThL3nyfoNGSFUQSZOdQ",
+    "modified_at":1578727774,
+    "object":"payment_intent",
+    "status":"inited"
+  }
+}

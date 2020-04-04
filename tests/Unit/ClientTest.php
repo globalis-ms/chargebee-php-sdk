@@ -17,6 +17,7 @@ use NathanDunn\Chargebee\Api\Exports\Export;
 use NathanDunn\Chargebee\Api\HostedPages\HostedPage;
 use NathanDunn\Chargebee\Api\Invoices\Invoice;
 use NathanDunn\Chargebee\Api\Orders\Order;
+use NathanDunn\Chargebee\Api\PaymentIntents\PaymentIntent;
 use NathanDunn\Chargebee\Api\PaymentSources\PaymentSource;
 use NathanDunn\Chargebee\Api\Plans\Plan;
 use NathanDunn\Chargebee\Api\PortalSessions\PortalSession;
@@ -157,6 +158,13 @@ class ClientTest extends TestCase
         $hostedPage = $this->client->hostedPage();
 
         $this->assertInstanceOf(HostedPage::class, $hostedPage);
+    }
+
+    public function should_get_payment_intent()
+    {
+        $paymentSource = $this->client->paymentIntent();
+
+        $this->assertInstanceOf(PaymentIntent::class, $paymentSource);
     }
 
     /** @test */
