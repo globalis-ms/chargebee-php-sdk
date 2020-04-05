@@ -10,8 +10,10 @@ class Gift extends AbstractApi
     /**
      * @param array $parameters
      * @param array $headers
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function list(array $parameters = [], array $headers = [])
     {
@@ -22,9 +24,11 @@ class Gift extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $headers
-     * @return array|string
+     * @param array  $headers
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function find(string $id, array $headers = [])
     {
@@ -36,8 +40,10 @@ class Gift extends AbstractApi
     /**
      * @param array $data
      * @param array $headers
-     * @return array|string
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function create(array $data = [], array $headers = [])
     {
@@ -48,10 +54,12 @@ class Gift extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @param array $headers
-     * @return array|string
+     * @param array  $data
+     * @param array  $headers
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function claim(string $id, array $data = [], array $headers = [])
     {
@@ -62,10 +70,12 @@ class Gift extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @param array $headers
-     * @return array|string
+     * @param array  $data
+     * @param array  $headers
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function update(string $id, array $data = [], array $headers = [])
     {
@@ -76,10 +86,12 @@ class Gift extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $data
-     * @param array $headers
-     * @return array|string
+     * @param array  $data
+     * @param array  $headers
+     *
      * @throws Exception
+     *
+     * @return array|string
      */
     public function cancel(string $id, array $data = [], array $headers = [])
     {
