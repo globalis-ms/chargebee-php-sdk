@@ -55,8 +55,8 @@ class Client
     private $key;
 
     /**
-     * @param string $site
-     * @param string $key
+     * @param string       $site
+     * @param string       $key
      * @param Builder|null $httpClientBuilder
      */
     public function __construct(string $site, string $key, Builder $httpClientBuilder = null)

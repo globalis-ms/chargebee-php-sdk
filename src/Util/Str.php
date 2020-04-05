@@ -11,7 +11,9 @@ class Str
      */
     public static function studly($value): string
     {
-        return str_replace(' ', '',
+        return str_replace(
+            ' ',
+            '',
             ucwords(str_replace(['-', '_'], ' ', $value))
         );
     }
