@@ -14,6 +14,7 @@ use NathanDunn\Chargebee\Api\Customers\Customer;
 use NathanDunn\Chargebee\Api\Estimates\Estimate;
 use NathanDunn\Chargebee\Api\Events\Event;
 use NathanDunn\Chargebee\Api\Exports\Export;
+use NathanDunn\Chargebee\Api\Gifts\Gift;
 use NathanDunn\Chargebee\Api\HostedPages\HostedPage;
 use NathanDunn\Chargebee\Api\Invoices\Invoice;
 use NathanDunn\Chargebee\Api\Orders\Order;
@@ -150,6 +151,14 @@ class ClientTest extends TestCase
         $event = $this->client->export();
 
         $this->assertInstanceOf(Export::class, $event);
+    }
+
+    /** @test */
+    public function should_get_gift()
+    {
+        $gift = $this->client->gift();
+
+        $this->assertInstanceOf(Gift::class, $gift);
     }
 
     /** @test */

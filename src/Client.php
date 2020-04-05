@@ -16,6 +16,7 @@ use NathanDunn\Chargebee\Api\Customers\Customer;
 use NathanDunn\Chargebee\Api\Estimates\Estimate;
 use NathanDunn\Chargebee\Api\Events\Event;
 use NathanDunn\Chargebee\Api\Exports\Export;
+use NathanDunn\Chargebee\Api\Gifts\Gift;
 use NathanDunn\Chargebee\Api\HostedPages\HostedPage;
 use NathanDunn\Chargebee\Api\Invoices\Invoice;
 use NathanDunn\Chargebee\Api\Orders\Order;
@@ -188,6 +189,14 @@ class Client
     public function export(): Export
     {
         return new Export($this);
+    }
+
+    /**
+     * @return Gift
+     */
+    public function gift(): Gift
+    {
+        return new Gift($this);
     }
 
     /**

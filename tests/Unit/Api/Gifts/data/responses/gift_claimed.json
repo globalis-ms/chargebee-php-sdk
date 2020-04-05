@@ -1,0 +1,63 @@
+{
+  "gift": {
+    "auto_claim": false,
+    "gift_receiver": {
+      "customer_id": "receiver",
+      "email": "james@user.com",
+      "first_name": "James",
+      "last_name": "William",
+      "object": "gift_receiver",
+      "subscription_id": "__test__KyVnJjRnFYZEr5o4"
+    },
+    "gift_timelines": [
+      {
+        "object": "gift_timeline",
+        "occurred_at": 1517641953,
+        "status": "claimed"
+      }
+    ],
+    "gifter": {
+      "customer_id": "gifter",
+      "invoice_id": "__demo_inv__2",
+      "object": "gifter",
+      "signature": "John"
+    },
+    "id": "__test__KyVnJjRnFYZGl5oA__test__jcuCMZQKJ6sYN2vBjMPDgj4HrIXqymFcd8",
+    "no_expiry": true,
+    "object": "gift",
+    "resource_version": 1517641953000,
+    "scheduled_at": 1517469158,
+    "status": "claimed",
+    "updated_at": 1517641953
+  },
+  "subscription": {
+    "activated_at": 1517641953,
+    "base_currency_code": "USD",
+    "billing_period": 1,
+    "billing_period_unit": "month",
+    "cancelled_at": 1520061153,
+    "created_at": 1517469153,
+    "currency_code": "USD",
+    "current_term_end": 1520061153,
+    "current_term_start": 1517641953,
+    "customer_id": "receiver",
+    "deleted": false,
+    "due_invoices_count": 0,
+    "exchange_rate": 1,
+    "gift_id": "__test__KyVnJjRnFYZGl5oA__test__jcuCMZQKJ6sYN2vBjMPDgj4HrIXqymFcd8",
+    "has_scheduled_changes": false,
+    "id": "__test__KyVnJjRnFYZEr5o4",
+    "mrr": 0,
+    "object": "subscription",
+    "plan_amount": 10000,
+    "plan_free_quantity": 0,
+    "plan_id": "GiftPlan$100",
+    "plan_quantity": 1,
+    "plan_unit_price": 10000,
+    "remaining_billing_cycles": 0,
+    "resource_version": 1517641953000,
+    "started_at": 1517641953,
+    "status": "non_renewing",
+    "updated_at": 1517641953
+  }
+}

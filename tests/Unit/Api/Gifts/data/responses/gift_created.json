@@ -1,0 +1,139 @@
+{
+  "gift": {
+    "auto_claim": false,
+    "claim_expiry_date": 1525849953,
+    "gift_receiver": {
+      "customer_id": "receiver",
+      "email": "james@user.com",
+      "first_name": "James",
+      "last_name": "William",
+      "object": "gift_receiver",
+      "subscription_id": "__test__KyVnJjRnFYZON5oJ"
+    },
+    "gift_timelines": [
+      {
+        "object": "gift_timeline",
+        "occurred_at": 1517469153,
+        "status": "scheduled"
+      }
+    ],
+    "gifter": {
+      "customer_id": "gifter",
+      "invoice_id": "__demo_inv__3",
+      "object": "gifter",
+      "signature": "Sam"
+    },
+    "id": "__test__KyVnJjRnFYZQ95oP__test__OpnYrlqtmcuPgFc8udy9PkwLoOxocdAtEs",
+    "no_expiry": false,
+    "object": "gift",
+    "resource_version": 1517469153000,
+    "scheduled_at": 1518073953,
+    "status": "scheduled",
+    "updated_at": 1517469153
+  },
+  "invoice": {
+    "adjustment_credit_notes": [
+    ],
+    "amount_adjusted": 0,
+    "amount_due": 0,
+    "amount_paid": 10000,
+    "amount_to_collect": 0,
+    "applied_credits": [
+    ],
+    "base_currency_code": "USD",
+    "billing_address": {
+      "first_name": "John",
+      "last_name": "Doe",
+      "object": "billing_address",
+      "validation_status": "not_validated"
+    },
+    "credits_applied": 0,
+    "currency_code": "USD",
+    "customer_id": "gifter",
+    "date": 1517469153,
+    "deleted": false,
+    "due_date": 1517469153,
+    "dunning_attempts": [
+    ],
+    "exchange_rate": 1,
+    "first_invoice": true,
+    "has_advance_charges": true,
+    "id": "__demo_inv__3",
+    "is_gifted": true,
+    "issued_credit_notes": [
+    ],
+    "line_items": [
+      {
+        "amount": 10000,
+        "customer_id": "receiver",
+        "date_from": 1612768353,
+        "date_to": 1615187553,
+        "description": "New Year Gift",
+        "discount_amount": 0,
+        "entity_id": "GiftPlan$100",
+        "entity_type": "plan",
+        "id": "li___test__KyVnJjRnFYZP95oL",
+        "is_taxed": false,
+        "item_level_discount_amount": 0,
+        "object": "line_item",
+        "pricing_model": "flat_fee",
+        "quantity": 1,
+        "subscription_id": "__test__KyVnJjRnFYZON5oJ",
+        "tax_amount": 0,
+        "tax_exempt_reason": "tax_not_configured",
+        "unit_amount": 10000
+      }
+    ],
+    "linked_orders": [
+    ],
+    "linked_payments": [
+      {
+        "applied_amount": 10000,
+        "applied_at": 1517469153,
+        "txn_amount": 10000,
+        "txn_date": 1517469153,
+        "txn_id": "txn___test__KyVnJjRnFYZPa5oM",
+        "txn_status": "success"
+      }
+    ],
+    "net_term_days": 0,
+    "new_sales_amount": 10000,
+    "object": "invoice",
+    "paid_at": 1517469153,
+    "price_type": "tax_exclusive",
+    "recurring": true,
+    "resource_version": 1517469153000,
+    "round_off_amount": 0,
+    "status": "paid",
+    "sub_total": 10000,
+    "tax": 0,
+    "term_finalized": false,
+    "total": 10000,
+    "updated_at": 1517469153,
+    "write_off_amount": 0
+  },
+  "subscription": {
+    "billing_period": 1,
+    "billing_period_unit": "month",
+    "created_at": 1517469153,
+    "currency_code": "USD",
+    "customer_id": "receiver",
+    "deleted": false,
+    "due_invoices_count": 0,
+    "gift_id": "__test__KyVnJjRnFYZQ95oP__test__OpnYrlqtmcuPgFc8udy9PkwLoOxocdAtEs",
+    "has_scheduled_changes": false,
+    "id": "__test__KyVnJjRnFYZON5oJ",
+    "next_billing_at": 1615187553,
+    "object": "subscription",
+    "plan_amount": 10000,
+    "plan_free_quantity": 0,
+    "plan_id": "GiftPlan$100",
+    "plan_quantity": 1,
+    "plan_unit_price": 10000,
+    "remaining_billing_cycles": 1,
+    "resource_version": 1517469153000,
+    "start_date": 1612768353,
+    "status": "future",
+    "updated_at": 1517469153
+  }
+}
