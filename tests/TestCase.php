@@ -2,8 +2,10 @@
 
 namespace Tests;
 
-use Http\Discovery\MessageFactoryDiscovery;
-use Http\Discovery\StreamFactoryDiscovery;
+use Http\Discovery\HttpClientDiscovery;
+use Http\Discovery\Psr17FactoryDiscovery;
+use Http\Discovery\Psr18ClientDiscovery;
+use Http\Discovery\Strategy\MockClientStrategy;
 use Http\Mock\Client as MockClient;
 use NathanDunn\Chargebee\Client;
 use NathanDunn\Chargebee\HttpClient\Builder;
@@ -34,14 +36,11 @@ class TestCase extends PHPUnitTestCase
     /**
      * Set up test case.
      */
-    public function setUp()
+    public function setUp(): void
     {
-        $this->builder = new Builder(
-            self::$key,
-            new MockClient(),
-            MessageFactoryDiscovery::find(),
-            StreamFactoryDiscovery::find()
-        );
+        HttpClientDiscovery::prependStrategy(MockClientStrategy::class);
+
+        $this->builder = new Builder(self::$key);
         $this->client = new Client(self::$site, self::$key, $this->builder);
     }
 }
