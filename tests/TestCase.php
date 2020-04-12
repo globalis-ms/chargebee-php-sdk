@@ -3,10 +3,7 @@
 namespace Tests;
 
 use Http\Discovery\HttpClientDiscovery;
-use Http\Discovery\Psr17FactoryDiscovery;
-use Http\Discovery\Psr18ClientDiscovery;
 use Http\Discovery\Strategy\MockClientStrategy;
-use Http\Mock\Client as MockClient;
 use NathanDunn\Chargebee\Client;
 use NathanDunn\Chargebee\HttpClient\Builder;
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
