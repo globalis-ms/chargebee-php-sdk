@@ -3,7 +3,6 @@
 namespace Tests\Unit\Api\Customers;
 
 use NathanDunn\Chargebee\Api\Customers\Customer;
-use Symfony\Component\OptionsResolver\Exception\UndefinedOptionsException;
 use Tests\Unit\Api\TestCase;
 
 class CustomerTest extends TestCase
