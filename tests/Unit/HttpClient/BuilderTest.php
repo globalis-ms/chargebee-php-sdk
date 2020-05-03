@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Unit;
+namespace Tests\Unit\HttpClient;
 
 use Http\Client\Common\HttpMethodsClient;
 use Tests\TestCase;
