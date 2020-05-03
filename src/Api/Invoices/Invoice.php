@@ -17,17 +17,9 @@ class Invoice extends AbstractApi
      */
     public function list(array $parameters = [], array $headers = [])
     {
-        $resolver = $this->createOptionsResolver();
-
-        $resolver->setDefined('include_deleted')
-            ->setAllowedTypes('include_deleted', 'boolean');
-
-        $resolver->setDefined('sort_by')
-            ->setAllowedTypes('sort_by', 'string');
-
         $url = $this->url('invoices');
 
-        return $this->get($url, $resolver->resolve($parameters), $headers);
+        return $this->get($url, $parameters, $headers);
     }
 
     /**

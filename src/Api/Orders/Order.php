@@ -17,11 +17,9 @@ class Order extends AbstractApi
      */
     public function list(array $parameters = [], array $headers = [])
     {
-        $resolver = $this->createOptionsResolver();
-
         $url = $this->url('orders');
 
-        return $this->get($url, $resolver->resolve($parameters), $headers);
+        return $this->get($url, $parameters, $headers);
     }
 
     /**

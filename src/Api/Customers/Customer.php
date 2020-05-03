@@ -19,20 +19,9 @@ class Customer extends AbstractApi
      */
     public function list(array $parameters = [], array $headers = [])
     {
-        $resolver = $this->createOptionsResolver();
-
-        $resolver->setDefined('email[is]')
-            ->setAllowedTypes('email[is]', 'string');
-
-        $resolver->setDefined('first_name[is]')
-            ->setAllowedTypes('first_name[is]', 'string');
-
-        $resolver->setDefined('last_name[is]')
-            ->setAllowedTypes('last_name[is]', 'string');
-
         $url = $this->url('customers');
 
-        return $this->get($url, $resolver->resolve($parameters), $headers);
+        return $this->get($url, $parameters, $headers);
     }
 
     /**
@@ -266,10 +255,8 @@ class Customer extends AbstractApi
      */
     public function contacts(string $id, array $parameters = [], array $headers = [])
     {
-        $resolver = $this->createOptionsResolver();
-
         $url = $this->url('customers/%s/contacts', $id);
 
-        return $this->get($url, $resolver->resolve($parameters), $headers);
+        return $this->get($url, $parameters, $headers);
     }
 }

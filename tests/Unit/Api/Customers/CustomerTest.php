@@ -48,23 +48,6 @@ class CustomerTest extends TestCase
         ];
     }
 
-    /**
-     * @test
-     */
-    public function should_reject_unregistered_filters()
-    {
-        $filters = ['unkown' => 'field'];
-
-        $expected = $this->getContent(sprintf('%s/data/responses/customer_list.json', __DIR__));
-
-        $customer = $this->getApiMock();
-        $customer->expects($this->never())
-            ->method('get');
-
-        $this->expectException(UndefinedOptionsException::class);
-        $customer->list($filters);
-    }
-
     /** @test */
     public function should_find_customer()
     {

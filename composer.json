@@ -20,7 +20,6 @@
     "php-http/client-common": "^2.1",
     "php-http/multipart-stream-builder": "^1.0",
     "php-http/message": "^1.7",
-    "symfony/options-resolver": "^2.6 || ^3.0 || ^4.0",
     "psr/http-client": "^1.0",
     "php-http/client-implementation": "^1.0",
     "http-interop/http-factory-guzzle": "^1.0"

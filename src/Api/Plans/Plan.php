@@ -18,11 +18,9 @@ class Plan extends AbstractApi
      */
     public function list(array $parameters = [], array $headers = [])
     {
-        $resolver = $this->createOptionsResolver();
-
         $url = $this->url('plans');
 
-        return $this->get($url, $resolver->resolve($parameters));
+        return $this->get($url, $parameters, $headers);
     }
 
     /**

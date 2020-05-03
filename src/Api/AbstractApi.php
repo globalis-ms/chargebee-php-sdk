@@ -10,7 +10,6 @@ use NathanDunn\Chargebee\Client;
 use NathanDunn\Chargebee\HttpClient\Exception\ApiExceptionHandler;
 use NathanDunn\Chargebee\HttpClient\Message\QueryStringBuilder;
 use NathanDunn\Chargebee\HttpClient\Message\ResponseFormatter;
-use Symfony\Component\OptionsResolver\OptionsResolver;
 
 abstract class AbstractApi
 {
@@ -111,27 +110,6 @@ abstract class AbstractApi
         }
 
         return $path;
-    }
-
-    /**
-     * Create a new OptionsResolver with page and per_page options.
-     *
-     * @return OptionsResolver
-     */
-    protected function createOptionsResolver(): OptionsResolver
-    {
-        $resolver = new OptionsResolver();
-
-        $resolver->setDefined('limit')
-            ->setAllowedTypes('limit', 'int')
-            ->setAllowedValues('limit', function ($value) {
-                return $value > 0;
-            });
-
-        $resolver->setDefined('offset')
-            ->setAllowedTypes('offset', 'string');
-
-        return $resolver;
     }
 
     /**

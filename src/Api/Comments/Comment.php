@@ -17,11 +17,9 @@ class Comment extends AbstractApi
      */
     public function list(array $parameters = [], array $headers = [])
     {
-        $resolver = $this->createOptionsResolver();
-
         $url = $this->url('comments');
 
-        return $this->get($url, $resolver->resolve($parameters));
+        return $this->get($url, $parameters, $headers);
     }
 
     /**

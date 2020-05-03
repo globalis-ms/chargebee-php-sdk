@@ -17,11 +17,9 @@ class CouponCode extends AbstractApi
      */
     public function list(array $parameters = [], array $headers = [])
     {
-        $resolver = $this->createOptionsResolver();
-
         $url = $this->url('coupon_codes');
 
-        return $this->get($url, $resolver->resolve($parameters), $headers);
+        return $this->get($url, $parameters, $headers);
     }
 
     /**

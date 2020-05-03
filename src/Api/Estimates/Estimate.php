@@ -4,7 +4,6 @@ namespace NathanDunn\Chargebee\Api\Estimates;
 
 use Http\Client\Exception;
 use NathanDunn\Chargebee\Api\AbstractApi;
-use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class Estimate extends AbstractApi
 {
@@ -50,30 +49,9 @@ class Estimate extends AbstractApi
      */
     public function renewalEstimate(string $subscriptionId, array $parameters = [], array $headers = [])
     {
-        $resolver = new OptionsResolver();
-
-        $resolver->setDefined('use_existing_balances')
-            ->setAllowedTypes('use_existing_balances', 'boolean');
-        $resolver->setDefined('invoice_immediately')
-            ->setAllowedTypes('invoice_immediately', 'boolean');
-        $resolver->setDefined('billing_cycles')
-            ->setAllowedTypes('billing_cycles', 'integer');
-        $resolver->setDefined('terms_to_charge')
-            ->setAllowedTypes('terms_to_charge', 'integer')
-            ->setAllowedValues('terms_to_charge', function ($value) {
-                return $value > 0;
-            });
-        $resolver->setDefined('billing_alignment_mode')
-            ->setAllowedTypes('billing_alignment_mode', 'string')
-            ->setAllowedValues('billing_alignment_mode', ['immediate', 'delayed']);
-        $resolver->setDefined('coupon_ids');
-        $resolver->setDefined('subscription');
-        $resolver->setDefined('shipping_address');
-        $resolver->setDefined('addons');
-
         $url = $this->url('subscriptions/%s/renewal_estimate', $subscriptionId);
 
-        return $this->get($url, $resolver->resolve($parameters), $headers);
+        return $this->get($url, $parameters, $headers);
     }
 
     /**
