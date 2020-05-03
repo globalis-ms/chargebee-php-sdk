@@ -24,8 +24,8 @@ class Comment extends AbstractApi
 
     /**
      * @param string $id
-     * @param array $parameters
-     * @param array $headers
+     * @param array  $parameters
+     * @param array  $headers
      *
      * @throws Exception
      *
