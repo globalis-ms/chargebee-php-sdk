@@ -24,17 +24,18 @@ class Comment extends AbstractApi
 
     /**
      * @param string $id
-     * @param array  $headers
+     * @param array $parameters
+     * @param array $headers
      *
      * @throws Exception
      *
      * @return array|string
      */
-    public function find(string $id, array $headers = [])
+    public function find(string $id, array $parameters = [], array $headers = [])
     {
         $url = $this->url('comments/%s', $id);
 
-        return $this->get($url);
+        return $this->get($url, $parameters, $headers);
     }
 
     /**
