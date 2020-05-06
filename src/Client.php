@@ -60,7 +60,7 @@ class Client
      * @param string       $key
      * @param Builder|null $httpClientBuilder
      */
-    public function __construct(string $site, string $key, Builder $httpClientBuilder = null)
+    public function __construct(string $site = '', string $key = '', Builder $httpClientBuilder = null)
     {
         $this->httpClientBuilder = $httpClientBuilder ?: new Builder($key);
         $this->key = $key;
