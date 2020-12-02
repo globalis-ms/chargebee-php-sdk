@@ -2,6 +2,8 @@ name: Continuous Integration
 on:
   push:
   pull_request:
+  schedule:
+    - cron: "0 0 * * *" # every day at midnight
 jobs:
   laravel-tests:
     runs-on: ${{ matrix.os }}
