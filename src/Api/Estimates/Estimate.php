@@ -11,9 +11,9 @@ class Estimate extends AbstractApi
      * @param array $data
      * @param array $headers
      *
-     * @return array|string
      * @throws Exception
      *
+     * @return array|string
      */
     public function createSubscription(array $data, array $headers = [])
     {
@@ -24,12 +24,12 @@ class Estimate extends AbstractApi
 
     /**
      * @param string $customerId
-     * @param array $data
-     * @param array $headers
+     * @param array  $data
+     * @param array  $headers
      *
-     * @return array|string
      * @throws Exception
      *
+     * @return array|string
      */
     public function createSubscriptionEstimate(string $customerId, array $data, array $headers = [])
     {
@@ -40,12 +40,12 @@ class Estimate extends AbstractApi
 
     /**
      * @param string $subscriptionId
-     * @param array $parameters
-     * @param array $headers
+     * @param array  $parameters
+     * @param array  $headers
      *
-     * @return array|string
      * @throws Exception
      *
+     * @return array|string
      */
     public function renewalEstimate(string $subscriptionId, array $parameters = [], array $headers = [])
     {
@@ -56,11 +56,11 @@ class Estimate extends AbstractApi
 
     /**
      * @param string $customerId
-     * @param array $headers
+     * @param array  $headers
      *
-     * @return array|string
      * @throws Exception
      *
+     * @return array|string
      */
     public function upcomingInvoicesEstimate(string $customerId, array $headers = [])
     {
@@ -71,12 +71,12 @@ class Estimate extends AbstractApi
 
     /**
      * @param string $subscriptionId
-     * @param array $data
-     * @param array $headers
+     * @param array  $data
+     * @param array  $headers
      *
-     * @return array|string
      * @throws Exception
      *
+     * @return array|string
      */
     public function changeTermEndEstimate(string $subscriptionId, array $data, array $headers = [])
     {
@@ -87,12 +87,12 @@ class Estimate extends AbstractApi
 
     /**
      * @param string $subscriptionId
-     * @param array $data
-     * @param array $headers
+     * @param array  $data
+     * @param array  $headers
      *
-     * @return array|string
      * @throws Exception
      *
+     * @return array|string
      */
     public function cancelSubscriptionEstimate(string $subscriptionId, array $data, array $headers = [])
     {
@@ -103,12 +103,12 @@ class Estimate extends AbstractApi
 
     /**
      * @param string $subscriptionId
-     * @param array $data
-     * @param array $headers
+     * @param array  $data
+     * @param array  $headers
      *
-     * @return array|string
      * @throws Exception
      *
+     * @return array|string
      */
     public function pauseSubscriptionEstimate(string $subscriptionId, array $data, array $headers = [])
     {
@@ -119,12 +119,12 @@ class Estimate extends AbstractApi
 
     /**
      * @param string $subscriptionId
-     * @param array $data
-     * @param array $headers
+     * @param array  $data
+     * @param array  $headers
      *
-     * @return array|string
      * @throws Exception
      *
+     * @return array|string
      */
     public function resumeSubscriptionEstimate(string $subscriptionId, array $data, array $headers = [])
     {
