@@ -12,10 +12,8 @@ class Subscription extends AbstractApi
      *
      * @param array $parameters
      * @param array $headers
-     *
-     * @throws Exception
-     *
      * @return array|string
+     * @throws Exception
      */
     public function list(array $parameters = [], array $headers = [])
     {
@@ -28,11 +26,9 @@ class Subscription extends AbstractApi
      * Find subscriptions.
      *
      * @param string $id
-     * @param array  $headers
-     *
-     * @throws Exception
-     *
+     * @param array $headers
      * @return array|string
+     * @throws Exception
      */
     public function find(string $id, array $headers = [])
     {
@@ -46,10 +42,8 @@ class Subscription extends AbstractApi
      *
      * @param array $data
      * @param array $headers
-     *
-     * @throws Exception
-     *
      * @return array|string
+     * @throws Exception
      */
     public function create(array $data, array $headers = [])
     {
@@ -60,11 +54,11 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @param array  $headers
-     *
-     * @throws Exception
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
+     *
      */
     public function retrieveWithScheduledChanges(string $id, array $headers = [])
     {
@@ -75,11 +69,9 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @param array  $headers
-     *
-     * @throws Exception
-     *
+     * @param array $headers
      * @return array|string
+     * @throws Exception
      */
     public function removeScheduledChanges(string $id, array $headers = [])
     {
@@ -90,11 +82,9 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @param array  $headers
-     *
-     * @throws Exception
-     *
+     * @param array $headers
      * @return array|string
+     * @throws Exception
      */
     public function removeScheduledCancellation(string $id, array $headers = [])
     {
@@ -105,12 +95,10 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @param array  $data
-     * @param array  $headers
-     *
-     * @throws Exception
-     *
+     * @param array $data
+     * @param array $headers
      * @return array|string
+     * @throws Exception
      */
     public function removeCoupons(string $id, array $data, array $headers = [])
     {
@@ -121,12 +109,10 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @param array  $data
-     * @param array  $headers
-     *
-     * @throws Exception
-     *
+     * @param array $data
+     * @param array $headers
      * @return array|string
+     * @throws Exception
      */
     public function update(string $id, array $data, array $headers = [])
     {
@@ -137,12 +123,10 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @param array  $data
-     * @param array  $headers
-     *
-     * @throws Exception
-     *
+     * @param array $data
+     * @param array $headers
      * @return array|string
+     * @throws Exception
      */
     public function changeTermEnd(string $id, array $data, array $headers = [])
     {
@@ -153,12 +137,12 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @param array  $data
-     * @param array  $headers
-     *
-     * @throws Exception
+     * @param array $data
+     * @param array $headers
      *
      * @return array|string
+     * @throws Exception
+     *
      */
     public function cancel(string $id, array $data, array $headers = [])
     {
@@ -169,12 +153,10 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @param array  $data
-     * @param array  $headers
-     *
-     * @throws Exception
-     *
+     * @param array $data
+     * @param array $headers
      * @return array|string
+     * @throws Exception
      */
     public function reactivate(string $id, array $data, array $headers = [])
     {
@@ -185,12 +167,10 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @param array  $data
-     * @param array  $headers
-     *
-     * @throws Exception
-     *
+     * @param array $data
+     * @param array $headers
      * @return array|string
+     * @throws Exception
      */
     public function addChargeAtTermEnd(string $id, array $data, array $headers = [])
     {
@@ -201,12 +181,10 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @param array  $data
-     * @param array  $headers
-     *
-     * @throws Exception
-     *
+     * @param array $data
+     * @param array $headers
      * @return array|string
+     * @throws Exception
      */
     public function chargeAddonAtTermEnd(string $id, array $data, array $headers = [])
     {
@@ -217,12 +195,10 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @param array  $data
-     * @param array  $headers
-     *
-     * @throws Exception
-     *
+     * @param array $data
+     * @param array $headers
      * @return array|string
+     * @throws Exception
      */
     public function chargeFutureRenewals(string $id, array $data, array $headers = [])
     {
@@ -235,9 +211,9 @@ class Subscription extends AbstractApi
      * @param array $data
      * @param array $headers
      *
+     * @return array|string
      * @throws Exception
      *
-     * @return array|string
      */
     public function import(array $data, array $headers = [])
     {
@@ -248,12 +224,11 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $customerId
-     * @param array  $data
-     * @param array  $headers
-     *
+     * @param array $data
+     * @param array $headers
+     * @return array|string
      * @throws Exception
      *
-     * @return array|string
      */
     public function importForCustomer(string $customerId, array $data, array $headers = [])
     {
@@ -264,12 +239,10 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @param array  $data
-     * @param array  $headers
-     *
-     * @throws Exception
-     *
+     * @param array $data
+     * @param array $headers
      * @return array|string
+     * @throws Exception
      */
     public function overrideBillingProfile(string $id, array $data, array $headers = [])
     {
@@ -280,11 +253,9 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @param array  $headers
-     *
-     * @throws Exception
-     *
+     * @param array $headers
      * @return array|string
+     * @throws Exception
      */
     public function delete(string $id, array $headers = [])
     {
@@ -295,12 +266,10 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @param array  $data
-     * @param array  $headers
-     *
-     * @throws Exception
-     *
+     * @param array $data
+     * @param array $headers
      * @return array|string
+     * @throws Exception
      */
     public function pause(string $id, array $data = [], array $headers = [])
     {
@@ -311,12 +280,10 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @param array  $data
-     * @param array  $headers
-     *
-     * @throws Exception
-     *
+     * @param array $data
+     * @param array $headers
      * @return array|string
+     * @throws Exception
      */
     public function resume(string $id, array $data = [], array $headers = [])
     {
@@ -327,12 +294,10 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @param array  $data
-     * @param array  $headers
-     *
-     * @throws Exception
-     *
+     * @param array $data
+     * @param array $headers
      * @return array|string
+     * @throws Exception
      */
     public function removeScheduledPause(string $id, array $data = [], array $headers = [])
     {
@@ -343,12 +308,10 @@ class Subscription extends AbstractApi
 
     /**
      * @param string $id
-     * @param array  $data
-     * @param array  $headers
-     *
-     * @throws Exception
-     *
+     * @param array $data
+     * @param array $headers
      * @return array|string
+     * @throws Exception
      */
     public function removeScheduledResumption(string $id, array $data = [], array $headers = [])
     {

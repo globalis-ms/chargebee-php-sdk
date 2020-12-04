@@ -11,9 +11,9 @@ class Address extends AbstractApi
      * @param array $parameters
      * @param array $headers
      *
+     * @return array|string
      * @throws Exception
      *
-     * @return array|string
      */
     public function find(array $parameters = [], array $headers = [])
     {
@@ -26,9 +26,9 @@ class Address extends AbstractApi
      * @param array $data
      * @param array $headers
      *
+     * @return array|string
      * @throws Exception
      *
-     * @return array|string
      */
     public function update(array $data, array $headers = [])
     {

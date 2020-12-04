@@ -39,9 +39,9 @@ abstract class AbstractApi
      * @param array $parameters
      * @param array $requestHeaders
      *
+     * @return array|string
      * @throws Exception
      *
-     * @return array|string
      */
     protected function get($path, array $parameters = [], array $requestHeaders = [])
     {
@@ -61,9 +61,9 @@ abstract class AbstractApi
      * @param array $parameters
      * @param array $requestHeaders
      *
+     * @return array|string
      * @throws Exception
      *
-     * @return array|string
      */
     protected function post($path, array $parameters = [], $requestHeaders = [])
     {
@@ -88,13 +88,13 @@ abstract class AbstractApi
      * Generate URL from base url and given endpoint.
      *
      * @param string $endpoint
-     * @param array  $replacements
+     * @param array $replacements
      *
      * @return string
      */
     protected function url(string $endpoint, ...$replacements): string
     {
-        return $this->client->baseUrl.vsprintf($endpoint, $replacements);
+        return $this->client->baseUrl . vsprintf($endpoint, $replacements);
     }
 
     /**
@@ -106,7 +106,7 @@ abstract class AbstractApi
     private function preparePath($path, array $parameters = []): string
     {
         if (count($parameters) > 0) {
-            $path .= '?'.QueryStringBuilder::build($parameters);
+            $path .= '?' . QueryStringBuilder::build($parameters);
         }
 
         return $path;
