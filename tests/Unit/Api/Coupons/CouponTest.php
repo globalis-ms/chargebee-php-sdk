@@ -36,17 +36,17 @@ class CouponTest extends TestCase
     }
 
     /** @test */
-    public function should_create_coupon()
+    public function should_create_coupon_for_items()
     {
         $expected = $this->getContent(sprintf('%s/data/responses/coupon_created.json', __DIR__));
 
         $coupon = $this->getApiMock();
         $coupon->expects($this->once())
             ->method('post')
-            ->with('https://123456789.chargebee.com/api/v2/coupons', [])
+            ->with('https://123456789.chargebee.com/api/v2/coupons/create_for_items', [])
             ->will($this->returnValue($expected));
 
-        $this->assertEquals($expected, $coupon->create([]));
+        $this->assertEquals($expected, $coupon->createForItems([]));
     }
 
     /** @test */
@@ -78,17 +78,17 @@ class CouponTest extends TestCase
     }
 
     /** @test */
-    public function should_update_coupon()
+    public function should_update_coupon_for_items()
     {
         $expected = $this->getContent(sprintf('%s/data/responses/coupon_updated.json', __DIR__));
 
         $coupon = $this->getApiMock();
         $coupon->expects($this->once())
             ->method('post')
-            ->with('https://123456789.chargebee.com/api/v2/coupons/beta_offer', [])
+            ->with('https://123456789.chargebee.com/api/v2/coupons/beta_offer/update_for_items', [])
             ->will($this->returnValue($expected));
 
-        $this->assertEquals($expected, $coupon->update('beta_offer', []));
+        $this->assertEquals($expected, $coupon->updateForItems('beta_offer', []));
     }
 
     /**

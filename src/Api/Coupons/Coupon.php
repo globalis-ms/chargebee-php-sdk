@@ -45,9 +45,9 @@ class Coupon extends AbstractApi
      *
      * @return array|string
      */
-    public function create(array $data, array $headers = [])
+    public function createForItems(array $data, array $headers = [])
     {
-        $url = $this->url('coupons');
+        $url = $this->url('coupons/create_for_items');
 
         return $this->post($url, $data, $headers);
     }
@@ -61,9 +61,9 @@ class Coupon extends AbstractApi
      *
      * @return array|string
      */
-    public function update(string $id, array $data, array $headers = [])
+    public function updateForItems(string $id, array $data, array $headers = [])
     {
-        $url = $this->url('coupons/%s', $id);
+        $url = $this->url('coupons/%s/update_for_items', $id);
 
         return $this->post($url, $data, $headers);
     }
@@ -96,5 +96,20 @@ class Coupon extends AbstractApi
         $url = $this->url('coupons/%s/unarchive', $id);
 
         return $this->post($url, [], $headers);
+    }
+
+    /**
+     * @param array $data
+     * @param array $headers
+     *
+     * @throws Exception
+     *
+     * @return array|string
+     */
+    public function copy(array $data, array $headers = [])
+    {
+        $url = $this->url('coupons/copy');
+
+        return $this->post($url, $data, $headers);
     }
 }
