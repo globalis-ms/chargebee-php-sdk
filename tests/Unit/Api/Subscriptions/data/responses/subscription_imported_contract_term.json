@@ -1,0 +1,12 @@
+{"contract_term": {
+    "action_at_term_end": "cancel",
+    "billing_cycle": 5,
+    "cancellation_cutoff_period": 0,
+    "contract_end": 1493613610,
+    "contract_start": 1483245610,
+    "created_at": 1483245610,
+    "id": "__test__8asukSOXdvULP3",
+    "object": "contract_term",
+    "status": "terminated",
+    "total_contract_value": 1000
+}}

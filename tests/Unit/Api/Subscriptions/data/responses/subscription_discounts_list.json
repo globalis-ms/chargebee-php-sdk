@@ -1,0 +1,14 @@
+{"list": [
+    {"discount": {
+        "amount": 100,
+        "applied_count": 1,
+        "apply_on": "invoice_amount",
+        "created_at": 1608822300,
+        "currency_code": "USD",
+        "duration_type": "forever",
+        "id": "__test__8at0iSK6IPuW1r",
+        "invoice_name": "__test__8at0iSK6IPuW1r",
+        "object": "discount",
+        "type": "fixed_amount"
+    }}
+]}

@@ -1,0 +1,12 @@
+{"advance_invoice_schedules": [
+    {
+        "id": "__test__KyVkmQSCX2wUp4H",
+        "object": "advance_invoice_schedule",
+        "schedule_type": "specific_dates",
+        "specific_dates_schedule": {
+            "date": 1518339710,
+            "object": "specific_dates_schedule",
+            "terms_to_charge": 2
+        }
+    }
+]}

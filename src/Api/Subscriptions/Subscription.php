@@ -8,8 +8,6 @@ use Globalis\Chargebee\Api\AbstractApi;
 class Subscription extends AbstractApi
 {
     /**
-     * Get subscriptions.
-     *
      * @param array $parameters
      * @param array $headers
      *
@@ -25,8 +23,38 @@ class Subscription extends AbstractApi
     }
 
     /**
-     * Find subscriptions.
+     * @param string $id
+     * @param array $parameters
+     * @param array $headers
      *
+     * @throws Exception
+     *
+     * @return array|string
+     */
+    public function listDiscounts($id, array $parameters = [], array $headers = [])
+    {
+        $url = $this->url('subscriptions/%s/discounts', $id);
+
+        return $this->get($url, $parameters, $headers);
+    }
+
+    /**
+     * @param string $id
+     * @param array $parameters
+     * @param array $headers
+     *
+     * @throws Exception
+     *
+     * @return array|string
+     */
+    public function listContractTerms($id, array $parameters = [], array $headers = [])
+    {
+        $url = $this->url('subscriptions/%s/contract_terms', $id);
+
+        return $this->get($url, $parameters, $headers);
+    }
+
+    /**
      * @param string $id
      * @param array  $headers
      *
@@ -42,8 +70,7 @@ class Subscription extends AbstractApi
     }
 
     /**
-     * Create a subscription.
-     *
+     * @param string $id
      * @param array $data
      * @param array $headers
      *
@@ -51,9 +78,9 @@ class Subscription extends AbstractApi
      *
      * @return array|string
      */
-    public function create(array $data, array $headers = [])
+    public function createForItems(string $customerId, array $data, array $headers = [])
     {
-        $url = $this->url('subscriptions');
+        $url = $this->url('customers/%s/subscription_for_items', $customerId);
 
         return $this->post($url, $data, $headers);
     }
@@ -128,9 +155,9 @@ class Subscription extends AbstractApi
      *
      * @return array|string
      */
-    public function update(string $id, array $data, array $headers = [])
+    public function updateForItems(string $id, array $data, array $headers = [])
     {
-        $url = $this->url('subscriptions/%s', $id);
+        $url = $this->url('subscriptions/%s/update_for_items', $id);
 
         return $this->post($url, $data, $headers);
     }
@@ -160,9 +187,9 @@ class Subscription extends AbstractApi
      *
      * @return array|string
      */
-    public function cancel(string $id, array $data, array $headers = [])
+    public function cancelForItems(string $id, array $data, array $headers = [])
     {
-        $url = $this->url('subscriptions/%s/cancel', $id);
+        $url = $this->url('subscriptions/%s/cancel_for_items', $id);
 
         return $this->post($url, $data, $headers);
     }
@@ -192,9 +219,9 @@ class Subscription extends AbstractApi
      *
      * @return array|string
      */
-    public function addChargeAtTermEnd(string $id, array $data, array $headers = [])
+    public function regenerateInvoice(string $id, array $data, array $headers = [])
     {
-        $url = $this->url('subscriptions/%s/add_charge_at_term_end', $id);
+        $url = $this->url('subscriptions/%s/regenerate_invoice', $id);
 
         return $this->post($url, $data, $headers);
     }
@@ -208,9 +235,9 @@ class Subscription extends AbstractApi
      *
      * @return array|string
      */
-    public function chargeAddonAtTermEnd(string $id, array $data, array $headers = [])
+    public function addChargeAtTermEnd(string $id, array $data, array $headers = [])
     {
-        $url = $this->url('subscriptions/%s/charge_addon_at_term_end', $id);
+        $url = $this->url('subscriptions/%s/add_charge_at_term_end', $id);
 
         return $this->post($url, $data, $headers);
     }
@@ -232,16 +259,64 @@ class Subscription extends AbstractApi
     }
 
     /**
-     * @param array $data
+     * @param string $id
+     * @param array  $headers
+     *
+     * @throws Exception
+     *
+     * @return array|string
+     */
+    public function retrieveAdvanceInvoiceSchedule(string $id, array $headers = [])
+    {
+        $url = $this->url('subscriptions/%s/retrieve_advance_invoice_schedule', $id);
+
+        return $this->get($url, [], $headers);
+    }
+
+    /**
+     * @param string $id
+     * @param array  $data
+     * @param array  $headers
+     *
+     * @throws Exception
+     *
+     * @return array|string
+     */
+    public function editAdvanceInvoiceSchedule(string $id, array $data, array $headers = [])
+    {
+        $url = $this->url('subscriptions/%s/edit_advance_invoice', $id);
+
+        return $this->post($url, $data, $headers);
+    }
+
+    /**
+     * @param string $id
+     * @param array  $data
+     * @param array  $headers
+     *
+     * @throws Exception
+     *
+     * @return array|string
+     */
+    public function removeAdvanceInvoiceSchedules(string $id, array $data = [], array $headers = [])
+    {
+        $url = $this->url('subscriptions/%s/remove_advance_invoice_schedule', $id);
+
+        return $this->post($url, $data, $headers);
+    }
+
+    /**
+     * @param string $id
+     * @param array  $data
      * @param array $headers
      *
      * @throws Exception
      *
      * @return array|string
      */
-    public function import(array $data, array $headers = [])
+    public function importContractTerm(string $id, array $data, array $headers = [])
     {
-        $url = $this->url('subscriptions/import');
+        $url = $this->url('subscriptions/%s/import_contract_term', $id);
 
         return $this->post($url, $data, $headers);
     }
@@ -255,9 +330,9 @@ class Subscription extends AbstractApi
      *
      * @return array|string
      */
-    public function importForCustomer(string $customerId, array $data, array $headers = [])
+    public function importForItems(string $customerId, array $data, array $headers = [])
     {
-        $url = $this->url('subscriptions/customers/%s/import_subscription', $customerId);
+        $url = $this->url('subscriptions/customers/%s/import_for_items', $customerId);
 
         return $this->post($url, $data, $headers);
     }

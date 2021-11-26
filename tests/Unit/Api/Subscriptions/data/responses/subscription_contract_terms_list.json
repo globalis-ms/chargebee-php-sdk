@@ -1,0 +1,15 @@
+{"list": [
+    {"contract_term": {
+        "action_at_term_end": "renew",
+        "billing_cycle": 6,
+        "cancellation_cutoff_period": 0,
+        "contract_end": 1628529313,
+        "contract_start": 1612890913,
+        "created_at": 1612890913,
+        "id": "__test__8asukSOXdty7Mw",
+        "object": "contract_term",
+        "remaining_billing_cycles": 5,
+        "status": "active",
+        "total_contract_value": 6600
+    }}
+]}
