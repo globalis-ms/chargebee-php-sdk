@@ -9,8 +9,8 @@ use League\Event\EventDispatcher;
 use Globalis\Chargebee\Events\EventChargebeeApiResponse as EventResponse;
 use Globalis\Chargebee\Events\EventChargebeeApiResponseSuccess as EventResponseSuccess;
 use Globalis\Chargebee\Events\EventChargebeeApiResponseError as EventResponseError;
-use Globalis\Chargebee\Api\Addons\Addon;
 use Globalis\Chargebee\Api\Addresses\Address;
+use Globalis\Chargebee\Api\AttachedItems\AttachedItem;
 use Globalis\Chargebee\Api\Cards\Card;
 use Globalis\Chargebee\Api\CouponCodes\CouponCode;
 use Globalis\Chargebee\Api\Coupons\Coupon;
@@ -23,10 +23,11 @@ use Globalis\Chargebee\Api\Exports\Export;
 use Globalis\Chargebee\Api\Gifts\Gift;
 use Globalis\Chargebee\Api\HostedPages\HostedPage;
 use Globalis\Chargebee\Api\Invoices\Invoice;
+use Globalis\Chargebee\Api\ItemPrices\ItemPrice;
+use Globalis\Chargebee\Api\Items\Item;
 use Globalis\Chargebee\Api\Orders\Order;
 use Globalis\Chargebee\Api\PaymentIntents\PaymentIntent;
 use Globalis\Chargebee\Api\PaymentSources\PaymentSource;
-use Globalis\Chargebee\Api\Plans\Plan;
 use Globalis\Chargebee\Api\PortalSessions\PortalSession;
 use Globalis\Chargebee\Api\PromotionalCredits\PromotionalCredit;
 use Globalis\Chargebee\Api\SiteMigrationDetails\SiteMigrationDetail;
@@ -143,19 +144,19 @@ class Client
     }
 
     /**
-     * @return Addon
-     */
-    public function addon(): Addon
-    {
-        return new Addon($this);
-    }
-
-    /**
      * @return Address
      */
     public function address(): Address
     {
         return new Address($this);
+    }
+
+    /**
+     * @return AttachedItem
+     */
+    public function attachedItem(): AttachedItem
+    {
+        return new AttachedItem($this);
     }
 
     /**
@@ -255,6 +256,22 @@ class Client
     }
 
     /**
+     * @return Item
+     */
+    public function item(): Item
+    {
+        return new Item($this);
+    }
+
+    /**
+     * @return ItemPrice
+     */
+    public function itemPrice(): ItemPrice
+    {
+        return new ItemPrice($this);
+    }
+
+    /**
      * @return Order
      */
     public function order(): Order
@@ -276,14 +293,6 @@ class Client
     public function paymentSource(): PaymentSource
     {
         return new PaymentSource($this);
-    }
-
-    /**
-     * @return Plan
-     */
-    public function plan(): Plan
-    {
-        return new Plan($this);
     }
 
     /**

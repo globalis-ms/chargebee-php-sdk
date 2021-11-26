@@ -1,11 +1,11 @@
 <?php
 
-namespace Globalis\Chargebee\Api\Addons;
+namespace Globalis\Chargebee\Api\ItemPrices;
 
 use Http\Client\Exception;
 use Globalis\Chargebee\Api\AbstractApi;
 
-class Addon extends AbstractApi
+class ItemPrice extends AbstractApi
 {
     /**
      * @param array $parameters
@@ -17,24 +17,9 @@ class Addon extends AbstractApi
      */
     public function list(array $parameters = [], array $headers = [])
     {
-        $url = $this->url('addons');
+        $url = $this->url('item_prices');
 
         return $this->get($url, $parameters, $headers);
-    }
-
-    /**
-     * @param string $id
-     * @param array  $headers
-     *
-     * @throws Exception
-     *
-     * @return array|string
-     */
-    public function find(string $id, array $headers = [])
-    {
-        $url = $this->url('addons/%s', $id);
-
-        return $this->get($url, [], $headers);
     }
 
     /**
@@ -47,9 +32,24 @@ class Addon extends AbstractApi
      */
     public function create(array $data, array $headers = [])
     {
-        $url = $this->url('addons');
+        $url = $this->url('item_prices');
 
         return $this->post($url, $data, $headers);
+    }
+
+    /**
+     * @param string $id
+     * @param array  $headers
+     *
+     * @throws Exception
+     *
+     * @return array|string
+     */
+    public function find(string $id, array $headers = [])
+    {
+        $url = $this->url('item_prices/%s', $id);
+
+        return $this->get($url, [], $headers);
     }
 
     /**
@@ -61,9 +61,9 @@ class Addon extends AbstractApi
      *
      * @return array|string
      */
-    public function update(string $id, array $data = [], array $headers = [])
+    public function update(string $id, array $data, array $headers = [])
     {
-        $url = $this->url('addons/%s', $id);
+        $url = $this->url('item_prices/%s', $id);
 
         return $this->post($url, $data, $headers);
     }
@@ -78,37 +78,7 @@ class Addon extends AbstractApi
      */
     public function delete(string $id, array $headers = [])
     {
-        $url = $this->url('addons/%s/delete', $id);
-
-        return $this->post($url, [], $headers);
-    }
-
-    /**
-     * @param array $data
-     * @param array $headers
-     *
-     * @throws Exception
-     *
-     * @return array|string
-     */
-    public function copy(array $data, array $headers = [])
-    {
-        $url = $this->url('addons/copy');
-
-        return $this->post($url, $data, $headers);
-    }
-
-    /**
-     * @param string $id
-     * @param array  $headers
-     *
-     * @throws Exception
-     *
-     * @return array|string
-     */
-    public function unarchive(string $id, array $headers = [])
-    {
-        $url = $this->url('addons/%s/unarchive', $id);
+        $url = $this->url('item_prices/%s/delete', $id);
 
         return $this->post($url, [], $headers);
     }

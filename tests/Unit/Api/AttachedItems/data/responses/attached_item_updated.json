@@ -1,0 +1,14 @@
+{
+  "attached_item": {
+    "created_at": 1594107081,
+    "id": "c9109b84-732a-4093-b53d-0b9f31ccc11c",
+    "item_id": "day-pass",
+    "object": "attached_item",
+    "parent_item_id": "basic",
+    "quantity": 1,
+    "resource_version": 1594107081871,
+    "status": "active",
+    "type": "mandatory",
+    "updated_at": 1594107081
+  }
+}

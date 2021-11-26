@@ -3,8 +3,8 @@
 namespace Tests\Unit;
 
 use Http\Client\Common\HttpMethodsClient;
-use Globalis\Chargebee\Api\Addons\Addon;
 use Globalis\Chargebee\Api\Addresses\Address;
+use Globalis\Chargebee\Api\AttachedItems\AttachedItem;
 use Globalis\Chargebee\Api\Cards\Card;
 use Globalis\Chargebee\Api\CouponCodes\CouponCode;
 use Globalis\Chargebee\Api\Coupons\Coupon;
@@ -17,10 +17,11 @@ use Globalis\Chargebee\Api\Exports\Export;
 use Globalis\Chargebee\Api\Gifts\Gift;
 use Globalis\Chargebee\Api\HostedPages\HostedPage;
 use Globalis\Chargebee\Api\Invoices\Invoice;
+use Globalis\Chargebee\Api\ItemPrices\ItemPrice;
+use Globalis\Chargebee\Api\Items\Item;
 use Globalis\Chargebee\Api\Orders\Order;
 use Globalis\Chargebee\Api\PaymentIntents\PaymentIntent;
 use Globalis\Chargebee\Api\PaymentSources\PaymentSource;
-use Globalis\Chargebee\Api\Plans\Plan;
 use Globalis\Chargebee\Api\PortalSessions\PortalSession;
 use Globalis\Chargebee\Api\PromotionalCredits\PromotionalCredit;
 use Globalis\Chargebee\Api\SiteMigrationDetails\SiteMigrationDetail;
@@ -66,6 +67,22 @@ class ClientTest extends TestCase
     }
 
     /** @test */
+    public function should_get_item()
+    {
+        $order = $this->client->item();
+
+        $this->assertInstanceOf(Item::class, $order);
+    }
+
+    /** @test */
+    public function should_get_item_price()
+    {
+        $order = $this->client->itemPrice();
+
+        $this->assertInstanceOf(ItemPrice::class, $order);
+    }
+
+    /** @test */
     public function should_get_order()
     {
         $order = $this->client->order();
@@ -82,19 +99,19 @@ class ClientTest extends TestCase
     }
 
     /** @test */
-    public function should_get_addon()
-    {
-        $addon = $this->client->addon();
-
-        $this->assertInstanceOf(Addon::class, $addon);
-    }
-
-    /** @test */
     public function should_get_address()
     {
         $address = $this->client->address();
 
         $this->assertInstanceOf(Address::class, $address);
+    }
+
+    /** @test */
+    public function should_get_attached_item()
+    {
+        $address = $this->client->attachedItem();
+
+        $this->assertInstanceOf(AttachedItem::class, $address);
     }
 
     /** @test */
@@ -182,14 +199,6 @@ class ClientTest extends TestCase
         $paymentSource = $this->client->paymentSource();
 
         $this->assertInstanceOf(PaymentSource::class, $paymentSource);
-    }
-
-    /** @test */
-    public function should_get_plan()
-    {
-        $plan = $this->client->plan();
-
-        $this->assertInstanceOf(Plan::class, $plan);
     }
 
     /** @test */

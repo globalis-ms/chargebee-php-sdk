@@ -38,6 +38,20 @@ class Estimate extends AbstractApi
         return $this->post($url, $data, $headers);
     }
 
+    public function createCustomerAndSubscriptionForItems(array $data, array $headers = [])
+    {
+        $url = $this->url('estimates/create_subscription_for_items');
+
+        return $this->post($url, $data, $headers);
+    }
+
+    public function createSubscriptionForItems(string $customerId, array $data, array $headers = [])
+    {
+        $url = $this->url('customers/%s/create_subscription_for_items_estimate', $customerId);
+
+        return $this->post($url, $data, $headers);
+    }
+
     /**
      * @param string $subscriptionId
      * @param array  $parameters

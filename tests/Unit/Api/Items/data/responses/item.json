@@ -1,0 +1,16 @@
+{
+  "item": {
+    "enabled_for_checkout": true,
+    "enabled_in_portal": true,
+    "id": "silver",
+    "is_giftable": false,
+    "is_shippable": false,
+    "item_applicability": "all",
+    "name": "Silver",
+    "object": "item",
+    "resource_version": 1599817249982,
+    "status": "active",
+    "type": "plan",
+    "updated_at": 1599817249
+  }
+}
