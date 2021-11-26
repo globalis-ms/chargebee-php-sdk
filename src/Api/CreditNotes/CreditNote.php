@@ -48,7 +48,7 @@ class CreditNote extends AbstractApi
     {
         $url = $this->url('credit_notes/%s/pdf', $id);
 
-        return $this->get($url, [], $headers);
+        return $this->post($url, [], $headers);
     }
 
     /**

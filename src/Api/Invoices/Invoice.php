@@ -156,7 +156,7 @@ class Invoice extends AbstractApi
     {
         $url = $this->url('invoices/%s/pdf', $id);
 
-        return $this->get($url, [], $headers);
+        return $this->post($url, [], $headers);
     }
 
     /**

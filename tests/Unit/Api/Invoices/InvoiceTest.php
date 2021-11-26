@@ -140,7 +140,7 @@ class InvoiceTest extends TestCase
 
         $invoice = $this->getApiMock();
         $invoice->expects($this->once())
-            ->method('get')
+            ->method('post')
             ->with('https://123456789.chargebee.com/api/v2/invoices/1/pdf', [])
             ->will($this->returnValue($expected));
 

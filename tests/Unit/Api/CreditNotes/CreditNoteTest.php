@@ -42,7 +42,7 @@ class CreditNoteTest extends TestCase
 
         $creditNote = $this->getApiMock();
         $creditNote->expects($this->once())
-            ->method('get')
+            ->method('post')
             ->with('https://123456789.chargebee.com/api/v2/credit_notes/TEST-CN-1/pdf')
             ->will($this->returnValue($expected));
 
