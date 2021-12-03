@@ -1,9 +1,9 @@
 <?php
 
-namespace NathanDunn\Chargebee\Api\PaymentIntents;
+namespace Globalis\Chargebee\Api\PaymentIntents;
 
 use Http\Client\Exception;
-use NathanDunn\Chargebee\Api\AbstractApi;
+use Globalis\Chargebee\Api\AbstractApi;
 
 class PaymentIntent extends AbstractApi
 {

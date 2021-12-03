@@ -1,9 +1,9 @@
 <?php
 
-namespace NathanDunn\Chargebee\Api\Coupons;
+namespace Globalis\Chargebee\Api\Coupons;
 
 use Http\Client\Exception;
-use NathanDunn\Chargebee\Api\AbstractApi;
+use Globalis\Chargebee\Api\AbstractApi;
 
 class Coupon extends AbstractApi
 {

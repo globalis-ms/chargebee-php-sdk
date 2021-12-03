@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Api\Events;
 
-use NathanDunn\Chargebee\Api\HostedPages\HostedPage;
+use Globalis\Chargebee\Api\HostedPages\HostedPage;
 use Tests\Unit\Api\TestCase;
 
 class HostedPageTest extends TestCase

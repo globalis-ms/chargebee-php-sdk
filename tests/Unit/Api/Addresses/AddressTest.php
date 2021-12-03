@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Api\Addresses;
 
-use NathanDunn\Chargebee\Api\Addresses\Address;
+use Globalis\Chargebee\Api\Addresses\Address;
 use Tests\Unit\Api\TestCase;
 
 class AddressTest extends TestCase

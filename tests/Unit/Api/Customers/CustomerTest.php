@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Api\Customers;
 
-use NathanDunn\Chargebee\Api\Customers\Customer;
+use Globalis\Chargebee\Api\Customers\Customer;
 use Tests\Unit\Api\TestCase;
 
 class CustomerTest extends TestCase

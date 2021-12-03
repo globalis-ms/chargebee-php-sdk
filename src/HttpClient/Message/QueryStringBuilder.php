@@ -1,6 +1,6 @@
 <?php
 
-namespace NathanDunn\Chargebee\HttpClient\Message;
+namespace Globalis\Chargebee\HttpClient\Message;
 
 final class QueryStringBuilder
 {

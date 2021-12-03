@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Api\VirtualBankAccounts;
 
-use NathanDunn\Chargebee\Api\VirtualBankAccounts\VirtualBankAccount;
+use Globalis\Chargebee\Api\VirtualBankAccounts\VirtualBankAccount;
 use Tests\Unit\Api\TestCase;
 
 class VirtualBankAccountTest extends TestCase

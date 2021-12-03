@@ -4,8 +4,8 @@ namespace Tests;
 
 use Http\Discovery\HttpClientDiscovery;
 use Http\Discovery\Strategy\MockClientStrategy;
-use NathanDunn\Chargebee\Client;
-use NathanDunn\Chargebee\HttpClient\Builder;
+use Globalis\Chargebee\Client;
+use Globalis\Chargebee\HttpClient\Builder;
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
 
 class TestCase extends PHPUnitTestCase

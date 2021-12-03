@@ -1,11 +1,11 @@
 <?php
 
-namespace NathanDunn\Chargebee\HttpClient\Exception;
+namespace Globalis\Chargebee\HttpClient\Exception;
 
 use GuzzleHttp\Psr7\Request;
 use GuzzleHttp\Psr7\Response;
 use Http\Client\Common\Exception\ClientErrorException;
-use NathanDunn\Chargebee\Exceptions\ParamWrongValueException;
+use Globalis\Chargebee\Exceptions\ParamWrongValueException;
 use Tests\TestCase;
 
 class ApiExceptionHandlerTest extends TestCase
@@ -90,6 +90,6 @@ class ApiExceptionHandlerTest extends TestCase
             ],
         ];
 
-        return new Request('POST', 'https://test.chargebee.com/api/v2/customers', $headers, 'email=github%40nathandunn.');
+        return new Request('POST', 'https://test.chargebee.com/api/v2/customers', $headers, 'email=github%40example.');
     }
 }

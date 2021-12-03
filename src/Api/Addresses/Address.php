@@ -1,9 +1,9 @@
 <?php
 
-namespace NathanDunn\Chargebee\Api\Addresses;
+namespace Globalis\Chargebee\Api\Addresses;
 
 use Http\Client\Exception;
-use NathanDunn\Chargebee\Api\AbstractApi;
+use Globalis\Chargebee\Api\AbstractApi;
 
 class Address extends AbstractApi
 {

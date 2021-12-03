@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Api\Exports;
 
-use NathanDunn\Chargebee\Api\Exports\Export;
+use Globalis\Chargebee\Api\Exports\Export;
 use Tests\Unit\Api\TestCase;
 
 class ExportTest extends TestCase

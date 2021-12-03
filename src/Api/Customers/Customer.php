@@ -1,9 +1,9 @@
 <?php
 
-namespace NathanDunn\Chargebee\Api\Customers;
+namespace Globalis\Chargebee\Api\Customers;
 
 use Http\Client\Exception;
-use NathanDunn\Chargebee\Api\AbstractApi;
+use Globalis\Chargebee\Api\AbstractApi;
 
 class Customer extends AbstractApi
 {

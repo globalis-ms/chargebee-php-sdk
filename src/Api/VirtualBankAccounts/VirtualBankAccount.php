@@ -1,9 +1,9 @@
 <?php
 
-namespace NathanDunn\Chargebee\Api\VirtualBankAccounts;
+namespace Globalis\Chargebee\Api\VirtualBankAccounts;
 
 use Http\Client\Exception;
-use NathanDunn\Chargebee\Api\AbstractApi;
+use Globalis\Chargebee\Api\AbstractApi;
 
 class VirtualBankAccount extends AbstractApi
 {

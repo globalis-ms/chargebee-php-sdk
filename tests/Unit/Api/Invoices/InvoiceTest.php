@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Api\Invoices;
 
-use NathanDunn\Chargebee\Api\Invoices\Invoice;
+use Globalis\Chargebee\Api\Invoices\Invoice;
 use Tests\Unit\Api\TestCase;
 
 class InvoiceTest extends TestCase

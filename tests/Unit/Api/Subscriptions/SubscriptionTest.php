@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Api\Subscriptions;
 
-use NathanDunn\Chargebee\Api\Subscriptions\Subscription;
+use Globalis\Chargebee\Api\Subscriptions\Subscription;
 use Tests\Unit\Api\TestCase;
 
 class SubscriptionTest extends TestCase

@@ -2,7 +2,7 @@
 
 namespace Tests\Unit;
 
-use NathanDunn\Chargebee\Util\Str;
+use Globalis\Chargebee\Util\Str;
 use Tests\TestCase;
 
 class StrTest extends TestCase

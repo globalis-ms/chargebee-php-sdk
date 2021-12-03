@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Api\PortalSessions;
 
-use NathanDunn\Chargebee\Api\PortalSessions\PortalSession;
+use Globalis\Chargebee\Api\PortalSessions\PortalSession;
 use Tests\Unit\Api\TestCase;
 
 class PortalSessionTest extends TestCase

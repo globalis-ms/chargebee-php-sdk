@@ -1,6 +1,6 @@
 <?php
 
-namespace NathanDunn\Chargebee\Util;
+namespace Globalis\Chargebee\Util;
 
 class Str
 {

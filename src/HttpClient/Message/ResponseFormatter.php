@@ -1,6 +1,6 @@
 <?php
 
-namespace NathanDunn\Chargebee\HttpClient\Message;
+namespace Globalis\Chargebee\HttpClient\Message;
 
 use Psr\Http\Message\ResponseInterface;
 

@@ -1,9 +1,9 @@
 <?php
 
-namespace NathanDunn\Chargebee\Api\UnbilledCharges;
+namespace Globalis\Chargebee\Api\UnbilledCharges;
 
 use Http\Client\Exception;
-use NathanDunn\Chargebee\Api\AbstractApi;
+use Globalis\Chargebee\Api\AbstractApi;
 
 class UnbilledCharge extends AbstractApi
 {

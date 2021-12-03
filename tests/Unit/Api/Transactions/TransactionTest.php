@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Api\Transactions;
 
-use NathanDunn\Chargebee\Api\Transactions\Transaction;
+use Globalis\Chargebee\Api\Transactions\Transaction;
 use Tests\Unit\Api\TestCase;
 
 class TransactionTest extends TestCase

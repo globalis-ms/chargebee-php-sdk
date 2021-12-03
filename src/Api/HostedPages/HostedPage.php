@@ -1,9 +1,9 @@
 <?php
 
-namespace NathanDunn\Chargebee\Api\HostedPages;
+namespace Globalis\Chargebee\Api\HostedPages;
 
 use Http\Client\Exception;
-use NathanDunn\Chargebee\Api\AbstractApi;
+use Globalis\Chargebee\Api\AbstractApi;
 
 class HostedPage extends AbstractApi
 {

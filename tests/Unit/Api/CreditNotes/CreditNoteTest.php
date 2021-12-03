@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Api\CreditNotes;
 
-use NathanDunn\Chargebee\Api\CreditNotes\CreditNote;
+use Globalis\Chargebee\Api\CreditNotes\CreditNote;
 use Tests\Unit\Api\TestCase;
 
 class CreditNoteTest extends TestCase

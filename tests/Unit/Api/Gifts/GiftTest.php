@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Api\Gift;
 
-use NathanDunn\Chargebee\Api\Gifts\Gift;
+use Globalis\Chargebee\Api\Gifts\Gift;
 use Tests\Unit\Api\TestCase;
 
 class GiftTest extends TestCase

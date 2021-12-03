@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Api\Comments;
 
-use NathanDunn\Chargebee\Api\Comments\Comment;
+use Globalis\Chargebee\Api\Comments\Comment;
 use Tests\Unit\Api\TestCase;
 
 class CommentTest extends TestCase

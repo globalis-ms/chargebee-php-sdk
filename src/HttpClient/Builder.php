@@ -1,6 +1,6 @@
 <?php
 
-namespace NathanDunn\Chargebee\HttpClient;
+namespace Globalis\Chargebee\HttpClient;
 
 use Http\Client\Common\HttpMethodsClient;
 use Http\Client\Common\Plugin\AuthenticationPlugin;

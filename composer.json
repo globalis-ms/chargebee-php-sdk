@@ -1,16 +1,22 @@
 {
-  "name": "nathandunn/chargebee-php-sdk",
+  "name": "globalis/chargebee-php-sdk",
   "description": "PHP Client for using the Chargebee API.",
   "license": "MIT",
   "keywords": ["chargebee", "api-client"],
   "type": "library",
   "authors": [
     {
+      "name": "Pierre Dargham",
+      "homepage": "https://github.com/pierre-dargham/"
+    },
+    {
+      "name": "GLOBALIS media systems",
+      "homepage": "https://www.globalis-ms.com/"
+    },
+    {
       "name": "Nathan Dunn",
-      "email": "github@nathandunn.uk",
-      "role": "Developer",
       "homepage": "https://nathandunn.uk"
-    }
+    },
   ],
   "require": {
     "php": "^7.3 || ^8.0",
@@ -35,7 +41,7 @@
   },
   "autoload": {
     "psr-4": {
-      "NathanDunn\\Chargebee\\": "src/"
+      "Globalis\\Chargebee\\": "src/"
     }
   },
   "autoload-dev": {

@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Api\Orders;
 
-use NathanDunn\Chargebee\Api\Orders\Order;
+use Globalis\Chargebee\Api\Orders\Order;
 use Tests\Unit\Api\TestCase;
 
 class OrderTest extends TestCase

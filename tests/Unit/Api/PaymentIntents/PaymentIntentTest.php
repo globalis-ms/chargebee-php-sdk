@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Api\PaymentIntent;
 
-use NathanDunn\Chargebee\Api\PaymentIntents\PaymentIntent;
+use Globalis\Chargebee\Api\PaymentIntents\PaymentIntent;
 use Tests\Unit\Api\TestCase;
 
 class PaymentIntentTest extends TestCase

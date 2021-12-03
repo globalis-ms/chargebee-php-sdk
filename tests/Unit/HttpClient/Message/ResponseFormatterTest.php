@@ -3,7 +3,7 @@
 namespace Tests\Unit\HttpClient\Message;
 
 use GuzzleHttp\Psr7\Response;
-use NathanDunn\Chargebee\HttpClient\Message\ResponseFormatter;
+use Globalis\Chargebee\HttpClient\Message\ResponseFormatter;
 use Tests\TestCase;
 
 class ResponseFormatterTest extends TestCase

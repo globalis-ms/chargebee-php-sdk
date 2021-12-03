@@ -1,37 +1,37 @@
 <?php
 
-namespace NathanDunn\Chargebee;
+namespace Globalis\Chargebee;
 
 use Http\Client\Common\HttpMethodsClient;
 use Http\Message\RequestFactory;
 use Http\Message\StreamFactory;
-use NathanDunn\Chargebee\Api\Addons\Addon;
-use NathanDunn\Chargebee\Api\Addresses\Address;
-use NathanDunn\Chargebee\Api\Cards\Card;
-use NathanDunn\Chargebee\Api\CouponCodes\CouponCode;
-use NathanDunn\Chargebee\Api\Coupons\Coupon;
-use NathanDunn\Chargebee\Api\CouponSets\CouponSet;
-use NathanDunn\Chargebee\Api\CreditNotes\CreditNote;
-use NathanDunn\Chargebee\Api\Customers\Customer;
-use NathanDunn\Chargebee\Api\Estimates\Estimate;
-use NathanDunn\Chargebee\Api\Events\Event;
-use NathanDunn\Chargebee\Api\Exports\Export;
-use NathanDunn\Chargebee\Api\Gifts\Gift;
-use NathanDunn\Chargebee\Api\HostedPages\HostedPage;
-use NathanDunn\Chargebee\Api\Invoices\Invoice;
-use NathanDunn\Chargebee\Api\Orders\Order;
-use NathanDunn\Chargebee\Api\PaymentIntents\PaymentIntent;
-use NathanDunn\Chargebee\Api\PaymentSources\PaymentSource;
-use NathanDunn\Chargebee\Api\Plans\Plan;
-use NathanDunn\Chargebee\Api\PortalSessions\PortalSession;
-use NathanDunn\Chargebee\Api\PromotionalCredits\PromotionalCredit;
-use NathanDunn\Chargebee\Api\SiteMigrationDetails\SiteMigrationDetail;
-use NathanDunn\Chargebee\Api\Subscriptions\Subscription;
-use NathanDunn\Chargebee\Api\TimeMachines\TimeMachine;
-use NathanDunn\Chargebee\Api\Transactions\Transaction;
-use NathanDunn\Chargebee\Api\UnbilledCharges\UnbilledCharge;
-use NathanDunn\Chargebee\Api\VirtualBankAccounts\VirtualBankAccount;
-use NathanDunn\Chargebee\HttpClient\Builder;
+use Globalis\Chargebee\Api\Addons\Addon;
+use Globalis\Chargebee\Api\Addresses\Address;
+use Globalis\Chargebee\Api\Cards\Card;
+use Globalis\Chargebee\Api\CouponCodes\CouponCode;
+use Globalis\Chargebee\Api\Coupons\Coupon;
+use Globalis\Chargebee\Api\CouponSets\CouponSet;
+use Globalis\Chargebee\Api\CreditNotes\CreditNote;
+use Globalis\Chargebee\Api\Customers\Customer;
+use Globalis\Chargebee\Api\Estimates\Estimate;
+use Globalis\Chargebee\Api\Events\Event;
+use Globalis\Chargebee\Api\Exports\Export;
+use Globalis\Chargebee\Api\Gifts\Gift;
+use Globalis\Chargebee\Api\HostedPages\HostedPage;
+use Globalis\Chargebee\Api\Invoices\Invoice;
+use Globalis\Chargebee\Api\Orders\Order;
+use Globalis\Chargebee\Api\PaymentIntents\PaymentIntent;
+use Globalis\Chargebee\Api\PaymentSources\PaymentSource;
+use Globalis\Chargebee\Api\Plans\Plan;
+use Globalis\Chargebee\Api\PortalSessions\PortalSession;
+use Globalis\Chargebee\Api\PromotionalCredits\PromotionalCredit;
+use Globalis\Chargebee\Api\SiteMigrationDetails\SiteMigrationDetail;
+use Globalis\Chargebee\Api\Subscriptions\Subscription;
+use Globalis\Chargebee\Api\TimeMachines\TimeMachine;
+use Globalis\Chargebee\Api\Transactions\Transaction;
+use Globalis\Chargebee\Api\UnbilledCharges\UnbilledCharge;
+use Globalis\Chargebee\Api\VirtualBankAccounts\VirtualBankAccount;
+use Globalis\Chargebee\HttpClient\Builder;
 
 class Client
 {

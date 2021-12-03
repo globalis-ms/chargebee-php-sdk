@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Api\CouponsCodes;
 
-use NathanDunn\Chargebee\Api\CouponCodes\CouponCode;
+use Globalis\Chargebee\Api\CouponCodes\CouponCode;
 use Tests\Unit\Api\TestCase;
 
 class CouponCodeTest extends TestCase

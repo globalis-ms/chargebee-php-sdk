@@ -1,6 +1,6 @@
 <?php
 
-namespace NathanDunn\Chargebee\Api\PaymentSources\Exceptions;
+namespace Globalis\Chargebee\Api\PaymentSources\Exceptions;
 
 use Http\Client\Exception\HttpException;
 

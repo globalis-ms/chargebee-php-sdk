@@ -1,10 +1,10 @@
 <?php
 
-namespace NathanDunn\Chargebee\HttpClient\Exception;
+namespace Globalis\Chargebee\HttpClient\Exception;
 
 use Http\Client\Exception\HttpException;
-use NathanDunn\Chargebee\HttpClient\Message\ResponseFormatter;
-use NathanDunn\Chargebee\Util\Str;
+use Globalis\Chargebee\HttpClient\Message\ResponseFormatter;
+use Globalis\Chargebee\Util\Str;
 
 class ApiExceptionHandler
 {
@@ -49,7 +49,7 @@ class ApiExceptionHandler
     private function formatException(array $content)
     {
         if (isset($content['api_error_code'])) {
-            return sprintf('NathanDunn\Chargebee\Exceptions\%sException', Str::studly($content['api_error_code']));
+            return sprintf('Globalis\Chargebee\Exceptions\%sException', Str::studly($content['api_error_code']));
         }
     }
 }

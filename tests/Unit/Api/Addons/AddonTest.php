@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Api\Addons;
 
-use NathanDunn\Chargebee\Api\Addons\Addon;
+use Globalis\Chargebee\Api\Addons\Addon;
 use Tests\Unit\Api\TestCase;
 
 class AddonTest extends TestCase

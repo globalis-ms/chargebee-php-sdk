@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Api\Events;
 
-use NathanDunn\Chargebee\Api\Events\Event;
+use Globalis\Chargebee\Api\Events\Event;
 use Tests\Unit\Api\TestCase;
 
 class EventTest extends TestCase

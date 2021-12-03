@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Api\UnbilledCharges;
 
-use NathanDunn\Chargebee\Api\UnbilledCharges\UnbilledCharge;
+use Globalis\Chargebee\Api\UnbilledCharges\UnbilledCharge;
 use Tests\Unit\Api\TestCase;
 
 class UnbilledChargeTest extends TestCase

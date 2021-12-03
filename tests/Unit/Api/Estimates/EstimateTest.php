@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Api\Estimates;
 
-use NathanDunn\Chargebee\Api\Estimates\Estimate;
+use Globalis\Chargebee\Api\Estimates\Estimate;
 use Tests\Unit\Api\TestCase;
 
 class EstimateTest extends TestCase

@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\HttpClient\Message;
 
-use NathanDunn\Chargebee\HttpClient\Message\QueryStringBuilder;
+use Globalis\Chargebee\HttpClient\Message\QueryStringBuilder;
 use Tests\TestCase;
 
 class QueryStringBuilderTest extends TestCase

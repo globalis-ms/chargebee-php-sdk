@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Api\TimeMachines;
 
-use NathanDunn\Chargebee\Api\TimeMachines\TimeMachine;
+use Globalis\Chargebee\Api\TimeMachines\TimeMachine;
 use Tests\Unit\Api\TestCase;
 
 class TimeMachineTest extends TestCase

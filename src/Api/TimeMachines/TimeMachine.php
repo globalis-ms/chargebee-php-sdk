@@ -1,9 +1,9 @@
 <?php
 
-namespace NathanDunn\Chargebee\Api\TimeMachines;
+namespace Globalis\Chargebee\Api\TimeMachines;
 
 use Http\Client\Exception;
-use NathanDunn\Chargebee\Api\AbstractApi;
+use Globalis\Chargebee\Api\AbstractApi;
 
 class TimeMachine extends AbstractApi
 {

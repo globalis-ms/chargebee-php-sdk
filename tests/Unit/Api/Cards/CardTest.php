@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Api\Cards;
 
-use NathanDunn\Chargebee\Api\Cards\Card;
+use Globalis\Chargebee\Api\Cards\Card;
 use Tests\Unit\Api\TestCase;
 
 class CardTest extends TestCase

@@ -5,8 +5,8 @@ namespace Tests\Unit\Api;
 use Http\Client\HttpClient;
 use Http\Discovery\MessageFactoryDiscovery;
 use Http\Discovery\StreamFactoryDiscovery;
-use NathanDunn\Chargebee\Client;
-use NathanDunn\Chargebee\HttpClient\Builder;
+use Globalis\Chargebee\Client;
+use Globalis\Chargebee\HttpClient\Builder;
 use Tests\TestCase as BaseTestCase;
 
 abstract class TestCase extends BaseTestCase

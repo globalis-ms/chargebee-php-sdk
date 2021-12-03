@@ -1,9 +1,9 @@
 <?php
 
-namespace NathanDunn\Chargebee\Api\SiteMigrationDetails;
+namespace Globalis\Chargebee\Api\SiteMigrationDetails;
 
 use Http\Client\Exception;
-use NathanDunn\Chargebee\Api\AbstractApi;
+use Globalis\Chargebee\Api\AbstractApi;
 
 class SiteMigrationDetail extends AbstractApi
 {

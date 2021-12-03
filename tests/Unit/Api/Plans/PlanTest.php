@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Api\Plans;
 
-use NathanDunn\Chargebee\Api\Plans\Plan;
+use Globalis\Chargebee\Api\Plans\Plan;
 use Tests\Unit\Api\TestCase;
 
 class PlanTest extends TestCase

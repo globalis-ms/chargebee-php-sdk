@@ -1,9 +1,9 @@
 <?php
 
-namespace NathanDunn\Chargebee\Api\PortalSessions;
+namespace Globalis\Chargebee\Api\PortalSessions;
 
 use Http\Client\Exception;
-use NathanDunn\Chargebee\Api\AbstractApi;
+use Globalis\Chargebee\Api\AbstractApi;
 
 class PortalSession extends AbstractApi
 {

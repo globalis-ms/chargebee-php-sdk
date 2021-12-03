@@ -1,6 +1,6 @@
 <?php
 
-namespace NathanDunn\Chargebee\Exceptions;
+namespace Globalis\Chargebee\Exceptions;
 
 use Http\Client\Exception\HttpException;
 

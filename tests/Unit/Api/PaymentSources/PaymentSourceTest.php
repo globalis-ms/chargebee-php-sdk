@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Api\PaymentSources;
 
-use NathanDunn\Chargebee\Api\PaymentSources\PaymentSource;
+use Globalis\Chargebee\Api\PaymentSources\PaymentSource;
 use Tests\Unit\Api\TestCase;
 
 class PaymentSourceTest extends TestCase

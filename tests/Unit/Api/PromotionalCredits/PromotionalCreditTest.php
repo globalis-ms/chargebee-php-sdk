@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Api\Invoices;
 
-use NathanDunn\Chargebee\Api\PromotionalCredits\PromotionalCredit;
+use Globalis\Chargebee\Api\PromotionalCredits\PromotionalCredit;
 use Tests\Unit\Api\TestCase;
 
 class PromotionalCreditTest extends TestCase

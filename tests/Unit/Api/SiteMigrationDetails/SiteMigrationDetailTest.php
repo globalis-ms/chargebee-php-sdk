@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Api\SiteMigrationDetails;
 
-use NathanDunn\Chargebee\Api\SiteMigrationDetails\SiteMigrationDetail;
+use Globalis\Chargebee\Api\SiteMigrationDetails\SiteMigrationDetail;
 use Tests\Unit\Api\TestCase;
 
 class SiteMigrationDetailTest extends TestCase

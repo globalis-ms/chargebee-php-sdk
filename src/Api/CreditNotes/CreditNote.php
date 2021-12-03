@@ -1,9 +1,9 @@
 <?php
 
-namespace NathanDunn\Chargebee\Api\CreditNotes;
+namespace Globalis\Chargebee\Api\CreditNotes;
 
 use Http\Client\Exception;
-use NathanDunn\Chargebee\Api\AbstractApi;
+use Globalis\Chargebee\Api\AbstractApi;
 
 class CreditNote extends AbstractApi
 {

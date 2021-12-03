@@ -1,9 +1,9 @@
 <?php
 
-namespace NathanDunn\Chargebee\Api\PromotionalCredits;
+namespace Globalis\Chargebee\Api\PromotionalCredits;
 
 use Http\Client\Exception;
-use NathanDunn\Chargebee\Api\AbstractApi;
+use Globalis\Chargebee\Api\AbstractApi;
 
 class PromotionalCredit extends AbstractApi
 {

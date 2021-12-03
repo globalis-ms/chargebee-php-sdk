@@ -1,15 +1,15 @@
 <?php
 
-namespace NathanDunn\Chargebee\Api;
+namespace Globalis\Chargebee\Api;
 
 use finfo;
 use Http\Client\Exception;
 use Http\Client\Exception\HttpException;
 use Http\Message\StreamFactory;
-use NathanDunn\Chargebee\Client;
-use NathanDunn\Chargebee\HttpClient\Exception\ApiExceptionHandler;
-use NathanDunn\Chargebee\HttpClient\Message\QueryStringBuilder;
-use NathanDunn\Chargebee\HttpClient\Message\ResponseFormatter;
+use Globalis\Chargebee\Client;
+use Globalis\Chargebee\HttpClient\Exception\ApiExceptionHandler;
+use Globalis\Chargebee\HttpClient\Message\QueryStringBuilder;
+use Globalis\Chargebee\HttpClient\Message\ResponseFormatter;
 
 abstract class AbstractApi
 {
