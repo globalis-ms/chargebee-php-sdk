@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Api\AttachedItems;
 
-use NathanDunn\Chargebee\Api\AttachedItems\AttachedItem;
+use Globalis\Chargebee\Api\AttachedItems\AttachedItem;
 use Tests\Unit\Api\TestCase;
 
 class AttachedItemTest extends TestCase

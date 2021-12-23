@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Api\ItemPrices;
 
-use NathanDunn\Chargebee\Api\ItemPrices\ItemPrice;
+use Globalis\Chargebee\Api\ItemPrices\ItemPrice;
 use Tests\Unit\Api\TestCase;
 
 class ItemPriceTest extends TestCase

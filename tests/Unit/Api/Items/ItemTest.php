@@ -2,7 +2,7 @@
 
 namespace Tests\Unit\Api\Items;
 
-use NathanDunn\Chargebee\Api\Items\Item;
+use Globalis\Chargebee\Api\Items\Item;
 use Tests\Unit\Api\TestCase;
 
 class ItemTest extends TestCase
