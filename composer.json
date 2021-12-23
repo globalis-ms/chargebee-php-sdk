@@ -16,7 +16,7 @@
     {
       "name": "Nathan Dunn",
       "homepage": "https://nathandunn.uk"
-    },
+    }
   ],
   "require": {
     "php": "^7.3 || ^8.0",
@@ -28,7 +28,8 @@
     "php-http/message": "^1.7",
     "psr/http-client": "^1.0",
     "php-http/client-implementation": "^1.0",
-    "http-interop/http-factory-guzzle": "^1.0"
+    "http-interop/http-factory-guzzle": "^1.0",
+    "globalis/wp-cubi-helpers": "^1.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^9.1",

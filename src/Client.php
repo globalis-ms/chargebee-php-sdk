@@ -43,6 +43,11 @@ class Client
     /**
      * @var string
      */
+    public $site;
+
+    /**
+     * @var string
+     */
     public $baseUrl = 'https://%s.chargebee.com/api/%s/';
 
     /**
@@ -64,6 +69,7 @@ class Client
     {
         $this->httpClientBuilder = $httpClientBuilder ?: new Builder($key);
         $this->key = $key;
+        $this->site = $site;
         $this->setBaseUrl($site);
     }
 

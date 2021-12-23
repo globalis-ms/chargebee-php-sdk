@@ -6,10 +6,12 @@ use finfo;
 use Http\Client\Exception;
 use Http\Client\Exception\HttpException;
 use Http\Message\StreamFactory;
+use Globalis\Chargebee\Util;
 use Globalis\Chargebee\Client;
 use Globalis\Chargebee\HttpClient\Exception\ApiExceptionHandler;
 use Globalis\Chargebee\HttpClient\Message\QueryStringBuilder;
 use Globalis\Chargebee\HttpClient\Message\ResponseFormatter;
+use Globalis\WP\Cubi;
 
 abstract class AbstractApi
 {
@@ -47,11 +49,22 @@ abstract class AbstractApi
     {
         $path = $this->preparePath($path, $parameters);
 
+        $timer_name = $path . '_' . microtime();
+        Cubi\time_start($timer_name);
+
         try {
             $response = $this->client->getHttpClient()->get($path, $requestHeaders);
 
+            $time = Cubi\time_elapsed($timer_name, false);
+            $this->hooksHttpSuccess('GET', $path, $parameters, $requestHeaders, $response, $time);
+
             return ResponseFormatter::getContent($response);
         } catch (HttpException $e) {
+            $response = $e->getResponse();
+
+            $time = Cubi\time_elapsed($timer_name, false);
+            $this->hooksHttpError('GET', $path, $parameters, $requestHeaders, $response, $time);
+
             (new ApiExceptionHandler($e))->handle();
         }
     }
@@ -75,9 +88,20 @@ abstract class AbstractApi
             $requestHeaders['Content-Type'] = 'application/x-www-form-urlencoded';
         }
 
+        $timer_name = $path . '_' . microtime();
+        Cubi\time_start($timer_name);
+
         try {
             $response = $this->client->getHttpClient()->post($path, $requestHeaders, $body);
+
+            $time = Cubi\time_elapsed($timer_name, false);
+            $this->hooksHttpSuccess('POST', $path, $parameters, $requestHeaders, $response, $time);
         } catch (HttpException $e) {
+            $response = $e->getResponse();
+
+            $time = Cubi\time_elapsed($timer_name, false);
+            $this->hooksHttpError('POST', $path, $parameters, $requestHeaders, $response, $time);
+
             (new ApiExceptionHandler($e))->handle();
         }
 
@@ -125,5 +149,31 @@ abstract class AbstractApi
         $finfo = new finfo(FILEINFO_MIME_TYPE);
 
         return $finfo->file($file);
+    }
+
+    private function hooksHttpSuccess($method, $endpoint, $parameters, $requestHeaders, $response, $time)
+    {
+        Util::doAction('globalis/chargebee_api_response', [
+            'site' => $this->client->site,
+            'method' => $method,
+            'endpoint' => $endpoint,
+            'parameters' => $parameters,
+            'headers' => $requestHeaders,
+            'response' => $response,
+            'time' => $time,
+        ]);
+    }
+
+    private function hooksHttpError($method, $endpoint, $parameters, $requestHeaders, $response, $time)
+    {
+        Util::doAction('globalis/chargebee_api_error', [
+            'site' => $this->client->site,
+            'method' => $method,
+            'endpoint' => $endpoint,
+            'parameters' => $parameters,
+            'headers' => $requestHeaders,
+            'response' => $response,
+            'time' => $time,
+        ]);
     }
 }
