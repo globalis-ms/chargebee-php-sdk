@@ -290,7 +290,7 @@ class SubscriptionTest extends TestCase
     }
 
     /** @test */
-    public function remove_scheduled_resumption()
+    public function should_remove_scheduled_resumption()
     {
         $expected = $this->getContent(sprintf('%s/data/responses/subscription_scheduled_resumption_removed.json', __DIR__));
 
