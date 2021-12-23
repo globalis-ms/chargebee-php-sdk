@@ -259,4 +259,82 @@ class Customer extends AbstractApi
 
         return $this->get($url, $parameters, $headers);
     }
+
+    /**
+     * @param string $id
+     * @param array  $headers
+     *
+     * @throws Exception
+     *
+     * @return array|string
+     */
+    public function clearPersonalData(string $id, array $headers = [])
+    {
+        $url = $this->url('customers/%s/clear_personal_data', $id);
+
+        return $this->post($url, [], $headers);
+    }
+
+    /**
+     * @param string $id
+     * @param array  $parameters
+     * @param array  $headers
+     *
+     * @throws Exception
+     *
+     * @return array|string
+     */
+    public function hierarchy(string $id, array $parameters = [], array $headers = [])
+    {
+        $url = $this->url('customers/%s/hierarchy', $id);
+
+        return $this->get($url, $parameters, $headers);
+    }
+
+    /**
+     * @param string $id
+     * @param array  $data
+     * @param array  $headers
+     *
+     * @throws Exception
+     *
+     * @return array|string
+     */
+    public function relationships(string $id, array $data = [], array $headers = [])
+    {
+        $url = $this->url('customers/%s/relationships', $id);
+
+        return $this->post($url, $data, $headers);
+    }
+
+    /**
+     * @param string $id
+     * @param array  $headers
+     *
+     * @throws Exception
+     *
+     * @return array|string
+     */
+    public function deleteRelationship(string $id, array $headers = [])
+    {
+        $url = $this->url('customers/%s/delete_relationship', $id);
+
+        return $this->post($url, [], $headers);
+    }
+
+    /**
+     * @param string $id
+     * @param array  $data
+     * @param array  $headers
+     *
+     * @throws Exception
+     *
+     * @return array|string
+     */
+    public function updateHierarchySettings(string $id, array $data = [], array $headers = [])
+    {
+        $url = $this->url('customers/%s/update_hierarchy_settings', $id);
+
+        return $this->post($url, $data, $headers);
+    }
 }
