@@ -6,7 +6,7 @@ use finfo;
 use Http\Client\Exception;
 use Http\Client\Exception\HttpException;
 use Http\Message\StreamFactory;
-use Globalis\Chargebee\Util;
+use Globalis\Chargebee\Util\Hooks;
 use Globalis\Chargebee\Client;
 use Globalis\Chargebee\HttpClient\Exception\ApiExceptionHandler;
 use Globalis\Chargebee\HttpClient\Message\QueryStringBuilder;
@@ -153,7 +153,7 @@ abstract class AbstractApi
 
     private function hooksHttpSuccess($method, $endpoint, $parameters, $requestHeaders, $response, $time)
     {
-        Util::doAction('globalis/chargebee_api_response', [
+        Hooks::doAction('globalis/chargebee_api_response', [
             'site' => $this->client->site,
             'method' => $method,
             'endpoint' => $endpoint,
@@ -166,7 +166,7 @@ abstract class AbstractApi
 
     private function hooksHttpError($method, $endpoint, $parameters, $requestHeaders, $response, $time)
     {
-        Util::doAction('globalis/chargebee_api_error', [
+        Hooks::doAction('globalis/chargebee_api_error', [
             'site' => $this->client->site,
             'method' => $method,
             'endpoint' => $endpoint,
