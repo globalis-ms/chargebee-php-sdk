@@ -7,6 +7,7 @@ use Http\Client\Exception;
 use Http\Client\Exception\HttpException;
 use Http\Message\StreamFactory;
 use Globalis\Chargebee\Util\Hooks;
+use Globalis\Chargebee\Util\Str;
 use Globalis\Chargebee\Client;
 use Globalis\Chargebee\HttpClient\Exception\ApiExceptionHandler;
 use Globalis\Chargebee\HttpClient\Message\QueryStringBuilder;
@@ -49,6 +50,7 @@ abstract class AbstractApi
     {
         $path = $this->preparePath($path, $parameters);
 
+        $trace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS);
         $timer_name = $path . '_' . microtime();
         Cubi\time_start($timer_name);
 
@@ -56,14 +58,14 @@ abstract class AbstractApi
             $response = $this->client->getHttpClient()->get($path, $requestHeaders);
 
             $time = Cubi\time_elapsed($timer_name, false);
-            $this->hooksHttpSuccess('GET', $path, $parameters, $requestHeaders, $response, $time);
+            $this->hooksHttpSuccess('GET', $path, $parameters, $requestHeaders, $response, $time, $trace);
 
             return ResponseFormatter::getContent($response);
         } catch (HttpException $e) {
             $response = $e->getResponse();
 
             $time = Cubi\time_elapsed($timer_name, false);
-            $this->hooksHttpError('GET', $path, $parameters, $requestHeaders, $response, $time);
+            $this->hooksHttpError('GET', $path, $parameters, $requestHeaders, $response, $time, $trace);
 
             (new ApiExceptionHandler($e))->handle();
         }
@@ -88,6 +90,7 @@ abstract class AbstractApi
             $requestHeaders['Content-Type'] = 'application/x-www-form-urlencoded';
         }
 
+        $trace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS);
         $timer_name = $path . '_' . microtime();
         Cubi\time_start($timer_name);
 
@@ -95,12 +98,12 @@ abstract class AbstractApi
             $response = $this->client->getHttpClient()->post($path, $requestHeaders, $body);
 
             $time = Cubi\time_elapsed($timer_name, false);
-            $this->hooksHttpSuccess('POST', $path, $parameters, $requestHeaders, $response, $time);
+            $this->hooksHttpSuccess('POST', $path, $parameters, $requestHeaders, $response, $time, $trace);
         } catch (HttpException $e) {
             $response = $e->getResponse();
 
             $time = Cubi\time_elapsed($timer_name, false);
-            $this->hooksHttpError('POST', $path, $parameters, $requestHeaders, $response, $time);
+            $this->hooksHttpError('POST', $path, $parameters, $requestHeaders, $response, $time, $trace);
 
             (new ApiExceptionHandler($e))->handle();
         }
@@ -151,29 +154,33 @@ abstract class AbstractApi
         return $finfo->file($file);
     }
 
-    private function hooksHttpSuccess($method, $endpoint, $parameters, $requestHeaders, $response, $time)
+    private function hooksHttpSuccess($method, $url, $parameters, $requestHeaders, $response, $time, $trace)
     {
         Hooks::doAction('globalis/chargebee_api_response', [
             'site' => $this->client->site,
             'method' => $method,
-            'endpoint' => $endpoint,
+            'url' => $url,
+            'endpoint' => Str::removeQueryArgs($url),
             'parameters' => $parameters,
             'headers' => $requestHeaders,
             'response' => $response,
             'time' => $time,
+            'trace' => $trace,
         ]);
     }
 
-    private function hooksHttpError($method, $endpoint, $parameters, $requestHeaders, $response, $time)
+    private function hooksHttpError($method, $url, $parameters, $requestHeaders, $response, $time, $trace)
     {
         Hooks::doAction('globalis/chargebee_api_error', [
             'site' => $this->client->site,
             'method' => $method,
-            'endpoint' => $endpoint,
+            'url' => $url,
+            'endpoint' => Str::removeQueryArgs($url),
             'parameters' => $parameters,
             'headers' => $requestHeaders,
             'response' => $response,
             'time' => $time,
+            'trace' => $trace,
         ]);
     }
 }
