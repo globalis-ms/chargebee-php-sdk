@@ -156,11 +156,15 @@ abstract class AbstractApi
 
     private function hooksHttpSuccess($method, $url, $parameters, $requestHeaders, $response, $time, $trace)
     {
+        $endpoint = Str::removeQueryArgs($url);
+        $endpoint_stripped = substr($endpoint, strlen($this->client->baseUrl));
+
         Hooks::doAction('globalis/chargebee_api_response', [
             'site' => $this->client->site,
             'method' => $method,
             'url' => $url,
-            'endpoint' => Str::removeQueryArgs($url),
+            'endpoint' => $endpoint,
+            'endpoint_stripped' => $endpoint_stripped,
             'parameters' => $parameters,
             'headers' => $requestHeaders,
             'response' => $response,
@@ -171,11 +175,15 @@ abstract class AbstractApi
 
     private function hooksHttpError($method, $url, $parameters, $requestHeaders, $response, $time, $trace)
     {
+        $endpoint = Str::removeQueryArgs($url);
+        $endpoint_stripped = substr($endpoint, strlen($this->client->baseUrl));
+
         Hooks::doAction('globalis/chargebee_api_error', [
             'site' => $this->client->site,
             'method' => $method,
             'url' => $url,
-            'endpoint' => Str::removeQueryArgs($url),
+            'endpoint' => $endpoint,
+            'endpoint_stripped' => $endpoint_stripped,
             'parameters' => $parameters,
             'headers' => $requestHeaders,
             'response' => $response,
