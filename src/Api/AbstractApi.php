@@ -6,8 +6,8 @@ use finfo;
 use Http\Client\Exception;
 use Http\Client\Exception\HttpException;
 use Http\Message\StreamFactory;
-use Globalis\Chargebee\Util\Hooks;
-use Globalis\Chargebee\Util\Str;
+use Globalis\Chargebee\Events\EventChargebeeApiResponseSuccess as EventResponseSuccess;
+use Globalis\Chargebee\Events\EventChargebeeApiResponseError as EventResponseError;
 use Globalis\Chargebee\Client;
 use Globalis\Chargebee\HttpClient\Exception\ApiExceptionHandler;
 use Globalis\Chargebee\HttpClient\Message\QueryStringBuilder;
@@ -58,14 +58,16 @@ abstract class AbstractApi
             $response = $this->client->getHttpClient()->get($path, $requestHeaders);
 
             $time = Cubi\time_elapsed($timer_name, false);
-            $this->hooksHttpSuccess('GET', $path, $parameters, $requestHeaders, $response, $time, $trace);
+            $event = new EventResponseSuccess($this->client, 'GET', $path, $parameters, $requestHeaders, $response, $time, $trace);
+            Client::dispatchEvent($event);
 
             return ResponseFormatter::getContent($response);
         } catch (HttpException $e) {
             $response = $e->getResponse();
 
             $time = Cubi\time_elapsed($timer_name, false);
-            $this->hooksHttpError('GET', $path, $parameters, $requestHeaders, $response, $time, $trace);
+            $event = new EventResponseError($this->client, 'GET', $path, $parameters, $requestHeaders, $response, $time, $trace);
+            Client::dispatchEvent($event);
 
             (new ApiExceptionHandler($e))->handle();
         }
@@ -98,12 +100,14 @@ abstract class AbstractApi
             $response = $this->client->getHttpClient()->post($path, $requestHeaders, $body);
 
             $time = Cubi\time_elapsed($timer_name, false);
-            $this->hooksHttpSuccess('POST', $path, $parameters, $requestHeaders, $response, $time, $trace);
+            $event = new EventResponseSuccess($this->client, 'POST', $path, $parameters, $requestHeaders, $response, $time, $trace);
+            Client::dispatchEvent($event);
         } catch (HttpException $e) {
             $response = $e->getResponse();
 
             $time = Cubi\time_elapsed($timer_name, false);
-            $this->hooksHttpError('POST', $path, $parameters, $requestHeaders, $response, $time, $trace);
+            $event = new EventResponseError($this->client, 'POST', $path, $parameters, $requestHeaders, $response, $time, $trace);
+            Client::dispatchEvent($event);
 
             (new ApiExceptionHandler($e))->handle();
         }
@@ -152,43 +156,5 @@ abstract class AbstractApi
         $finfo = new finfo(FILEINFO_MIME_TYPE);
 
         return $finfo->file($file);
-    }
-
-    private function hooksHttpSuccess($method, $url, $parameters, $requestHeaders, $response, $time, $trace)
-    {
-        $endpoint = Str::removeQueryArgs($url);
-        $endpoint_stripped = substr($endpoint, strlen($this->client->baseUrl));
-
-        Hooks::doAction('globalis/chargebee_api_response', [
-            'site' => $this->client->site,
-            'method' => $method,
-            'url' => $url,
-            'endpoint' => $endpoint,
-            'endpoint_stripped' => $endpoint_stripped,
-            'parameters' => $parameters,
-            'headers' => $requestHeaders,
-            'response' => $response,
-            'time' => $time,
-            'trace' => $trace,
-        ]);
-    }
-
-    private function hooksHttpError($method, $url, $parameters, $requestHeaders, $response, $time, $trace)
-    {
-        $endpoint = Str::removeQueryArgs($url);
-        $endpoint_stripped = substr($endpoint, strlen($this->client->baseUrl));
-
-        Hooks::doAction('globalis/chargebee_api_error', [
-            'site' => $this->client->site,
-            'method' => $method,
-            'url' => $url,
-            'endpoint' => $endpoint,
-            'endpoint_stripped' => $endpoint_stripped,
-            'parameters' => $parameters,
-            'headers' => $requestHeaders,
-            'response' => $response,
-            'time' => $time,
-            'trace' => $trace,
-        ]);
     }
 }

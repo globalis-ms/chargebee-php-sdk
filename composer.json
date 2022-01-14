@@ -19,7 +19,7 @@
     }
   ],
   "require": {
-    "php": "^7.3 || ^8.0",
+    "php": "^7.4 || ^8.0",
     "psr/http-message": "^1.0",
     "php-http/message-factory": "^1.0",
     "php-http/discovery": "^1.7",
@@ -29,13 +29,14 @@
     "psr/http-client": "^1.0",
     "php-http/client-implementation": "^1.0",
     "http-interop/http-factory-guzzle": "^1.0",
-    "globalis/wp-cubi-helpers": "^1.0"
+    "globalis/wp-cubi-helpers": "^1.0",
+    "league/event": "^3.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^9.1",
     "php-http/mock-client": "^1.3",
     "php-coveralls/php-coveralls": "^2.2",
-    "phpunit/phpcov": "^7.0",
+    "phpunit/phpcov": "^8.0",
     "php-http/guzzle6-adapter": "^2.0",
     "guzzlehttp/psr7": "^1.6",
     "guzzlehttp/guzzle": "^6.5"

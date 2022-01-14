@@ -5,6 +5,10 @@ namespace Globalis\Chargebee;
 use Http\Client\Common\HttpMethodsClient;
 use Http\Message\RequestFactory;
 use Http\Message\StreamFactory;
+use League\Event\EventDispatcher;
+use Globalis\Chargebee\Events\EventChargebeeApiResponse as EventResponse;
+use Globalis\Chargebee\Events\EventChargebeeApiResponseSuccess as EventResponseSuccess;
+use Globalis\Chargebee\Events\EventChargebeeApiResponseError as EventResponseError;
 use Globalis\Chargebee\Api\Addons\Addon;
 use Globalis\Chargebee\Api\Addresses\Address;
 use Globalis\Chargebee\Api\Cards\Card;
@@ -61,6 +65,11 @@ class Client
     private $key;
 
     /**
+     * @var EventDispatcher
+     */
+    protected static $eventDispatcher;
+
+    /**
      * @param string       $site
      * @param string       $key
      * @param Builder|null $httpClientBuilder
@@ -71,6 +80,30 @@ class Client
         $this->key = $key;
         $this->site = $site;
         $this->setBaseUrl($site);
+    }
+
+    public static function eventDispatcher()
+    {
+        if(is_null(self::$eventDispatcher)) {
+            self::$eventDispatcher = new EventDispatcher();
+        }
+
+        return self::$eventDispatcher;
+    }
+
+    public static function dispatchEvent(EventResponse $event)
+    {
+        self::eventDispatcher()->dispatch($event);
+    }
+
+    public static function onApiResponseSuccess(callable $c)
+    {
+        self::eventDispatcher()->subscribeTo(EventResponseSuccess::class, $c);
+    }
+
+    public static function onApiResponseError(callable $c)
+    {
+        self::eventDispatcher()->subscribeTo(EventResponseError::class, $c);
     }
 
     /**
