@@ -15,7 +15,7 @@ class ResponseFormatterTest extends TestCase
         $response = new Response(
             200,
             ['Content-Type'=> 'application/json'],
-            \GuzzleHttp\Psr7\stream_for(json_encode($body))
+            \GuzzleHttp\Psr7\Utils::streamFor(json_encode($body))
         );
 
         $this->assertEquals($body, ResponseFormatter::getContent($response));
@@ -32,7 +32,7 @@ class ResponseFormatterTest extends TestCase
         $response = new Response(
             200,
             [],
-            \GuzzleHttp\Psr7\stream_for($body)
+            \GuzzleHttp\Psr7\Utils::streamFor($body)
         );
 
         $this->assertEquals($body, ResponseFormatter::getContent($response));
@@ -49,7 +49,7 @@ class ResponseFormatterTest extends TestCase
         $response = new Response(
             200,
             ['Content-Type'=> 'application/json'],
-            \GuzzleHttp\Psr7\stream_for($body)
+            \GuzzleHttp\Psr7\Utils::streamFor($body)
         );
 
         $this->assertEquals($body, ResponseFormatter::getContent($response));
