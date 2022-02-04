@@ -14,7 +14,7 @@ class ResponseFormatterTest extends TestCase
         $body = ['foo' => 'bar'];
         $response = new Response(
             200,
-            ['Content-Type'=> 'application/json'],
+            ['Content-Type' => 'application/json'],
             \GuzzleHttp\Psr7\Utils::streamFor(json_encode($body))
         );
 
@@ -48,7 +48,7 @@ class ResponseFormatterTest extends TestCase
         $body = 'foobar';
         $response = new Response(
             200,
-            ['Content-Type'=> 'application/json'],
+            ['Content-Type' => 'application/json'],
             \GuzzleHttp\Psr7\Utils::streamFor($body)
         );
 

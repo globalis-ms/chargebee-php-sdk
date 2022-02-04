@@ -85,7 +85,7 @@ class Client
 
     public static function eventDispatcher()
     {
-        if(is_null(self::$eventDispatcher)) {
+        if (is_null(self::$eventDispatcher)) {
             self::$eventDispatcher = new EventDispatcher();
         }
 

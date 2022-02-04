@@ -125,7 +125,7 @@ abstract class AbstractApi
      */
     protected function url(string $endpoint, ...$replacements): string
     {
-        return $this->client->baseUrl.vsprintf($endpoint, $replacements);
+        return $this->client->baseUrl . vsprintf($endpoint, $replacements);
     }
 
     /**
@@ -137,7 +137,7 @@ abstract class AbstractApi
     private function preparePath($path, array $parameters = []): string
     {
         if (count($parameters) > 0) {
-            $path .= '?'.QueryStringBuilder::build($parameters);
+            $path .= '?' . QueryStringBuilder::build($parameters);
         }
 
         return $path;

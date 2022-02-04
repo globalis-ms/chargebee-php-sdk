@@ -27,7 +27,7 @@ class Str
     {
         $url = parse_url($url);
 
-        if(empty($url)) {
+        if (empty($url)) {
             return $url;
         }
 

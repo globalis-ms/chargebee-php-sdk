@@ -34,13 +34,13 @@ final class QueryStringBuilder
     private static function encode($query, $prefix)
     {
         if (!is_array($query)) {
-            return static::rawurlencode($prefix).'='.static::rawurlencode($query);
+            return static::rawurlencode($prefix) . '=' . static::rawurlencode($query);
         }
 
         $isIndexedArray = static::isIndexedArray($query);
 
         return implode('&', array_map(function ($value, $key) use ($prefix, $isIndexedArray) {
-            $prefix = $isIndexedArray ? $prefix.'[]' : $prefix.'['.$key.']';
+            $prefix = $isIndexedArray ? $prefix . '[]' : $prefix . '[' . $key . ']';
 
             return static::encode($value, $prefix);
         }, $query, array_keys($query)));
