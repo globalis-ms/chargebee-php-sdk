@@ -5,7 +5,7 @@ Overview
 
 This package provides an API client for [Chargebee](https://www.chargebee.com/) subscription management services.
 
-It connects to Chargebee REST APIs for following versions:
+It connects to Chargebee REST APIs for the following versions:
 - **Chargebee API :** version 2 ([see official API documentation](https://apidocs.chargebee.com/docs/api?prod_cat_ver=2))
 - **Product Catalog:** version 2.0 ([see official API documentation](https://apidocs.chargebee.com/docs/api?prod_cat_ver=2))
 
