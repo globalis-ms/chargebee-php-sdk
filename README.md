@@ -15,7 +15,7 @@ Installation
 ------------
 
 ```bash
-composer composer require globalis/chargebee-php-sdk php-http/guzzle7-adapter
+composer require globalis/chargebee-php-sdk php-http/guzzle7-adapter
 ```
 
 Basic usage
