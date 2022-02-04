@@ -1,6 +1,6 @@
 {
   "name": "globalis/chargebee-php-sdk",
-  "description": "PHP Client for using the Chargebee API.",
+  "description": "Chargebee API PHP Client (for API version 2 and Product Catalog version 2.0)",
   "license": "MIT",
   "keywords": ["chargebee", "api-client"],
   "type": "library",
