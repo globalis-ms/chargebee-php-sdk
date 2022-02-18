@@ -30,7 +30,7 @@ class ApiExceptionHandler
         $content = ResponseFormatter::getContent($response);
         $exception = $this->formatException($content);
 
-        if (class_exists($exception)) {
+        if (!empty($exception) && class_exists($exception)) {
             throw new $exception(
                 isset($content['message']) ? $content['message'] : $this->exception->getMessage(),
                 $this->exception->getRequest(),
@@ -42,14 +42,16 @@ class ApiExceptionHandler
     }
 
     /**
-     * @param array $content
+     * @param array|string $content
      *
      * @return string|null
      */
-    private function formatException(array $content)
+    private function formatException(array|string $content)
     {
-        if (isset($content['api_error_code'])) {
+        if (is_array($content) && isset($content['api_error_code'])) {
             return sprintf('Globalis\Chargebee\Exceptions\%sException', Str::studly($content['api_error_code']));
         }
+
+        return false;
     }
 }
